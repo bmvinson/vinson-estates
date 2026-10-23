@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>The Vinson Estate — Interactive Architectural Lookbook & Floor Plans</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .carousel-fade {
+      transition: opacity 0.35s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-stone-950 text-stone-100 antialiased min-h-screen selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- Sticky Top Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-stone-950/85 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold text-sm">
+          VE
+        </div>
+        <div>
+          <h1 class="text-base sm:text-lg font-bold tracking-tight text-white">Modern European Estate — Interior &amp; Site Concept</h1>
+          <p class="text-xs text-stone-400">Main Residence (~9,850 sq ft • 22' Island &amp; 15' Separation) • 3-Bed Guest House, Wellness Facility &amp; Barn (~7,200 sq ft)</p>
+        </div>
+      </div>
+
+      <!-- Main Section Tabs -->
+      <nav class="flex flex-wrap items-center gap-1.5 bg-stone-900 p-1 rounded-xl border border-stone-800">
+        <button id="nav-gallery" onclick="switchMainTab('gallery')" class="px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-amber-500 text-stone-950 shadow">
+          📸 Photo Carousel &amp; Tour (27)
+        </button>
+        <button id="nav-floorplan" onclick="switchMainTab('floorplan')" class="px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-stone-300 hover:text-white">
+          📐 Interactive Floor Plans
+        </button>
+        <button id="nav-specs" onclick="switchMainTab('specs')" class="px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-stone-300 hover:text-white">
+          📋 Architect's Specs &amp; Elevations
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-8">
+
+    <!-- ==================== TAB 1: PHOTO CAROUSEL & ROOM-BY-ROOM TOUR ==================== -->
+    <section id="tab-gallery" class="space-y-8">
+
+      <!-- TOP PROPERTY & MAIN HOME EXTERIOR CONTEXT BANNER -->
+      <div class="bg-stone-900 border border-stone-800 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div>
+            <span class="px-2.5 py-1 rounded-md bg-amber-500/15 text-amber-400 text-xs font-semibold">Estate Exterior Overview</span>
+            <h2 class="text-lg sm:text-xl font-bold text-white mt-1.5">The Property &amp; Main Residence Exterior Context</h2>
+            <p class="text-xs sm:text-sm text-stone-400">Overall property acreage and closer-up exterior view of the Main Home, Pool Courtyard, 3-Bedroom Guest House, Wellness / Health Facility, and Detached Collector's Barn before stepping inside.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div onclick="openLightbox(0)" class="group cursor-zoom-in bg-stone-950 border border-stone-800 rounded-xl overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="static/images/00a_overall_property_aerial.jpg?v=2e279ed7b2?v=2e279ed7b2" alt="Overall Property View" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/75 text-xs font-semibold text-amber-400 border border-white/10">1. Overall Property Aerial View</div>
+            </div>
+            <div class="p-3.5">
+              <p class="text-xs text-stone-300">Full estate boundary showing the agricultural fields on the left, the long formal English boxwood hedge maze on the right, and the residential compound nestled against the forest canopy.</p>
+            </div>
+          </div>
+          <div onclick="openLightbox(1)" class="group cursor-zoom-in bg-stone-950 border border-stone-800 rounded-xl overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="static/images/00b_closeup_estate_exterior.jpg?v=0bff768cba?v=0bff768cba" alt="Closer-Up View of the Home" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/75 text-xs font-semibold text-amber-400 border border-white/10">2. Closer-Up View of Main Home &amp; Courtyard</div>
+            </div>
+            <div class="p-3.5">
+              <p class="text-xs text-stone-300">Closer view of the Main Residence (arched iron entry, twin 20-ft grid windows, 3 upper dormers, west side-load garage drive), Rear Pool Courtyard, 2-Story 3-Bedroom Guest House, 2-Story Wellness / Health Facility, and Detached Barn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Hero Carousel -->
+      <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden shadow-2xl">
+        <!-- Quick-Jump Bar to Key Updated Rooms -->
+        <div class="px-4 py-3 bg-stone-950/90 border-b border-stone-800 flex flex-wrap items-center gap-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400 mr-1">Jump to Room:</span>
+          <button onclick="goToSlide(3)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🛋️ Living Room (15' Separation)</button>
+          <button onclick="goToSlide(4)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🦪 Open Kitchen (22' Island &amp; Oyster Bar)</button>
+          <button onclick="goToSlide(5)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🚪 Speakeasy (Closed vs. Open)</button>
+          <button onclick="goToSlide(9)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🛁 Her's &amp; His 7.3' 2-Person Tubs (6'8")</button>
+          <button onclick="goToSlide(13)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🥃 "Mad Men" Office (TV Above Fireplace)</button>
+          <button onclick="goToSlide(14)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🎬 Theater (2 Rows Vintage Velvet Couches)</button>
+          <button onclick="goToSlide(15)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">📺 Downstairs Daybed &amp; TV Suite (#2)</button>
+          <button onclick="goToSlide(19)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🏡 3-Bed Guest House &amp; Boss Woman Office</button>
+          <button onclick="goToSlide(22)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🧖‍♀️ Wellness Facility (Open Shower + L2 Gym/Bath)</button>
+          <button onclick="goToSlide(24)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🏎️ 4-Car All-Black Barn</button>
+          <button onclick="goToSlide(26)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🍷 Underground Wine Tunnel</button>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          <!-- Left: Large Carousel Image (8 cols) -->
+          <div class="lg:col-span-8 relative bg-black flex items-center justify-center min-h-[320px] sm:min-h-[480px] group">
+            <img id="carousel-img" src="static/images/01a_living_room_great_room.jpg?v=545b3c368d?v=545b3c368d" alt="Estate Rendering" onclick="openLightbox(currentSlide)" class="w-full h-[320px] sm:h-[500px] object-cover cursor-zoom-in carousel-fade" />
+            <!-- Slide Counter Pill -->
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-xs font-semibold text-white">
+              <span id="carousel-counter">4 / 27</span> • <span id="carousel-zone" class="text-amber-400">Level 1 (Living Room / Great Room)</span>
+            </div>
+            <button onclick="openLightbox(currentSlide)" class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/15 text-xs font-medium text-white transition">
+              🔍 Full Screen
+            </button>
+            <!-- Prev / Next Arrows -->
+            <button onclick="prevSlide()" aria-label="Previous photo" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/65 hover:bg-amber-500 hover:text-stone-950 text-white border border-white/20 flex items-center justify-center text-lg font-bold transition shadow-lg">
+              ‹
+            </button>
+            <button onclick="nextSlide()" aria-label="Next photo" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/65 hover:bg-amber-500 hover:text-stone-950 text-white border border-white/20 flex items-center justify-center text-lg font-bold transition shadow-lg">
+              ›
+            </button>
+          </div>
+
+          <!-- Right: Active Photo Story & Thumbnail Strip (4 cols) -->
+          <div class="lg:col-span-4 p-5 sm:p-6 flex flex-col justify-between bg-stone-900">
+            <div>
+              <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-amber-500/15 text-amber-400 text-xs font-semibold">
+                <span id="carousel-badge">Level 1 • 24' Vaulted Living Room, Limestone Fireplace, 85" TV &amp; Pool View</span>
+              </div>
+              <h2 id="carousel-title" class="text-xl font-bold text-white mt-2.5">Living Room / Soaring Great Room — Carved French Limestone Fireplace, 85" Framed TV, 20' Pool Windows &amp; Curved Grand Staircase</h2>
+              <p id="carousel-dims" class="text-xs font-mono text-stone-400 mt-1">30' × 24' Living Room • 24' Whitewashed Oak Trusses • Open to Chef's Kitchen</p>
+              <p id="carousel-desc" class="text-sm text-stone-300 mt-3 leading-relaxed"></p>
+              <ul id="carousel-highlights" class="mt-4 space-y-2 text-xs sm:text-sm text-stone-200 border-t border-stone-800 pt-4"></ul>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between gap-2">
+              <button onclick="prevSlide()" class="flex-1 py-2.5 px-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-xs font-semibold text-stone-200 transition">
+                ← Previous View
+              </button>
+              <button onclick="nextSlide()" class="flex-1 py-2.5 px-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-xs font-semibold text-stone-950 transition">
+                Next View →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scrollable Thumbnail Filmstrip -->
+        <div class="p-3 bg-stone-950/90 border-t border-stone-800 overflow-x-auto">
+          <div id="carousel-thumbs" class="flex items-center gap-2.5 min-w-max"></div>
+        </div>
+      </div>
+
+      <!-- SPEAKEASY BEFORE (HIDDEN) VS. AFTER (EXPOSED) SIDE-BY-SIDE COMPARISON -->
+      <div class="bg-stone-900 border border-stone-800 rounded-2xl p-5 sm:p-6 space-y-5 shadow-xl">
+        <div>
+          <span class="px-2.5 py-1 rounded-md bg-amber-500/15 text-amber-400 text-xs font-semibold">Secret Feature Comparison</span>
+          <h2 class="text-lg sm:text-xl font-bold text-white mt-1.5">Hidden Speakeasy Bar: Front View of Dark Cherry / Mahogany China Cabinet ("Closed" vs. "Open Towards Kitchen") &amp; "Inside the Bar"</h2>
+          <p class="text-xs sm:text-sm text-stone-400">See how the Speakeasy entrance is disguised as a floor-to-ceiling dark cherry / mahogany China Cabinet at the end of the kitchen wall—shown from the front closed, swung open outward towards the kitchen, and from inside the Speakeasy looking back at the open China Cabinet door.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div onclick="openLightbox(5)" class="group cursor-zoom-in bg-stone-950 border border-stone-800 rounded-xl overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="static/images/02a_speakeasy_door_closed.jpg?v=cb48bdaa79?v=cb48bdaa79" alt="Before: Front View of Dark Cherry/Mahogany China Cabinet Closed" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-stone-900/90 text-xs font-bold text-stone-200 border border-white/15">1. BEFORE: Front View — China Cabinet Closed</div>
+            </div>
+            <div class="p-3.5">
+              <p class="text-xs text-stone-300">Viewed directly from the front of the China Cabinet: the floor-to-ceiling built-in dark cherry / mahogany glass-front China Cabinet (displaying fine porcelain china &amp; crystal stemware) sits flush in the kitchen wall next to the matching dark cherry / mahogany stove area and Calacatta Verde/Viola island.</p>
+            </div>
+          </div>
+
+          <div onclick="openLightbox(6)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="static/images/02_speakeasy_door.jpg?v=deaf2492ce?v=deaf2492ce" alt="After: Front View of Dark Cherry/Mahogany China Cabinet Swung Open Towards Kitchen" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500 text-xs font-bold text-stone-950">2. AFTER: Front View — China Cabinet Opens to Kitchen</div>
+            </div>
+            <div class="p-3.5">
+              <p class="text-xs text-stone-300">From the exact same front-facing view, the entire built-in dark cherry / mahogany glass-front China Cabinet swings open outward TOWARDS the kitchen area on concealed pivot hinges, revealing the glowing antique-brick liquor arches and black marble bar of the Hidden Speakeasy directly behind it.</p>
+            </div>
+          </div>
+
+          <div onclick="openLightbox(7)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="static/images/03_speakeasy_cutaway.jpg?v=a3473282f5?v=77155265af" alt="Inside Speakeasy: Dark Cherry China Cabinet Door Opened Towards House/Kitchen" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500 text-xs font-bold text-stone-950">3. INSIDE: China Cabinet Opened Towards House</div>
+            </div>
+            <div class="p-3.5">
+              <p class="text-xs text-stone-300">Inside the Speakeasy: a single flat straight wall extends from the back pool entrance through the doorway all the way to the wine-cellar stairs &amp; railing, the China Cabinet door is hinged on the right (stair-side) jamb swinging outward into the kitchen (showing its solid dark cherry wood back, matching View B), and looking out into the kitchen shows only the back door &amp; nighttime pool with the glowing Wellness Center.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Bar for Scrollable Grid Below -->
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
+        <div>
+          <h2 class="text-lg sm:text-xl font-bold text-white">Scrollable Room-by-Room Visual Guide</h2>
+          <p class="text-xs sm:text-sm text-stone-400">Filter by zone or scroll down to view every space in high resolution. Tap any photo to enlarge.</p>
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+          <button onclick="filterGallery('all')" id="flt-all" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-stone-950">All (27)</button>
+          <button onclick="filterGallery('level1')" id="flt-level1" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white">Property &amp; Level 1 Main Home (13)</button>
+          <button onclick="filterGallery('level2')" id="flt-level2" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white">Level 2 West-to-East 5-Room Flow (5)</button>
+          <button onclick="filterGallery('outbuildings')" id="flt-outbuildings" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white">Pool Courtyard, Outbuildings &amp; Wine Tunnel (9)</button>
+        </div>
+      </div>
+
+      <!-- Scrollable Photo Cards Grid -->
+      <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+    </section>
+
+    <!-- ==================== TAB 2: INTERACTIVE 3-LEVEL FLOOR PLANS ==================== -->
+    <section id="tab-floorplan" class="hidden space-y-6">
+      <div class="bg-stone-900 border border-stone-800 rounded-2xl p-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div>
+          <h2 class="text-lg sm:text-xl font-bold text-white">Interactive 3-Level Architectural Floor Plans</h2>
+          <p class="text-xs sm:text-sm text-stone-400 mt-0.5">Updated to 100% match all current room renderings. Click any room on the floor plan to inspect dimensions, ceiling heights, and custom features.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5 bg-stone-950 p-1.5 rounded-xl border border-stone-800 self-start">
+          <button id="btn-floor-1" onclick="switchFloor(1)" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-amber-500 text-stone-950 shadow">
+            Level 1: Main House &amp; 3-Car Garage
+          </button>
+          <button id="btn-floor-2" onclick="switchFloor(2)" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-stone-400 hover:text-white">
+            Level 2: Dual-Suite Primary Floor
+          </button>
+          <button id="btn-floor-3" onclick="switchFloor(3)" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-stone-400 hover:text-white">
+            Outbuildings: 3-Bed Guest House, Wellness &amp; Barn
+          </button>
+        </div>
+      </div>
+
+      <div id="metrics-bar" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <!-- SVG Floor Plan (7 cols) -->
+        <div class="lg:col-span-7 bg-stone-900 border border-stone-800 rounded-2xl p-4 sm:p-5">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h3 id="floor-title" class="text-base font-bold text-white">First Floor Schematic (~6,050 Sq Ft + 3-Car Attached Garage)</h3>
+              <p id="floor-subtitle" class="text-xs text-stone-400">Large Open Kitchen (22' Island) • 15' Separation to Living Room • Velvet Couch Theater • 'Mad Men' Office</p>
+            </div>
+            <button id="speakeasy-toggle" onclick="toggleSpeakeasy()" class="px-3 py-1.5 rounded-lg text-xs font-semibold border border-amber-500/40 bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 transition">
+              🍸 Open Single Secret Door
+            </button>
+          </div>
+
+          <div id="compass-top" class="text-center text-xs font-medium text-stone-400 py-1.5 mb-2 rounded-lg bg-stone-950 border border-stone-800">
+            ▲ REAR COURTYARD POOL, SUNKEN FIRE PIT, 3-BED GUEST HOUSE &amp; WELLNESS / HEALTH FACILITY ▲
+          </div>
+
+          <!-- Floor 1 SVG: 100% ALIGNED WITH LARGE OPEN KITCHEN (22' ISLAND), 15' SEPARATION, VELVET COUCH THEATER & "MAD MEN" OFFICE -->
+          <div id="svg-floor-1" class="w-full overflow-x-auto">
+            <svg viewBox="0 0 800 560" class="w-full h-auto rounded-xl border border-stone-800 bg-stone-950 text-stone-100">
+              <rect x="180" y="8" width="440" height="30" rx="6" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.5)" stroke-dasharray="4 2"/>
+              <text x="400" y="27" text-anchor="middle" fill="currentColor" class="text-xs opacity-85" font-size="11.5">▲ REAR COVERED VERANDA &amp; POOL TERRACE (20' STEEL GRID DOORS FROM LIVING ROOM, SPEAKEASY &amp; SUITE 3) ▲</text>
+
+              <!-- FAR-LEFT WING: Attached 3-Car Side-Load Garage & Mudroom -->
+              <g onclick="selectRoom('garage')" class="cursor-pointer">
+                <rect id="room-garage" x="15" y="46" width="90" height="154" rx="8" fill="rgba(148, 163, 184, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="60" y="95" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">ATTACHED</text>
+                <text x="60" y="111" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">3-CAR GARAGE</text>
+                <text x="60" y="129" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">Side-Load Doors</text>
+                <text x="60" y="145" text-anchor="middle" fill="currentColor" opacity="0.75" font-size="10.5">+ EV Chargers</text>
+                <text x="60" y="161" text-anchor="middle" fill="currentColor" opacity="0.7" font-size="10.5">+ Dog-Wash Mudroom</text>
+              </g>
+
+              <!-- LEFT WING REAR: Dedicated Cinema / Theater Room (Two Rows of Burgundy Velvet Couches Facing Screen) -->
+              <g onclick="selectRoom('theater')" class="cursor-pointer">
+                <rect id="room-theater" x="112" y="46" width="85" height="154" rx="8" fill="rgba(139, 92, 246, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="154" y="84" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">THEATER</text>
+                <text x="154" y="100" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">22' × 18' • 150" 4K</text>
+                <text x="154" y="116" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• 2 Rows Burgundy</text>
+                <text x="154" y="129" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">  Velvet Couches</text>
+                <text x="154" y="143" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9">• Both Face Screen</text>
+                <text x="154" y="156" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">• 1st Row Closer</text>
+                <text x="154" y="169" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">  to Movie Screen</text>
+              </g>
+
+              <!-- LEFT WING MIDDLE: Guest Suite 2 (Daybed & Flat-Screen Viewing Lounge Suite) -->
+              <g onclick="selectRoom('bed2')" class="cursor-pointer">
+                <rect id="room-bed2" x="15" y="208" width="182" height="128" rx="8" fill="rgba(16, 185, 129, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="106" y="242" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">GUEST SUITE 2 (DAYBED)</text>
+                <text x="106" y="259" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">16' × 15' • Plush Daybed Lounge</text>
+                <text x="106" y="275" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• 85" Flat-Screen Viewing Wall</text>
+                <text x="106" y="291" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10">• Layered Plush Pillows &amp; Bolsters</text>
+                <text x="106" y="307" text-anchor="middle" fill="currentColor" opacity="0.75" font-size="10">• Private Calacatta En-Suite Bath</text>
+              </g>
+
+              <!-- LEFT WING FRONT: "Mad Men" Executive Office & Library (Flush TV Above Fireplace & No Ladder) -->
+              <g onclick="selectRoom('office')" class="cursor-pointer">
+                <rect id="room-office" x="15" y="344" width="182" height="148" rx="8" fill="rgba(59, 130, 246, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="106" y="376" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">"MAD MEN" OFFICE</text>
+                <text x="106" y="392" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">&amp; WALNUT LIBRARY</text>
+                <text x="106" y="410" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Limestone Fireplace +</text>
+                <text x="106" y="423" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">  Flush Flatscreen TV Above (L)</text>
+                <text x="106" y="439" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Walnut Shelves (No Ladder)</text>
+                <text x="106" y="455" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Whiskey Decanter Bar</text>
+                <text x="106" y="471" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10">• Eames Chairs &amp; Desk</text>
+              </g>
+
+              <!-- HIDDEN SPEAKEASY BAR (Directly Behind Solid Kitchen Range Wall on Back-Left) -->
+              <g onclick="selectRoom('speakeasy')" class="cursor-pointer">
+                <rect id="room-speakeasy" x="205" y="46" width="182" height="114" rx="8" fill="rgba(217, 119, 6, 0.28)" stroke="currentColor" stroke-width="2" stroke-dasharray="6 3"/>
+                <text x="296" y="70" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">HIDDEN SPEAKEASY BAR</text>
+                <text x="296" y="86" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• Rear: French Doors to Night Pool</text>
+                <text x="296" y="101" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• High Center Brick TV Between</text>
+                <text x="296" y="114" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  2 Backlit Brick Liquor Arches</text>
+                <text x="296" y="129" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• Secret China Cabinet Door</text>
+                <text id="speakeasy-door-label" x="296" y="143" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">  Opens Towards Kitchen + Stair Rail</text>
+              </g>
+
+              <!-- SOLID PERMANENT WALL BETWEEN KITCHEN RANGE & SPEAKEASY BAR -->
+              <rect x="205" y="160" width="116" height="10" fill="currentColor" fill-opacity="0.55"/>
+              <text x="263" y="168" text-anchor="middle" fill="#0c0a09" font-weight="700" font-size="7.5">SOLID RANGE / BAR WALL</text>
+
+              <!-- SECRET CHINA CABINET DOOR (Swings Outward Towards the Kitchen Area) -->
+              <g onclick="selectRoom('scullery')" class="cursor-pointer">
+                <rect id="room-scullery" x="323" y="162" width="64" height="82" rx="6" fill="rgba(168, 85, 247, 0.24)" stroke="currentColor" stroke-width="1.8"/>
+                <rect id="secret-door-marker" x="330" y="156" width="50" height="10" rx="3" fill="#f59e0b" stroke="currentColor" stroke-width="1.5"/>
+                <text x="355" y="185" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9">CHINA</text>
+                <text x="355" y="198" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9">CABINET</text>
+                <text x="355" y="213" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Secret Door</text>
+                <text x="355" y="225" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Opens Toward</text>
+                <text x="355" y="237" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Kitchen Area</text>
+              </g>
+
+              <!-- DINING ROOM AREA & BACK DOOR TO POOL (Back of Great Room Near Speakeasy & Back Door) -->
+              <g onclick="selectRoom('staircase')" class="cursor-pointer">
+                <rect id="room-staircase" x="395" y="46" width="222" height="120" rx="8" fill="rgba(236, 72, 153, 0.20)" stroke="currentColor" stroke-width="2"/>
+                <text x="506" y="72" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">DINING ROOM &amp; BACK DOOR</text>
+                <text x="506" y="89" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10.5">(Opposite Side Near Speakeasy &amp; Pool)</text>
+                <text x="506" y="108" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• Wood Dining Table &amp; Chairs</text>
+                <text x="506" y="124" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• 20' Black-Steel Pool Window</text>
+                <text x="506" y="140" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  &amp; Back Door to Pool Terrace</text>
+              </g>
+
+              <!-- LEFT SIDE OF GREAT ROOM: Large Open-Concept Elite Chef's Kitchen (36'×26' w/ 22' Extra-Long Calacatta Verde/Viola Island — @builtbycarlene Instagram Video Style) -->
+              <g onclick="selectRoom('kitchen')" class="cursor-pointer">
+                <path id="room-kitchen" d="M 205 172 L 319 172 L 319 248 L 392 248 L 392 492 L 205 492 Z" fill="rgba(14, 165, 233, 0.20)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="262" y="192" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">60" Range, Zellige Tile</text>
+                <text x="262" y="205" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">&amp; Fluted Glass Uppers</text>
+                <text x="262" y="220" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">+ 32°F Oyster Raw Bar &amp; Oak Portal</text>
+                <rect x="275" y="256" width="106" height="142" rx="4" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.5"/>
+                <text x="328" y="286" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">EXTRA-LONG 22'</text>
+                <text x="328" y="301" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">Calacatta Verde/</text>
+                <text x="328" y="316" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">Viola Slab Island</text>
+                <text x="328" y="334" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Dark Cherry Base + LED</text>
+                <text x="328" y="348" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">6 Cream Split-Back Stools</text>
+                <text x="298" y="420" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">LARGE OPEN KITCHEN</text>
+                <text x="298" y="436" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">36' × 26' • 22' Calacatta Verde Island</text>
+                <text x="298" y="451" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">All Dark Cherry / Mahogany Wood</text>
+              </g>
+
+              <!-- 15-FOOT WIDE-PLANK OAK GALLERY SEPARATION WALKWAY BETWEEN KITCHEN ISLAND & LIVING ROOM -->
+              <rect x="394" y="172" width="38" height="320" rx="4" fill="rgba(251, 191, 36, 0.10)" stroke="rgba(251, 191, 36, 0.45)" stroke-dasharray="4 3"/>
+              <text x="413" y="330" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5" transform="rotate(-90 413 330)">◄ 15-FT OPEN OAK FLOOR SEPARATION WALKWAY ►</text>
+
+              <!-- RIGHT & FRONT SIDE OF GREAT ROOM: Living Room, Curved Grand Staircase & Front Entry Door -->
+              <g onclick="selectRoom('greatroom')" class="cursor-pointer">
+                <rect id="room-greatroom" x="434" y="172" width="183" height="320" rx="8" fill="rgba(245, 158, 11, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <rect x="603" y="235" width="10" height="110" rx="3" fill="currentColor" fill-opacity="0.30"/>
+                <path d="M 595 455 Q 612 395 570 345" fill="none" stroke="currentColor" stroke-opacity="0.6" stroke-width="3" stroke-dasharray="4 3"/>
+                <text x="522" y="205" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">LIVING ROOM /</text>
+                <text x="522" y="222" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">SOARING GREAT ROOM</text>
+                <text x="522" y="241" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10.5">32' × 26' • 15' From Kitchen</text>
+                <text x="522" y="262" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Cream Slipcovered Sofa</text>
+                <text x="522" y="277" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">  (15' Past 22' Island)</text>
+                <text x="522" y="295" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Dark Brown Leather Club</text>
+                <text x="522" y="310" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">  Chairs &amp; Wood Coffee Table</text>
+                <text x="522" y="328" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Wall: Limestone Fireplace</text>
+                <text x="522" y="343" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">  &amp; 85" Mounted TV</text>
+                <text x="522" y="364" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Curved Grand Staircase</text>
+                <rect x="442" y="446" width="166" height="38" rx="6" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.2"/>
+                <text x="525" y="463" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">▼ FRONT OF HOME &amp; FRONT DOOR ▼</text>
+                <text x="525" y="478" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">Arched Iron Front Door &amp; 20' Window</text>
+              </g>
+
+              <!-- RIGHT WING: Guest Suites 3 & 4 -->
+              <g onclick="selectRoom('bed3')" class="cursor-pointer">
+                <rect id="room-bed3" x="625" y="46" width="160" height="214" rx="8" fill="rgba(16, 185, 129, 0.18)" stroke="currentColor" stroke-width="1.5"/>
+                <text x="705" y="122" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">GUEST SUITE 3</text>
+                <text x="705" y="140" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">17' × 15' • Poolside</text>
+                <text x="705" y="158" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10.5">• French Doors to Pool</text>
+                <text x="705" y="174" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10.5">• Calacatta En-Suite Bath</text>
+              </g>
+
+              <g onclick="selectRoom('bed4')" class="cursor-pointer">
+                <rect id="room-bed4" x="625" y="268" width="160" height="224" rx="8" fill="rgba(16, 185, 129, 0.18)" stroke="currentColor" stroke-width="1.5"/>
+                <text x="705" y="342" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">GUEST SUITE 4</text>
+                <text x="705" y="359" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">(Garden Loggia Suite)</text>
+                <text x="705" y="378" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• Limestone Fireplace (L)</text>
+                <text x="705" y="394" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• 4-Poster White-Oak Bed</text>
+                <text x="705" y="410" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• Doors to East Veranda</text>
+                <text x="705" y="426" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10.5">  &amp; Boxwood Hedge Maze</text>
+              </g>
+
+              <!-- FRONT CIRCULAR MOTOR COURT & SHREK/FIONA STATUE -->
+              <rect x="180" y="504" width="440" height="44" rx="22" fill="rgba(148, 163, 184, 0.18)" stroke="currentColor" stroke-dasharray="4 2"/>
+              <text x="400" y="523" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">▼ FRONT ARCHED ENTRY • CIRCULAR COBBLESTONE MOTOR COURT ▼</text>
+              <text x="400" y="539" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">Center Shrub Island: ~4.8-Ft Statue of Shrek &amp; Princess Fiona • East Side: Boxwood Hedge Maze</text>
+            </svg>
+          </div>
+
+          <!-- Floor 2 SVG: STRICT WEST-TO-EAST 5-ROOM SEQUENCE MATCHING ALL 5 PHOTOS -->
+          <div id="svg-floor-2" class="w-full overflow-x-auto hidden">
+            <svg viewBox="0 0 800 540" class="w-full h-auto rounded-xl border border-stone-800 bg-stone-950 text-stone-100">
+              <text x="400" y="28" text-anchor="middle" fill="currentColor" class="text-xs opacity-90" font-weight="700" font-size="11.5">◄ WEST TO EAST: 1. MASTER BEDROOM ➔ 2. HER'S BATH (7.3' 2-PERSON TUB) ➔ 3. HER'S CLOSET ➔ 4. HIS CLOSET ➔ 5. HIS BATH (7.3' 2-PERSON TUB) ►</text>
+
+              <g onclick="selectRoom('primarybed')" class="cursor-pointer">
+                <rect id="room-primarybed" x="20" y="50" width="148" height="350" rx="8" fill="rgba(139, 92, 246, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="94" y="76" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5" opacity="0.85">NORTH (LEFT OF PHOTO)</text>
+                <text x="94" y="94" text-anchor="middle" fill="currentColor" font-weight="600" font-size="11">• King Platform Bed</text>
+                <text x="94" y="110" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  &amp; Linen Headboard</text>
+
+                <text x="94" y="168" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13.5">1. UPSTAIRS</text>
+                <text x="94" y="186" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13.5">MASTER BED</text>
+                <text x="94" y="205" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">28' × 22' Vaulted</text>
+                <text x="94" y="225" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">East Door to Bath ➔</text>
+
+                <text x="94" y="315" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10" opacity="0.85">SOUTH (RIGHT OF PHOTO)</text>
+                <text x="94" y="332" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• Limestone Fireplace</text>
+                <text x="94" y="348" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• Espresso Bar &amp; 2nd</text>
+                <text x="94" y="363" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">  Story Roof Windows</text>
+              </g>
+
+              <g onclick="selectRoom('bathA')" class="cursor-pointer">
+                <rect id="room-bathA" x="176" y="50" width="148" height="350" rx="8" fill="rgba(245, 158, 11, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="250" y="76" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5" opacity="0.85">NORTH (LEFT OF PHOTO)</text>
+                <text x="250" y="94" text-anchor="middle" fill="currentColor" font-weight="600" font-size="11">• 10' Fluted Oak</text>
+                <text x="250" y="110" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  Double Vanity</text>
+
+                <text x="250" y="152" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">2. HER'S MARBLE</text>
+                <text x="250" y="168" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">BATHROOM</text>
+                <text x="250" y="187" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5">• 88"×48" (7.3' Long)</text>
+                <text x="250" y="201" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  2-Person Tub (6'8")</text>
+                <text x="250" y="220" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">To Her's Closet ➔</text>
+
+                <rect x="188" y="275" width="124" height="110" rx="6" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.5"/>
+                <text x="250" y="300" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10" opacity="0.85">SOUTH (RIGHT OF PHOTO)</text>
+                <text x="250" y="318" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">SHOWER #1 (10'×8')</text>
+                <text x="250" y="335" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">Calacatta Gold Marble</text>
+                <text x="250" y="351" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">+ Bench &amp; Roof View</text>
+              </g>
+
+              <g onclick="selectRoom('closetWest')" class="cursor-pointer">
+                <rect id="room-closetWest" x="332" y="50" width="148" height="350" rx="8" fill="rgba(236, 72, 153, 0.18)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="406" y="76" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5" opacity="0.85">NORTH (LEFT OF PHOTO)</text>
+                <text x="406" y="94" text-anchor="middle" fill="currentColor" font-weight="600" font-size="11">• 650-Pair 10-Tier</text>
+                <text x="406" y="110" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  Shoe Wall + Ladder</text>
+
+                <text x="406" y="168" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">3. HER'S CLOSET</text>
+                <text x="406" y="186" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">(~1,050 Sq Ft)</text>
+                <text x="406" y="206" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">• 2 Velvet Jewelry</text>
+                <text x="406" y="221" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">  Center Islands</text>
+                <text x="406" y="241" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">To His Closet ➔</text>
+
+                <text x="406" y="315" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10" opacity="0.85">SOUTH (RIGHT OF PHOTO)</text>
+                <text x="406" y="332" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• 95' Glass Couture</text>
+                <text x="406" y="348" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  Gown &amp; Bag Cases</text>
+              </g>
+
+              <g onclick="selectRoom('closetEast')" class="cursor-pointer">
+                <rect id="room-closetEast" x="488" y="50" width="144" height="350" rx="8" fill="rgba(16, 185, 129, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="560" y="76" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5" opacity="0.85">NORTH (LEFT OF PHOTO)</text>
+                <text x="560" y="94" text-anchor="middle" fill="currentColor" font-weight="600" font-size="11">• 470-Pair Sneaker</text>
+                <text x="560" y="110" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  &amp; Boot Wall + Ladder</text>
+
+                <text x="560" y="168" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">4. HIS CLOSET</text>
+                <text x="560" y="186" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">(~900 Sq Ft)</text>
+                <text x="560" y="206" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">• 2 Leather Watch-</text>
+                <text x="560" y="221" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">  Winder Islands</text>
+                <text x="560" y="241" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">To His Bathroom ➔</text>
+
+                <text x="560" y="315" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10" opacity="0.85">SOUTH (RIGHT OF PHOTO)</text>
+                <text x="560" y="332" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• 80' Bronze-Glass</text>
+                <text x="560" y="348" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  Tailored Suit Cases</text>
+              </g>
+
+              <g onclick="selectRoom('bathB')" class="cursor-pointer">
+                <rect id="room-bathB" x="640" y="50" width="140" height="350" rx="8" fill="rgba(14, 165, 233, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <rect x="650" y="65" width="120" height="112" rx="6" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.5"/>
+                <text x="710" y="88" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10" opacity="0.85">NORTH (LEFT OF PHOTO)</text>
+                <text x="710" y="106" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">WALK-IN SHOWER #2</text>
+                <text x="710" y="122" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">Pietra Grey Marble</text>
+                <text x="710" y="138" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">2 Rain Heads + 6 Jets</text>
+
+                <text x="710" y="202" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">5. SEPARATE HIS</text>
+                <text x="710" y="218" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">BATHROOM</text>
+                <text x="710" y="236" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">• 88"×48" (7.3' Long)</text>
+                <text x="710" y="250" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">  Dark Stone 2-Person</text>
+                <text x="710" y="264" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">  Tub (Sized for 6'8")</text>
+
+                <text x="710" y="315" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10" opacity="0.85">SOUTH (RIGHT OF PHOTO)</text>
+                <text x="710" y="332" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• 12' Smoked-Walnut</text>
+                <text x="710" y="348" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  Barber Double Vanity</text>
+              </g>
+
+              <g onclick="selectRoom('mezzanine')" class="cursor-pointer">
+                <rect id="room-mezzanine" x="20" y="412" width="760" height="78" rx="8" fill="rgba(236, 72, 153, 0.16)" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 3"/>
+                <text x="400" y="445" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">GRAND STAIRCASE GALLERY BRIDGE &amp; SHARED LAUNDRY / STEAM VALET</text>
+                <text x="400" y="465" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">Overlooks 24' Living Room &amp; Chef's Kitchen Below • Connects Grand Staircase to Primary Suite &amp; Closets</text>
+              </g>
+
+              <text x="400" y="520" text-anchor="middle" fill="currentColor" class="text-xs opacity-75" font-size="11.5">▼ SOUTH SIDE: 2ND-STORY WINDOWS OVERLOOKING LOWER METAL ROOFLINES &amp; DOUBLE-HEIGHT LIVING ROOM/KITCHEN VOIDS ▼</text>
+            </svg>
+          </div>
+
+          <!-- Floor 3 SVG: OUTBUILDINGS (3-BED GUEST HOUSE, WELLNESS FACILITY, 4-CAR BARN) & SUBTERRANEAN WINE CELLAR TUNNEL -->
+          <div id="svg-floor-3" class="w-full overflow-x-auto hidden">
+            <svg viewBox="0 0 800 540" class="w-full h-auto rounded-xl border border-stone-800 bg-stone-950 text-stone-100">
+              <g onclick="selectRoom('driveway')" class="cursor-pointer">
+                <rect id="room-driveway" x="15" y="22" width="108" height="248" rx="10" fill="rgba(148, 163, 184, 0.25)" stroke="currentColor" stroke-width="2" stroke-dasharray="6 3"/>
+                <text x="69" y="62" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">WEST STONE</text>
+                <text x="69" y="78" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">DRIVEWAY &amp;</text>
+                <text x="69" y="94" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">PERGOLA WALK</text>
+                <text x="69" y="128" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">▲ Barn Court</text>
+                <text x="69" y="148" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">► Wisteria</text>
+                <text x="69" y="162" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  Pergola to Pool</text>
+                <text x="69" y="182" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">▼ Main House</text>
+                <text x="69" y="196" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">  3-Car Garage</text>
+              </g>
+
+              <g onclick="selectRoom('tunnel')" class="cursor-pointer">
+                <rect id="room-tunnel" x="15" y="280" width="108" height="220" rx="10" fill="rgba(217, 119, 6, 0.28)" stroke="currentColor" stroke-width="2"/>
+                <text x="69" y="312" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">SUBTERRANEAN</text>
+                <text x="69" y="327" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">WINE TUNNEL</text>
+                <text x="69" y="344" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">12' × 110' (-12' Elev)</text>
+                <text x="69" y="368" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">◄ Left Stairs UP</text>
+                <text x="69" y="382" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  to Barn</text>
+                <text x="69" y="404" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">► Right Stairs UP</text>
+                <text x="69" y="418" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  to Speakeasy &amp;</text>
+                <text x="69" y="432" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  Guest House</text>
+                <text x="69" y="456" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• 2,000+ Bottles</text>
+                <text x="69" y="470" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Bourbon Vault</text>
+              </g>
+
+              <g onclick="selectRoom('barn')" class="cursor-pointer">
+                <rect id="room-barn" x="135" y="22" width="650" height="142" rx="10" fill="rgba(245, 158, 11, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="460" y="50" text-anchor="middle" fill="currentColor" font-weight="700" font-size="14.5">DETACHED COLLECTOR'S BARN (~2,800 Sq Ft • 4-Vehicle All-Black Fleet)</text>
+                <text x="460" y="72" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="11.5">• L1 Auto Gallery: Black Porsche Panamera (L) • Black-Wrapped Cybertruck (C) • Matte-Black Hummer EV (R) • Black Model Y on Lift</text>
+                <text x="460" y="92" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">• Right-Side Dual Stairs: Foreground Glass-Railed Stairs DOWN to Wine Tunnel + Midground Stairs UP to L2 Loft</text>
+                <text x="460" y="112" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">• L2 Entertainment Loft: Vaulted Timber Billiards Table, Leather Poker Lounge &amp; Backlit Bourbon Tasting Bar</text>
+              </g>
+
+              <g onclick="selectRoom('poolhouse')" class="cursor-pointer">
+                <rect id="room-poolhouse" x="135" y="180" width="350" height="182" rx="10" fill="rgba(14, 165, 233, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="310" y="203" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">3-BED GUEST HOUSE (LENNY KRAVITZ × CB2)</text>
+                <text x="310" y="222" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• L1: Smoked-Walnut &amp; Nero Marquina Kitchen (L),</text>
+                <text x="310" y="237" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  Lounge (C), Bed #1 + Bath #1 + Straight-Up Stairs (No Wrap)</text>
+                <rect x="150" y="249" width="320" height="102" rx="6" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.2"/>
+                <text x="310" y="267" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">L2 UPSTAIRS (GLASS OFFICE OVERLOOKING MAIN HOUSE + 2 BEDS):</text>
+                <text x="310" y="284" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">• 100% Glass-Surrounded "Boss Woman" Office (18'×15')</text>
+                <text x="310" y="299" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">  (Overlooks Double-Height Living &amp; Main House Across Pool)</text>
+                <text x="310" y="315" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Straight-Run Stairs (No Wrap-Around) + 85" TV at Top of Stairs</text>
+                <text x="310" y="331" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Upstairs Guest Bedrooms #2 &amp; #3 + Upstairs Full Bath #2</text>
+              </g>
+
+              <rect x="485" y="245" width="50" height="44" fill="rgba(148, 163, 184, 0.22)" stroke="currentColor" stroke-dasharray="4 2"/>
+              <text x="510" y="271" text-anchor="middle" fill="currentColor" font-size="10.5">Breezeway</text>
+
+              <g onclick="selectRoom('casita')" class="cursor-pointer">
+                <rect id="room-casita" x="535" y="180" width="250" height="182" rx="10" fill="rgba(16, 185, 129, 0.20)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="660" y="204" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">WELLNESS / HEALTH FACILITY</text>
+                <text x="660" y="220" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">(East Breezeway Wing • ~1,600 Sq Ft)</text>
+                <text x="660" y="239" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• L1 Downstairs: Hot Tub, Cedar Sauna &amp;</text>
+                <text x="660" y="253" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  Walk-Through Open Shower Area</text>
+                <text x="660" y="267" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  (Bi-Fold Doors Opening to Pool Area)</text>
+                <rect x="548" y="278" width="224" height="72" rx="6" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.2"/>
+                <text x="660" y="295" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">L2 UPSTAIRS WORKOUT &amp; FULL BATH:</text>
+                <text x="660" y="311" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Workout Facility + Large 85" Flat-Screen TV</text>
+                <text x="660" y="325" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Spin Bikes, Pilates, Bench Press &amp; Treadmills</text>
+                <text x="660" y="339" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">• Complete Upstairs Full Bathroom (Rear Right)</text>
+              </g>
+
+              <g onclick="selectRoom('outdoor')" class="cursor-pointer">
+                <rect id="room-outdoor" x="135" y="378" width="650" height="122" rx="10" fill="rgba(56, 189, 248, 0.26)" stroke="rgba(56, 189, 248, 0.85)" stroke-width="2"/>
+                <rect x="150" y="392" width="185" height="94" rx="6" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.2"/>
+                <text x="242" y="416" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">OUTDOOR SUMMER KITCHEN</text>
+                <text x="242" y="433" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10.5">• Wood-Fired Pizza Oven</text>
+                <text x="242" y="449" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10.5">• Pro Grill &amp; Pergola Bar</text>
+                <text x="242" y="465" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Sunken Limestone Fire Pit</text>
+
+                <text x="555" y="425" text-anchor="middle" fill="currentColor" font-weight="700" font-size="14">RESORT COURTYARD SWIMMING POOL &amp; SPA</text>
+                <text x="555" y="446" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="11.5">• Baja Sun Shelf Loungers • Water-Level Sunken Fire Pit Cabana</text>
+                <text x="555" y="466" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">• Honed French Limestone Coping &amp; Resort Daybeds</text>
+              </g>
+
+              <text x="400" y="524" text-anchor="middle" fill="currentColor" class="text-xs opacity-80" font-size="11.5">▼ CONNECTS SOUTH TO MAIN RESIDENCE LIVING ROOM, SPEAKEASY &amp; CHEF'S KITCHEN VERANDA ▼</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right: Room Detail Inspector & Dual-Suite Shoe Calculator (5 cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-stone-900 border border-stone-800 rounded-2xl p-5">
+            <div class="flex items-center justify-between">
+              <span id="detail-badge" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-500/15 text-amber-400">
+                Level 1 • Architectural Core
+              </span>
+              <span id="detail-dims" class="text-xs font-mono text-stone-400">32' × 26' • 15' From Kitchen</span>
+            </div>
+            <h3 id="detail-title" class="text-lg font-bold mt-2 text-white">Soaring Great Room</h3>
+            <p id="detail-desc" class="text-sm text-stone-300 mt-1 leading-relaxed"></p>
+            <div class="mt-4 pt-4 border-t border-stone-800">
+              <h4 class="text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Key Architectural Specifications</h4>
+              <ul id="detail-specs" class="space-y-2 text-xs sm:text-sm text-stone-200"></ul>
+            </div>
+          </div>
+
+          <div class="bg-stone-900 border border-stone-800 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-bold text-white">👟 Dual Separate Closet &amp; 1,000+ Shoe Planner</h3>
+              <span id="shoe-count-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500 text-stone-950">1,120 Pairs Total</span>
+            </div>
+            <p class="text-xs text-stone-400 mb-3">
+              Adjust the shoe capacity across your two separate Level 2 closet suites:
+            </p>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>"Hers" West Closet Suite 1 Shoe Capacity</span>
+                  <span id="lbl-west-shoes" class="font-semibold text-amber-400">650 Pairs (55' Wall + 2 Islands)</span>
+                </div>
+                <input id="slider-west" type="range" min="400" max="850" step="10" value="650" oninput="updateShoeCalc()" class="w-full accent-amber-500 cursor-pointer" />
+              </div>
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span>"His" East Closet Suite 2 Shoe Capacity</span>
+                  <span id="lbl-east-shoes" class="font-semibold text-amber-400">470 Pairs (37' Wall + 2 Islands)</span>
+                </div>
+                <input id="slider-east" type="range" min="300" max="750" step="10" value="470" oninput="updateShoeCalc()" class="w-full accent-amber-500 cursor-pointer" />
+              </div>
+              <div class="p-3 rounded-xl bg-stone-950 border border-stone-800 text-xs space-y-1">
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Combined Level 2 Shoe Storage:</span>
+                  <span id="calc-total-shoes" class="font-bold text-white">1,120 Pairs (58% West / 42% East)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-stone-400">Dedicated Apparel Hanging Rods:</span>
+                  <span class="font-bold text-white">95 ft (West Suite) + 80 ft (East Suite)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: ARCHITECT'S SPECIFICATION SHEET ==================== -->
+    <section id="tab-specs" class="hidden space-y-6">
+      <div class="bg-stone-900 border border-stone-800 rounded-2xl p-6 space-y-6">
+        <div>
+          <h2 class="text-xl font-bold text-white">Architect's Room-by-Room Specification &amp; Engineering Summary</h2>
+          <p class="text-sm text-stone-400 mt-1">100% synchronized with all 27 current architectural renderings and floor plan schematics.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
+            <h3 class="text-base font-bold text-amber-400">1. Living Room / Soaring Great Room (15-Foot Separation From Kitchen &amp; Front Door View)</h3>
+            <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
+              <li>• <strong>Generous 15-Foot Wide-Plank Oak Gallery Separation:</strong> A <strong>15-foot-wide expanse of open European white-oak flooring</strong> separates the Living Room seating grouping from the 22-foot Kitchen Island so the two rooms never feel crowded together.</li>
+              <li>• <strong>Front of Home &amp; Arched Front Door Sightline (Living Room View):</strong> Looking South through the Living Room frames the grand <strong>arched black wrought-iron double Front Door</strong> and tall multi-pane front windows overlooking the circular cobblestone motor court and center boxwood island.</li>
+              <li>• <strong>100% Consistent Living Room Furniture + Rear Dining Room Table:</strong> Features the exact same <strong>cream slipcovered linen 3-cushion sofa</strong>, <strong>two dark brown distressed leather club armchairs</strong>, and a <strong>chunky rustic reclaimed-wood rectangular coffee table</strong> on a vintage rug—while the <strong>wooden Dining Room Table</strong> sits at the opposite (rear) side of the Great Room near the Hidden Speakeasy and 20-foot Back Door to the pool.</li>
+            </ul>
+          </div>
+
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
+            <h3 class="text-base font-bold text-amber-400">2. Large Open-Concept Elite Chef's Kitchen (Unified Deep Dark Cherry / Mahogany Wood Across All Cabinetry + Secret China Cabinet Door)</h3>
+            <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
+              <li>• <strong>Extra-Long 22-Foot Calacatta Verde / Calacatta Viola Stone Slab Island:</strong> Anchored by a monumental <strong>22-foot-long single-span polished Calacatta Verde / Calacatta Viola Italian marble slab</strong> with a creamy alabaster-white background and dramatic brecciated sage-emerald green, deep burgundy-plum/wine, and warm gold veining, resting on a <strong>rich deep dark cherry / mahogany shaker drawer base</strong> with oversized horizontal brushed-brass bar pulls, a warm glowing LED toe-kick ribbon, <strong>6 plush cream upholstered channel-split-back counter stools</strong>, and <strong>3 cylindrical two-tier ribbed/fluted glass and brushed-brass drum chandeliers</strong> overhead.</li>
+              <li>• <strong>100% Unified Deep Dark Cherry / Mahogany Wood Cabinetry + Secret China Cabinet Door:</strong> Across all kitchen &amp; speakeasy views, every wooden cabinet—the <strong>32°F–34°F Chilled Oyster Raw Bar &amp; Damascus Knife Vault column</strong> (both exterior frame and interior wood backing), the <strong>upper glass-front and lower drawer cabinets around the 60" stove</strong>, the <strong>22-foot island base</strong>, and the <strong>built-in illuminated glass-front China Cabinet at the far end of the kitchen wall (both exterior frame and interior back panels) that swings open outward TOWARDS the kitchen area</strong>—is finished in the <strong>exact same deep, rich dark cherry / mahogany stained wood</strong>.</li>
+              <li>• <strong>60" Black &amp; Brass Pro Gas Range, 2 Wall Ovens &amp; 3-Dishwasher Program:</strong> Accompanied by a 60" black-and-brass gas range with brass pot filler, Flamberge rotisserie, Gaggenau Teppanyaki griddle &amp; wok ring, 2 stacked 30" wall ovens, sous-vide drawer, and 3 dishwashers.</li>
+            </ul>
+          </div>
+
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
+            <h3 class="text-base font-bold text-amber-400">3. Hidden Speakeasy Bar (Dark Cherry / Mahogany Secret China Cabinet Door Opening Towards Kitchen, High Center-Brick TV &amp; Wall-Connected Stair Rail)</h3>
+            <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
+              <li>• <strong>Secret Built-In Dark Cherry / Mahogany China Cabinet Door That Opens Towards the Kitchen Area:</strong> At the far end of the kitchen wall sits a floor-to-ceiling built-in illuminated glass-front China Cabinet crafted in matching deep dark cherry / mahogany wood (inside and out) displaying fine white porcelain dinnerware and crystal stemware; releasing its hidden magnetic latch allows the <strong>entire 1-piece dark cherry / mahogany China Cabinet box to swing open outward TOWARDS the kitchen area</strong> on heavy-duty concealed pivot hinges to reveal the Hidden Speakeasy Bar behind it.</li>
+              <li>• <strong>Left Wall — Mounted TV High on the Center Brick Between the Two Liquor Arches:</strong> Backed against the solid kitchen range wall, featuring two illuminated antique-brick liquor arches flanking a 4K flat-screen TV mounted high on the center brick spandrel above the leathered Nero Marquina marble bar.</li>
+              <li>• <strong>Right Wall &amp; Rear Pool Doors:</strong> Looking from inside the Speakeasy, the open dark cherry / mahogany China Cabinet door is seen outside the brick doorway swung outward onto the kitchen floor toward the house, while the wrought-iron railing for the Wine Cellar Tunnel stairs connects cleanly to the right wall and tall black-steel French doors open to the nighttime pool terrace.</li>
+            </ul>
+          </div>
+
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
+            <h3 class="text-base font-bold text-amber-400">4. Burgundy Velvet Snuggle-Couch Theater (Both Facing Screen, 1st Closer), "Mad Men" Office &amp; All 3 Downstairs Guest Suites</h3>
+            <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
+              <li>• <strong>Dedicated Home Theater — Two Tiered Rows of Deep Burgundy Velvet Couches BOTH Facing the Screen (First Couch Closer):</strong> Replaces individual leather recliners with <strong>two tiered stadium rows of extra-deep, oversized Vintage Tufted Burgundy Velvet Couches &amp; Twin Chaise Daybeds</strong> positioned horizontally parallel to and facing dead-on straight toward the 150" 4K CinemaScope laser screen—with the <strong>first (front-row) channel-tufted deep burgundy/merlot velvet couch positioned closer to the screen</strong> on the lower level and the matching second (rear-row) button-tufted deep burgundy/merlot velvet couch elevated on the stadium riser behind it.</li>
+              <li>• <strong>"Mad Men" Mid-Century Modern Office &amp; Library (Front-Left Wing):</strong> Features a sleek <strong>flush-mounted 4K OLED flat-screen TV recessed cleanly into the stone overmantel above the carved French limestone fireplace</strong> on the left, unobstructed walnut bookcases with zero ladder (for your 6'8" reach), and a crystal whiskey decanter bar.</li>
+              <li>• <strong>All 3 Downstairs Guest Bedroom Suites Shown Individually:</strong> (1) <strong>Guest Suite #2 (West Wing Daybed &amp; 85" Flat-Screen Viewing Lounge Suite)</strong>; (2) <strong>Poolside Guest Suite #3</strong>; and (3) <strong>Garden Loggia Suite #4</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
+            <h3 class="text-base font-bold text-amber-400">5. Level 2 Primary Floor — Oversized 88"×48" (7.3') Two-Person Tubs (Sized for 6'8") in Both Baths</h3>
+            <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
+              <li>• <strong>Strict West-to-East Linear Sequence (~3,800 Sq Ft):</strong> <strong>1. Upstairs Master Bedroom (West End) ➔ 2. Her's Marble Bathroom ➔ 3. Her's Closet ➔ 4. His Closet ➔ 5. Separate His Bathroom (East End)</strong>.</li>
+              <li>• <strong>Step 2 (Her's Calacatta Gold Marble Bath) — 88" × 48" × 26" Two-Person Tub (Sized for 6'8"):</strong> Features a monumental custom <strong>7.3-foot-long by 4-foot-wide carved white Calacatta stone two-person soaking tub</strong> with dual sloped ergonomic backrests engineered for a 6'8" frame and two bathers, flanked by a 10' fluted oak double vanity and 10'×8' Walk-In Rain/Steam Shower.</li>
+              <li>• <strong>Step 5 (His Dark Pietra Grey Marble Bath) — 88" × 48" × 26" Two-Person Tub (Sized for 6'8"):</strong> Features a matching monumental <strong>7.3-foot-long by 4-foot-wide honed dark charcoal Pietra Grey stone two-person soaking tub</strong> (engineered for 6'8" full-body immersion for two), flanked by a 10'×8' dark marble Walk-In Shower (left) and 12' smoked-walnut barber double vanity (right).</li>
+            </ul>
+          </div>
+
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
+            <h3 class="text-base font-bold text-amber-400">6. Lenny Kravitz × CB2 3-Bedroom Guest House (Straight-Up Stairs &amp; 100% Glass-Surrounded Boss Woman Office Overlooking Main House), 2-Story Wellness Facility &amp; 4-Car Barn</h3>
+            <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
+              <li>• <strong>Two-Story 3-Bedroom, 2-Bathroom Detached Guest House (~2,800 Sq Ft — Straight-Run Stairs &amp; 100% Glass-Surrounded Office Overlooking Main Part of House):</strong> Styled in a soulful <strong>Lenny Kravitz × CB2 ("Kravitz Design for CB2")</strong> 1970s Paris/New York rock-and-roll modernist aesthetic. Across all 3 views, a <strong>single straight-run floating dark-walnut staircase goes 100% straight up (zero wrap-around)</strong> to the flat Level 2 mezzanine, where the <strong>large 100% Glass-Surrounded "Boss Woman" Executive Video-Conference Office (18'×15')</strong> (completely wrapped in floor-to-ceiling black steel-and-glass grid walls) <strong>overlooks both the double-height main living/kitchen room of the Guest House below AND the Main Residence across the swimming pool</strong>! Includes a Kravitz × CB2 fluted smoked-walnut &amp; Nero Marquina Chef's Kitchen, cognac leather &amp; bouclé Living Lounge, <strong>Downstairs Bedroom #1 &amp; Full Bathroom #1</strong>, <strong>Upstairs Bedrooms #2 &amp; #3 + Full Bathroom #2</strong>, and an <strong>85" TV wall</strong> at the top of the straight stairs.</li>
+              <li>• <strong>Two-Story Wellness / Health Facility (~1,600 Sq Ft — East Breezeway Building):</strong> Level 1 features an in-ground bubbling stone <strong>Hot Tub</strong>, <strong>Finnish Cedar Sauna</strong>, and a <strong>Walk-Through Open Shower Area</strong> (fluted travertine wet-deck with dual brass rain heads &amp; zero glass enclosure) opening directly to the pool area; Level 2 houses the <strong>Upstairs Workout Facility with Large 85" Flat-Screen TV</strong> (spin bikes, Reformer Pilates, bench press/dumbbells &amp; treadmills) AND a <strong>Complete Upstairs Full Bathroom</strong>.</li>
+              <li>• <strong>Detached Collector's Barn (4-Vehicle All-Black Fleet) &amp; 110' Subterranean Wine Tunnel:</strong> Showcases your <strong>black Porsche Panamera, black-wrapped Cybertruck, matte-black Hummer EV, and black Tesla Model Y</strong> + Level 2 Bourbon/Billiards Loft + 110' underground Wine Cellar Tunnel.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Full-Screen Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl hidden items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-4 right-4 px-4 py-2 rounded-full bg-stone-800 hover:bg-stone-700 text-white text-xs sm:text-sm font-semibold border border-white/15">
+      ✕ Close (Esc)
+    </button>
+    <button onclick="lightboxPrev()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-stone-900/80 hover:bg-amber-500 hover:text-stone-950 text-white border border-white/20 flex items-center justify-center text-2xl font-bold">
+      ‹
+    </button>
+    <div class="max-w-6xl w-full flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="" class="max-h-[80vh] w-auto rounded-xl shadow-2xl border border-stone-800" />
+      <div class="mt-3 text-center max-w-2xl">
+        <h3 id="lightbox-title" class="text-base sm:text-lg font-bold text-white"></h3>
+        <p id="lightbox-caption" class="text-xs sm:text-sm text-stone-300 mt-1"></p>
+      </div>
+    </div>
+    <button onclick="lightboxNext()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-stone-900/80 hover:bg-amber-500 hover:text-stone-950 text-white border border-white/20 flex items-center justify-center text-2xl font-bold">
+      ›
+    </button>
+  </div>
+
+  <script>
+    const slides = [
+      {
+        src: "static/images/00a_overall_property_aerial.jpg?v=2e279ed7b2?v=2e279ed7b2",
+        category: "level1",
+        zone: "1. Overall Property View",
+        badge: "Full Acreage & Estate Boundary",
+        title: "Overall Property View — Fields, Hedge Maze & Estate Compound",
+        dims: "Full Acreage Boundary • Agricultural Rows, Live Oaks & Formal Gardens",
+        desc: "Wide aerial view showing the entire property boundary: rolling agricultural rows on the left, the tree-lined entrance drive, the formal English boxwood hedge maze on the right, and the residential compound backed by mature forest.",
+        highlights: [
+          "Private gated entrance drive winds beneath mature live oaks into the circular motor court.",
+          "Expansive agricultural fields on the west and formal English boxwood maze on the east.",
+          "Main Residence, Pool Courtyard, Pool House, Breezeway Spa, and Collector's Barn aligned on a south-to-north axis."
+        ]
+      },
+      {
+        src: "static/images/00b_closeup_estate_exterior.jpg?v=0bff768cba?v=0bff768cba",
+        category: "level1",
+        zone: "2. Closer-Up Home Exterior",
+        badge: "Reference Architecture • ~15,200 Sq Ft Compound",
+        title: "Closer-Up View of the Main Home, Pool Courtyard & Outbuildings",
+        dims: "Main Residence (~9,400 Sq Ft) + Outbuildings (~5,800 Sq Ft)",
+        desc: "Closer aerial view of the Modern European estate featuring steep standing-seam metal gables, painted brick and limewash plaster, twin monumental black steel grid windows, central arched iron entry, courtyard pool, two-story pool house, east breezeway wing, and upper collector's barn.",
+        highlights: [
+          "Center-Left & Center-Right Gables house the 24-ft Great Room and Open Chef's Kitchen.",
+          "Far-Left Wing houses the Executive Office, Theater Room, and Side-Load 3-Car Attached Garage.",
+          "Entire Second Floor of the Main Residence is dedicated to the Primary Suite."
+        ]
+      },
+      {
+        src: "static/images/00c_motor_court_boxwood_maze.jpg?v=fbfd8832b3?v=fbfd8832b3",
+        category: "level1",
+        zone: "3. Motor Court & Shrek/Fiona Statue",
+        badge: "Front Estate Arrival • Circular Driveway Centerpiece (~4.8 Ft Tall)",
+        title: "Circular Motor Court Centerpiece — 4.8-Foot Statue of Shrek & Princess Fiona Surrounded by Shrubs",
+        dims: "Belgian Cobblestone Circular Driveway • ~4.8 Ft Stone/Bronze Statue + Hedge Maze",
+        desc: "Centered inside the Belgian cobblestone circular driveway right in front of the ivy-clad limestone entry arch stands a custom ~4.8-foot-tall sculpted garden statue of Shrek and Princess Fiona standing side-by-side holding hands, surrounded by manicured green boxwood shrubs and white hydrangeas.",
+        highlights: [
+          "Circular Driveway Centerpiece: ~4.8-foot-tall statue (strictly under 5 feet) of Shrek and Princess Fiona on a low carved limestone plinth surrounded by manicured boxwood shrubs in the middle of the circular driveway.",
+          "Formal English Boxwood Hedge Maze with crushed limestone garden paths on the right.",
+          "Ivy-draped carved limestone front entry arch with double wrought-iron doors flanked by twin 20-foot steel grid windows."
+        ]
+      },
+      {
+        src: "static/images/01a_living_room_great_room.jpg?v=545b3c368d?v=545b3c368d",
+        category: "level1",
+        zone: "Level 1 (Living Room — 15' Separation & Front Door)",
+        badge: "Level 1 • 15' Open Floor Separation From Dark Cherry / Mahogany Kitchen • Arched Front Door View",
+        title: "Living Room View from the Soaring Great Room — Generous 15-Foot Open Oak Floor Separation From the Dark Cherry / Mahogany Kitchen & 22-Foot Calacatta Verde/Viola Island, Looking Toward the Arched Front Door",
+        dims: "32' × 26' Living Room • 15' Open Oak Floor Separation • Unified Dark Cherry / Mahogany Kitchen Cabinetry",
+        desc: "Standing inside the Soaring Great Room looking South toward the Front of the Home and the Arched Wrought-Iron Front Door: a generous 15-foot-wide expanse of open wide-plank European white-oak flooring cleanly separates the Living Room seating grouping from the 22-foot Calacatta Verde/Viola marble Kitchen Island on the right, with all kitchen cabinetry—the Oyster Raw Bar & Damascus Knife Vault column, stove cabinetry, and island base—finished in the same rich dark cherry / mahogany stained wood.",
+        highlights: [
+          "Unified Dark Cherry / Mahogany Wood Throughout Kitchen + 15' Separation: Every wooden cabinet on the right—the 32°F–34°F Chilled Oyster Raw Bar & Knife Vault column, the stove cabinetry, and the 22-foot Calacatta Verde/Viola marble island base—is crafted in rich dark cherry / mahogany stained wood, separated from the Living Room sofa by 15 feet of open oak floor.",
+          "Background (Front of Home & Arched Front Door): Grand arched black wrought-iron double Front Door and multi-pane front windows looking out to the circular Belgian cobblestone driveway and center shrub island.",
+          "100% Consistent Living Room Furniture & Left Wall: Cream slipcovered linen 3-cushion sofa, two dark brown distressed leather club armchairs, and rustic reclaimed-wood coffee table facing the carved French limestone fireplace, 85-inch TV, and curved Grand Staircase."
+        ]
+      },
+      {
+        src: "static/images/01_great_room_kitchen.jpg?v=e8d1005dd2?v=e8d1005dd2",
+        category: "level1",
+        zone: "Level 1 (Large Open Kitchen — Dark Cherry / Mahogany)",
+        badge: "Level 1 • Unified Dark Cherry / Mahogany Cabinetry • 22' Calacatta Verde/Viola Island, 32°F Oyster Bar & China Cabinet Door",
+        title: "Expanded Open-Concept Elite Chef's Kitchen — Unified Rich Dark Cherry / Mahogany Wood Cabinetry, 22-Foot Calacatta Verde/Viola Stone Slab Island, Sleek Matte-Black & Brass Hood, 32°F–34°F Oyster Raw Bar Vitrine & Built-In China Cabinet Secret Door",
+        dims: "36' × 26' Large Open Kitchen • All Dark Cherry / Mahogany Wood • 22' Calacatta Verde/Viola Island",
+        desc: "The enlarged 36' × 26' open-concept Elite Chef's Kitchen on the left features unified rich dark cherry / mahogany wood across every cabinet—including the foreground-left 32°F–34°F Oyster Raw Bar & Damascus Knife Vault column, the upper glass-front & lower drawer cabinets around the 60\" black-and-brass range, the 22-foot Calacatta Verde/Viola marble island base, and the built-in illuminated glass-front China Cabinet (secret Speakeasy door) at the far end of the left kitchen wall.",
+        highlights: [
+          "100% Unified Rich Dark Cherry / Mahogany Wood Cabinetry: The Oyster Raw Bar & Damascus Knife Vault column, stove upper/lower cabinets, 22-foot island base, and built-in China Cabinet Speakeasy entry are all finished in the exact same deep dark cherry / mahogany stained wood.",
+          "Extra-Long 22-Foot Calacatta Verde / Viola Stone Slab Island & 15' Separation: Monumental single-span stone slab with brecciated green, burgundy-plum, and gold veining on a dark cherry / mahogany base with warm LED toe-kick lighting, 6 plush cream channel-split-back stools, and 3 ribbed glass & brass drum chandeliers.",
+          "Built-In Dark Cherry / Mahogany Illuminated China Cabinet (Secret Speakeasy Door at Far End of Kitchen Wall): Positioned at the far end of the left kitchen wall next to the 20' black-steel pool window, displaying fine porcelain china dinnerware and crystal stemware on warm LED-lit shelves while concealing the Hidden Speakeasy Bar behind it."
+        ]
+      },
+      {
+        src: "static/images/02a_speakeasy_door_closed.jpg?v=cb48bdaa79?v=cb48bdaa79",
+        category: "level1",
+        zone: "Speakeasy (1. BEFORE: Front of China Cabinet Closed)",
+        badge: "Level 1 • Front View of Dark Cherry / Mahogany China Cabinet Secret Entrance (CLOSED)",
+        title: "Before (Shown from Front of China Cabinet — Closed): Floor-to-Ceiling Built-In Dark Cherry / Mahogany Illuminated Glass-Front China Cabinet Sitting Flush in the Kitchen Wall Next to the Matching Dark Cherry / Mahogany Stove Area & Island",
+        dims: "Front View of Dark Cherry / Mahogany China Cabinet (Closed) • Matching Stove Wall (Left) • Calacatta Verde/Viola Island (Foreground)",
+        desc: "Viewed directly from the front of the China Cabinet at the north end of the kitchen wall next to the 20-foot black-steel window: the floor-to-ceiling built-in dark cherry / mahogany glass-front China Cabinet (displaying fine white-and-gold porcelain dinnerware, soup tureens, and crystal stemware on warm LED-lit shelves) sits completely flush and closed in the wall, flanked on the left by the matching dark cherry / mahogany stove cabinetry, matte-black & brass tapered hood, 60\" black-and-brass range, and Calacatta Verde/Viola marble island.",
+        highlights: [
+          "Direct Front-Facing View of the Secret China Cabinet (Closed): Shows the full 4-bay dark cherry / mahogany glass-front China Cabinet from the front, displaying fine white-and-gold porcelain plates, soup tureens, bowls, and crystal stemware on warm LED-lit shelves.",
+          "100% Matching Dark Cherry / Mahogany Kitchen Cabinetry: The China Cabinet, the upper glass-front & lower drawer cabinets around the 60\" stove on the left, and the Calacatta Verde/Viola marble island base in the foreground are all finished in the same rich dark cherry / mahogany wood.",
+          "Complete Visual Disguise: Sitting flush against the wall beside the 20-foot black-steel window, the closed China Cabinet completely conceals the Hidden Speakeasy Bar behind it."
+        ]
+      },
+      {
+        src: "static/images/02_speakeasy_door.jpg?v=deaf2492ce?v=deaf2492ce",
+        category: "level1",
+        zone: "Speakeasy (2. AFTER: Front of China Cabinet Open)",
+        badge: "Level 1 • Front View of Dark Cherry / Mahogany China Cabinet Swinging OPEN Towards the Kitchen",
+        title: "After (Shown from Front of China Cabinet — Open Towards Kitchen): Exact Same Front View with the Dark Cherry / Mahogany Illuminated China Cabinet Swung Open Outward TOWARDS the Kitchen to Reveal the Hidden Speakeasy Bar",
+        dims: "Concealed Heavy-Duty Pivot Hinges • Dark Cherry / Mahogany China Cabinet Opens Towards Kitchen • Reveals Speakeasy Bar",
+        desc: "From the exact same front-facing camera angle: the entire floor-to-ceiling dark cherry / mahogany illuminated glass-front China Cabinet (with its white-and-gold porcelain china plates, soup tureens, and crystal stemware still displayed inside its lit shelves) swings open outward TOWARDS the kitchen area on concealed heavy-duty pivot hinges—revealing the glowing antique-brick liquor arches, backlit crystal whiskey decanters, and black marble bar of the Hidden Speakeasy Bar directly behind it!",
+        highlights: [
+          "Front-Facing Secret China Cabinet Swinging Outward Towards the Kitchen: The entire dark cherry / mahogany glass-front China Cabinet pivots forward out from its wall opening toward the kitchen island.",
+          "Direct Reveal of the Hidden Speakeasy Bar Behind the China Cabinet: Through the wall opening vacated by the swung-open China Cabinet, you look directly into the Speakeasy's glowing antique-brick liquor arches, backlit brass whiskey shelves, and black marble bar with tufted leather barstools.",
+          "100% Identical Kitchen Surroundings: The dark cherry / mahogany stove cabinetry, matte-black & brass range hood, 60\" black-and-brass range, and Calacatta Verde/Viola marble island remain 100% identical to the closed view."
+        ]
+      },
+      {
+        src: "static/images/03_speakeasy_cutaway.jpg?v=a3473282f5?v=77155265af",
+        category: "level1",
+        zone: "Speakeasy (3. Inside: Straight Wall to Stairs & Right-Jamb Door Swing)",
+        badge: "Level 1 • Inside Speakeasy: Straight Wall Extending to Stairs + China Cabinet Hinged on Right (Stair-Side) Jamb Swinging Into Kitchen",
+        title: "Inside the Speakeasy Bar — Single Straight Wall Extending All the Way to the Stairs, China Cabinet Hinged on Right Stair-Side Jamb Swinging Outward Into Kitchen (Matching View B) & Nighttime Pool + Wellness Center View",
+        dims: "18' × 14' • Single Straight Wall to Stairs + Right-Hinged China Cabinet Back + Nighttime Pool & Wellness Center",
+        desc: "Standing inside the moody Speakeasy Bar looking toward the back pool entrance: the entire right wall is a single flat, straight 1-point perspective wall extending continuously from the back pool entrance through the tall rectangular dark cherry / mahogany doorway frame all the way to the wine-tunnel stairs and wrought-iron railing. Referencing View B from the kitchen (where the pool window is on the right and the China Cabinet is hinged on the jamb away from the pool), from inside the Speakeasy the China Cabinet door is hinged on the right (stair-side) jamb and swings outward into the kitchen—showing only its solid dark cherry / mahogany paneled wood back. Looking out the open door into the kitchen shows only the kitchen's tall black-steel back door and the nighttime swimming pool with the Two-Story Wellness Center glowing in the background.",
+        highlights: [
+          "Single Flat Straight Wall Extending to the Stairs: The right wall runs in one unbroken 1-point perspective plane from the back pool entrance through the dark cherry doorway frame all the way to the wine-cellar stairs and wrought-iron stair railing (with zero angled wall or corner step-back).",
+          "Correct Right-Jamb China Cabinet Swing (Matching View B from the Kitchen): Hinged on the right (foreground / stair-side) jamb on the kitchen side of the doorway and swinging outward into the kitchen, showing only its solid deep dark cherry / mahogany paneled wood back (zero china dishes facing the Speakeasy).",
+          "Kitchen Back Door & Nighttime Pool + Wellness Center View: Looking out the open doorway across continuous European white-oak flooring into the kitchen shows only the kitchen's tall black-steel back door and the nighttime swimming pool with the Two-Story Wellness Center glowing across the water."
+        ]
+      },
+      {
+        src: "static/images/04a_master_bedroom.jpg?v=603f1609d8?v=603f1609d8",
+        category: "level2",
+        zone: "Level 2 (1. Upstairs Master Bedroom)",
+        badge: "Level 2 (West ➔ East: Room 1 of 5) • Upstairs Second-Story Roofline & Treetop View",
+        title: "1. Upstairs Master Bedroom (West End) — Second-Story Windows Overlooking Lower Metal Roof & Treetops, Looking East Into the Marble Bathroom",
+        dims: "28' × 22' • 16' Vaulted White-Oak Beamed Ceiling, Fireplace & Upstairs Roofline Sightline",
+        desc: "Starting at the far west end of the second floor inside the Upstairs Master Bedroom: the king platform bed in Belgian linen sits on the left and the carved French limestone fireplace, lounge seating, and raised second-story windows overlooking the lower sloped standing-seam metal roofline and upper tree canopies sit on the right, looking directly east into the Upstairs Marble Bathroom, Her's Closet, His Closet, and Separate His Bathroom.",
+        highlights: [
+          "Left Side (North Wall): Custom king platform bed in layered Belgian linen with floating oak nightstands, brass reading sconces, and upholstered bench.",
+          "Right Side (South Wall — True Upstairs Perspective): Hand-carved French limestone fireplace, swivel bouclé lounge chairs, and raised second-story black-steel windows looking down over the lower metal roofline and upper treetops.",
+          "East Sightline (1 ➔ 2 ➔ 3 ➔ 4 ➔ 5): Wide arched opening leads directly east into the Upstairs Marble Bathroom (Room 2), Her's Closet (Room 3), His Closet (Room 4), and Separate His Bathroom (Room 5)."
+        ]
+      },
+      {
+        src: "static/images/05_hers_west_bath.jpg?v=6264129db8?v=6264129db8",
+        category: "level2",
+        zone: "Level 2 (2. Her's Bath — 7.3' 2-Person Tub)",
+        badge: "Level 2 (West ➔ East: Room 2 of 5) • 88\"×48\" (7.3') Two-Person Tub Engineered for 6'8\"",
+        title: "2. Her's Upstairs Marble Bathroom — Monumental 88\"×48\" (7.3-Foot) Two-Person Soaking Tub (Engineered for 6'8\"), 10' Fluted Vanity & 10'×8' Walk-In Shower",
+        dims: "22' × 16' • Groin-Vaulted Ceiling • 88\" × 48\" × 26\" (7.3' Long) 2-Person Calacatta Tub",
+        desc: "Stepping east out of the Master Bedroom directly into Her's Upstairs White & Gold Calacatta Marble Bathroom: the 10-foot fluted oak double vanity sits on the left, a monumental custom 88\" × 48\" × 26\" (7.3-foot-long by 4-foot-wide) two-person carved stone soaking tub engineered for your 6'8\" height sits in the center, and the 10'×8' frameless glass walk-in rain/steam shower sits on the right—opening straight ahead (east) into Her's Closet.",
+        highlights: [
+          "Centerpiece — Custom 88\" × 48\" × 26\" (7.3-Foot-Long) Two-Person Soaking Tub (Sized for 6'8\"): Extra-long, extra-wide, extra-deep carved white Calacatta stone soaking tub with dual sloped ergonomic backrests and a center floor-mounted unlacquered brass filler so two people (including your 6'8\" frame) can recline together with full leg extension.",
+          "Left Wall (North): 10-foot floating fluted white-oak double vanity with Calacatta Gold marble counter, unlacquered brass fixtures, and dual arched backlit mirrors.",
+          "Right Wall (South) & East Sightline: Oversized 10' × 8' frameless glass Walk-In Rain & Steam Shower with second-story window, opening east into Her's Closet (Room 3)."
+        ]
+      },
+      {
+        src: "static/images/04_hers_west_closet.jpg?v=f3ba640f05?v=f3ba640f05",
+        category: "level2",
+        zone: "Level 2 (3. Her's Closet)",
+        badge: "Level 2 (West ➔ East: Room 3 of 5) • Entered From Marble Bathroom • Opens East Into His Closet",
+        title: "3. Her's Closet (650-Pair Shoe & Couture Gallery) — Looking East Into His Closet & Separate His Bathroom",
+        dims: "~1,050 Sq Ft • 10-Tier Shoe Wall (Left) + Couture Gown Wall (Right) + Jewelry Islands",
+        desc: "Positioned immediately east of the Marble Bathroom, Her's Walk-In Closet features 650 pairs of illuminated shoe shelving on the left, velvet jewelry islands in the center, and full-height glass couture wardrobes on the right—opening directly east into His Closet and the Separate His Bathroom beyond.",
+        highlights: [
+          "Left Wall: 55 linear feet of 10-tier LED-lit walnut shoe shelving (650 pairs) with a solid brass rolling library ladder.",
+          "Right Wall & Center: Full-height glass-front couture gown & coat cabinets, two-tier brass hanging rods, and dual velvet jewelry display islands.",
+          "East Sightline (3 ➔ 4 ➔ 5): Looks directly east into His Closet (Room 4) and the Separate His Bathroom (Room 5)."
+        ]
+      },
+      {
+        src: "static/images/06_his_east_closet_bath.jpg?v=5f0f1ed288?v=5f0f1ed288",
+        category: "level2",
+        zone: "Level 2 (4. His Closet)",
+        badge: "Level 2 (West ➔ East: Room 4 of 5) • Entered From Her's Closet • Opens East Into Separate His Bathroom",
+        title: "4. His Closet (470-Pair Sneaker & Suit Vault) — Opening Directly East Into Separate His Bathroom",
+        dims: "~900 Sq Ft • 10-Tier Sneaker/Shoe Wall (Left) + Suit Wardrobes (Right) + Watch Islands",
+        desc: "Positioned immediately east of Her's Closet, His Walk-In Closet houses a 10-tier dark fumed-walnut sneaker/dress-shoe vault on the left, saddle-leather watch-winder islands in the center, and bronze-glass suit wardrobes on the right—opening directly east into the Separate His Bathroom.",
+        highlights: [
+          "Left Wall: 10-tier fumed dark walnut vault for 470 pairs of collector sneakers, lasted dress shoes & boots with rolling ladder.",
+          "Right Wall & Center: Illuminated bronze-glass wardrobes for tailored suits, sportcoats, and dress shirts + dual saddle-leather watch islands.",
+          "East Sightline (4 ➔ 5): Wide doorway opens directly east into the Separate His Bathroom (Room 5)."
+        ]
+      },
+      {
+        src: "static/images/06b_his_east_bath_marble_shower.jpg?v=28a943c42d?v=28a943c42d",
+        category: "level2",
+        zone: "Level 2 (5. His Bath — 7.3' 2-Person Tub)",
+        badge: "Level 2 (West ➔ East: Room 5 of 5) • 88\"×48\" (7.3') Dark Stone 2-Person Tub Engineered for 6'8\"",
+        title: "5. Separate His Bathroom (Far East End) — Monumental 88\"×48\" (7.3-Foot) Dark Stone Two-Person Soaking Tub (Sized for 6'8\"), 10'×8' Walk-In Shower & 12' Barber Vanity",
+        dims: "22' × 16' • Smoked-Oak Timber Rafters • 88\" × 48\" × 26\" (7.3' Long) 2-Person Dark Stone Tub",
+        desc: "Terminating the West-to-East sequence at the far east end past His Closet, the Separate His Bathroom features a monumental custom 88\" × 48\" × 26\" (7.3-foot-long by 4-foot-wide) honed charcoal Pietra Grey stone two-person soaking tub in the center engineered for your 6'8\" frame, flanked by an oversized 10'×8' blackened-steel and dark marble Walk-In Shower on the left and a 12-foot floating smoked-walnut barber & grooming double vanity on the right.",
+        highlights: [
+          "Centerpiece — Custom 88\" × 48\" × 26\" (7.3-Foot-Long) Dark Stone Two-Person Soaking Tub (Sized for 6'8\"): Carved from honed dark charcoal Pietra Grey marble with dual ergonomic reclined ends and matte-black floor-mounted filler so two bathers (including your 6'8\" frame) can soak together in complete comfort.",
+          "Left Wall (North): Oversized 10' × 8' blackened-steel & glass Walk-In Shower clad in honed Pietra Grey marble with dual matte-black ceiling rain heads, 6 vertical body jets, and floating dark stone bench.",
+          "Right Wall (South): 12-foot floating smoked-walnut barber & grooming double vanity beneath pitched dark timber rafters."
+        ]
+      },
+      {
+        src: "static/images/07_executive_office.jpg?v=4f751da8d2?v=4f751da8d2",
+        category: "level1",
+        zone: "Level 1 (\"Mad Men\" Office — Flush TV & No Ladder)",
+        badge: "Level 1 • Front-Left Gable Wing • \"Mad Men\" Style (Flush TV Above Fireplace & No Ladder)",
+        title: "Main Residence \"Mad Men\" Executive Office & Library — Flush Flat-Screen TV Above Carved Limestone Fireplace, Unobstructed Walnut Bookcases (No Ladder) & Whiskey Decanter Bar",
+        dims: "18' × 16' • 14' Vaulted Walnut-Beamed Ceiling • Flush 4K TV Above Fireplace & Zero Ladder",
+        desc: "Occupying the front-left gable wing overlooking the circular driveway and English boxwood hedge maze, styled as an iconic 1960s \"Mad Men\" mid-century modern executive sanctuary featuring a sleek flush-mounted 4K flat-screen TV recessed cleanly into the stone overmantel above the carved French limestone fireplace on the left, and unobstructed walnut bookcases on the right with the library ladder completely removed (since at 6'8\" you can reach every shelf directly).",
+        highlights: [
+          "Left Wall — Carved French Limestone Fireplace + Flush Flat-Screen TV Above: Grand carved French limestone fireplace with a sleek flush-mounted 4K OLED flat-screen TV recessed cleanly into the stone overmantel directly above the hearth.",
+          "Unobstructed Oiled American Black Walnut & Rosewood Library Bookcases (with the rolling ladder and rail completely removed for your 6'8\" reach) + built-in mid-century bar credenza displaying cut-crystal scotch/rye whiskey decanters and rocks glasses.",
+          "1960s Mid-Century Modern Floating-Top Walnut & Brass Executive Desk with vintage brass mushroom lamp, Eames Time-Life tufted leather executive chair, rosewood Eames Lounge Chair & Ottoman, and a mid-century brass Stilnovo chandelier."
+        ]
+      },
+      {
+        src: "static/images/08_theater_room.jpg?v=2474d29aa6?v=2474d29aa6",
+        category: "level1",
+        zone: "Level 1 Theater (Spacious Aisle Between Rows)",
+        badge: "Level 1 • West Wing Core • Both Burgundy Velvet Couches Facing Screen w/ Wide Open Walkway Aisle Between Rows",
+        title: "Dedicated Private Cinema / Theater Room — Two Tiered Rows of Deep Burgundy Velvet Snuggle Couches Separated by a Wide Open Carpeted Walkway Aisle (Both Rows Facing Screen)",
+        dims: "22' × 18' • Acoustic STC-62 Isolation • Wide ~5'–6' Carpeted Aisle Between Rows",
+        desc: "Viewed from an elevated center-axis perspective at the back of the cinema looking straight ahead at the glowing 150-inch 4K CinemaScope screen: both tiered stadium rows of extra-deep Vintage Tufted Burgundy Velvet Snuggle Couches (with twin chaise extensions) face dead-on straight toward the movie screen and are separated by a generous ~5-to-6-foot open carpeted walking aisle and continuous glowing warm LED step riser—with the front row positioned closer to the screen on the lower level and the rear row across the wide aisle behind it.",
+        highlights: [
+          "Wide ~5-to-6-Foot Open Carpeted Walkway Aisle Between Rows: The front row is moved well forward toward the 150-inch screen, opening up an unobstructed full-width carpeted walking aisle and continuous glowing warm LED stadium step edge between the two rows so the couches never crowd or touch each other.",
+          "Both Burgundy Velvet Couches Facing 100% Straight Toward the Screen: Both rows are upholstered in rich burgundy/merlot/oxblood velvet and aligned horizontally across the center of the cinema facing dead-on toward the 150-inch movie screen.",
+          "Front-Row Channel-Tufted & Rear-Row Chesterfield Velvet Couches + Starlight Ceiling: Front-row channel-tufted deep burgundy velvet snuggle couch with twin chaises and cocktail table closer to the screen, and matching rear-row button-tufted deep burgundy velvet couch across the wide aisle, framed by dark navy acoustic velvet wall panels, vertical brass sconces, and a fiber-optic starlight ceiling."
+        ]
+      },
+      {
+        src: "static/images/08a_downstairs_daybed_guest_suite.jpg?v=a1653bf4d2?v=a1653bf4d2",
+        category: "level1",
+        zone: "Level 1 Guest Suite #2 (Daybed & TV Lounge)",
+        badge: "Level 1 • West Wing En-Suite • Oversized Plush Daybed & 85\" Flat-Screen Viewing Wall",
+        title: "Downstairs Bedroom Suite #2 (West Wing Daybed & Flat-Screen Viewing Lounge Suite) — Plush-Pillowed Daybed, 85\" 4K TV & En-Suite Marble Bath",
+        dims: "16' × 15' • 12' Whitewashed Oak Beamed Ceiling • Plush Daybed & 85\" OLED TV",
+        desc: "The first of the 3 downstairs bedroom suites—designed specifically with an ultra-deep, oversized custom upholstered Belgian-linen and cream bouclé Daybed Lounge piled high with plush pillows, bolsters, and cashmere throws, facing directly toward a flush-mounted 85-inch 4K OLED flat-screen TV over a floating white-oak console, with an arched doorway into a private Calacatta marble en-suite bathroom and black-steel French doors to the lavender garden terrace.",
+        highlights: [
+          "Hero Centerpiece — Oversized Plush Daybed Lounge: King-depth custom upholstered daybed in warm oatmeal Belgian linen and cream bouclé, layered generously with sink-in plush pillows, cylindrical bolsters, and cashmere throws for effortless lounging and relaxation.",
+          "85-Inch 4K Flat-Screen Viewing Wall: Sleek flush-mounted 85-inch OLED flat-screen TV centered opposite the daybed above a low-profile floating European white-oak media console with warm LED cove lighting.",
+          "Private En-Suite Marble Bath & Courtyard Doors: Arched doorway on the right into a private Calacatta Gold marble bathroom (fluted oak vanity, backlit arched mirror, curbless glass rain shower) and tall black-steel French doors on the left opening to the olive & lavender courtyard."
+        ]
+      },
+      {
+        src: "static/images/08b_downstairs_poolside_guest_suite.jpg?v=0f7659543d?v=0f7659543d",
+        category: "level1",
+        zone: "Level 1 Guest Suite #3 (Poolside)",
+        badge: "Level 1 • Rear East Wing Poolside En-Suite Bedroom",
+        title: "Downstairs Poolside Guest Bedroom Suite #3 — En-Suite Marble Bath & Pool Terrace Doors",
+        dims: "17' × 15' • 12' Whitewashed Oak Beamed Ceiling",
+        desc: "The second of the 3 downstairs bedroom suites, featuring a 12-foot beamed ceiling, Belgian-linen king platform bed, private Calacatta marble en-suite bathroom, and tall black-steel French doors opening directly onto the rear limestone pool veranda.",
+        highlights: [
+          "Left Wall: Tall black steel-and-glass French doors opening directly to the rear covered veranda and turquoise swimming pool.",
+          "Right Wall: Arched doorway into a private Calacatta marble bathroom with fluted oak vanity and curbless walk-in rain shower.",
+          "Center: Custom upholstered Belgian-linen king platform bed with floating oak nightstands and brass reading sconces."
+        ]
+      },
+      {
+        src: "static/images/08c_downstairs_garden_loggia_guest_suite.jpg?v=2afb07a0b7?v=2afb07a0b7",
+        category: "level1",
+        zone: "Level 1 Guest Suite #4 (Garden Loggia)",
+        badge: "Level 1 • Front East Wing (4th Bedroom)",
+        title: "Downstairs 4th Bedroom \"Garden Loggia Suite\" (#4) — Fireplace, Four-Poster Bed & Boxwood Maze View",
+        dims: "17' × 16' • Vaulted Oak Rafters & East Garden Loggia",
+        desc: "The third of the 3 downstairs bedroom suites (completing the 4-bedroom main-house program alongside the upstairs Primary Suite), featuring a carved French limestone fireplace, four-poster white-oak king bed, en-suite spa bath, and French doors opening onto the covered east veranda overlooking the English boxwood hedge maze.",
+        highlights: [
+          "Left Wall: Hand-carved French limestone corner fireplace, built-in white-oak wardrobes, and private en-suite spa bath.",
+          "Right Wall: Tall black-steel French doors opening onto the white-columned east stone loggia overlooking the boxwood hedge maze and white hydrangeas.",
+          "Center: Sculptural white-oak four-poster king bed beneath vaulted whitewashed oak rafters."
+        ]
+      },
+      {
+        src: "static/images/09b_outdoor_kitchen_sunken_firepit.jpg?v=3efcd20e1f?v=3efcd20e1f",
+        category: "outbuildings",
+        zone: "Outdoor Kitchen & Fire Pit Cabana",
+        badge: "Rear Pool Courtyard • Culinary Loggia & Water-Level Fire Pit",
+        title: "Outdoor Summer Kitchen, Wood-Fired Pizza Oven & Sunken Poolside Fire Pit Cabana",
+        dims: "Timber Pergola Bar + Baja Sun Shelf + Sunken Limestone Fire Pit",
+        desc: "Between the Main Residence rear veranda and the Two-Story 3-Bedroom Guest House sits a resort-grade outdoor culinary loggia and a sunken water-level fire pit cabana right beside the swimming pool's Baja sun shelf.",
+        highlights: [
+          "Left Under Timber Pergola: Sculpted limestone summer kitchen bar with commercial stainless gas/wood grill, limewash dome wood-fired pizza oven, beverage coolers, and woven barstools.",
+          "Center Foreground: Sunken limestone conversation fire pit lounge recessed flush with the pool edge, wrapped in weather-resistant bouclé seating around a linear gas fire trough.",
+          "Right & Background: Turquoise pool with Baja sun shelf loungers framed by the glowing two-story Guest House and Main Residence at sunset."
+        ]
+      },
+      {
+        src: "static/images/09_pool_house_level1.jpg?v=5e7217dca6?v=5e7217dca6",
+        category: "outbuildings",
+        zone: "3-Bed Guest House L1 (Lenny Kravitz Maximalism)",
+        badge: "Outbuilding 1 • Lenny Kravitz Paris Hôtel Particulier Maximalist Guest House Level 1 • Cascading Murano Chandelier, Zebra/Moroccan Rugs, Les Paul Guitar & Matching Glass Office",
+        title: "3-Bedroom Detached Guest House Level 1 (Lenny Kravitz Paris Hôtel Particulier Maximalism) — Cascading Murano Smoked-Amber Chandelier, Fluted Walnut & Backlit Amber Kitchen, Zebra-Hide & Moroccan Rugs, Leopard Velvet Pillows, Les Paul Guitar, Straight-Up Stairs & Matching Glass Office",
+        dims: "~1,500 Sq Ft Ground Floor (~2,800 Sq Ft Total) • Lenny-Level Rock-and-Roll Maximalism + Straight-Run Stairs + Glass Office",
+        desc: "Dialed up to full Lenny Kravitz Paris Hôtel Particulier & Kravitz Design × CB2 rock-and-roll maximalism: Level 1 is crowned by a monumental cascading 1970s Murano smoked-amber glass & brass chandelier in the double-height void, a fluted dark smoked-walnut kitchen with warm backlit amber glass upper display cabinets and a 10-foot Nero Marquina marble waterfall island on the left, a cognac leather pit sectional layered with leopard-print velvet pillows, oxblood velvet cushions, and a cream Mongolian shearling throw over a zebra-hide and vintage Moroccan rug in the center, a vintage sunburst Gibson Les Paul guitar on a brass stand and carved African totemic sculptures beside the fireplace, a single straight-run floating walnut staircase on the right, and the 100% glass-surrounded 'Boss Woman' Executive Office on the upper-left mezzanine (with the burl-wood desk in the middle of the office and the cream bouclé chair behind the desk facing away from the wall).",
+        highlights: [
+          "Lenny Kravitz Rock-and-Roll Maximalist Layering: Monumental cascading 1970s Murano smoked-amber glass & brass chandelier, charcoal-espresso Venetian plaster walls, zebra-hide layered over a geometric Moroccan wool rug, leopard velvet pillows & shearling throw on the cognac leather sectional, burl-wood plinth coffee table, vintage Gibson Les Paul guitar on a brass stand, Paul Evans brutalist floor lamp, and carved African totemic sculptures.",
+          "100% Matching Upstairs Glass-Surrounded 'Boss Woman' Office (Upper Left): Matches the Level 2 office views—with the sculptural burl-wood executive desk in the middle of the office (with dual monitors on top) and the cream bouclé executive chair positioned behind the desk (in front of the glowing LED arch on the fluted-walnut back wall) facing away from the wall.",
+          "Single Straight-Run Floating Walnut Staircase (Right) & Pool Sightline to Main Residence: Rises in one unbroken straight flight along the right wall (zero wrap-around) up to the Level 2 mezzanine while framing the swimming pool and Main Residence through the tall black-steel doors."
+        ]
+      },
+      {
+        src: "static/images/10_pool_house_level2.jpg?v=e887bb85aa?v=e887bb85aa",
+        category: "outbuildings",
+        zone: "Guest House L2 (Lenny Maximalism & Glass Office)",
+        badge: "Outbuilding 1 • Guest House Level 2 (View A — Lenny Kravitz Maximalism): Cascading Murano Chandelier, Rock Gallery Wall, Vinyl Console & Glass Office",
+        title: "3-Bedroom Guest House Level 2 (View A — Lenny Kravitz Paris Hôtel Particulier Maximalism) — Cascading Murano Smoked-Amber Chandelier, Brass-Framed B&W Rock Photography, Carved African Masks, Vinyl Record Console, Straight-Run Stairs & 100% Glass-Surrounded 'Boss Woman' Office (Right)",
+        dims: "~1,300 Sq Ft Flat Mezzanine Level • Lenny-Level Maximalism + Straight-Run Stairs + 18'×15' Glass Office",
+        desc: "Standing on the flat smoked-walnut herringbone mezzanine of the Lenny Kravitz Maximalist Guest House looking toward the soaring two-story pool gable window: the monumental cascading 1970s Murano smoked-amber glass chandelier hangs in the double-height void overlooking the zebra/Moroccan rug and Main Residence pool sightline; the charcoal-espresso Venetian plaster wall on the left is curated with oversized brass-framed B&W rock photography, carved African tribal masks, a burl-wood vinyl turntable console, and the single straight-run floating walnut staircase; and on the right sits the 100% glass-surrounded 'Boss Woman' Executive Office.",
+        highlights: [
+          "100% Glass-Surrounded 'Boss Woman' Office in Full Maximalist Detail (Right): Floor-to-ceiling matte-black steel-and-glass grid walls enclosing a sculptural burl-wood & brass executive desk in the middle of the office (over a layered vintage Persian & zebra rug), cream bouclé chair behind the desk facing away from the wall, cognac leather lounge chair with leopard velvet pillow, and backlit arched walnut Zoom backdrop.",
+          "Monumental Cascading Murano Chandelier & Rock-Star Mezzanine Gallery (Left & Center): Multi-tiered 1970s Murano smoked-amber glass chandelier in the double-height void, brass-framed B&W rock photography, museum-mounted carved African tribal masks, and a burl-wood audiophile vinyl record console with turntable.",
+          "Consistent Single Straight-Run Staircase (Left Edge) & Upstairs Bedrooms #2, #3 + Full Bath #2: Straight-run floating walnut stairs arrive with zero wrap-around beside three arched walnut doorways into Upstairs Guest Bedrooms #2 & #3 and Nero Marquina marble Full Bathroom #2."
+        ]
+      },
+      {
+        src: "static/images/10b_pool_house_level2_tv_wall.jpg?v=61637e2772?v=61637e2772",
+        category: "outbuildings",
+        zone: "Guest House L2 (Reverse View — Maximalist TV & Vinyl Wall)",
+        badge: "Outbuilding 1 • Guest House Level 2 (View B — Lenny Kravitz Maximalism): 85\" TV & Vinyl Credenza Wall, Les Paul Guitar, Rock Gallery & Glass Office",
+        title: "3-Bedroom Guest House Level 2 (View B — 180° Reverse Angle, Lenny Kravitz Maximalism) — Cascading Murano Chandelier, 85-Inch TV & Vinyl Turntable Wall, Straight-Run Stairs, Les Paul Guitar, B&W Rock Portraits & 100% Glass-Surrounded 'Boss Woman' Office (Left)",
+        dims: "~1,300 Sq Ft Flat Mezzanine Level • Single Straight-Run Staircase + 85\" TV & Vinyl Wall + Glass Office",
+        desc: "Standing at the gable window end of the flat smoked-walnut herringbone mezzanine looking 180 degrees back: the cascading 1970s Murano smoked-amber glass chandelier illuminates the double-height void; in the center, the single straight-run floating walnut staircase descends straight down into the main living room below beneath the fluted walnut 85-inch 4K TV wall and burl-wood vinyl record console; on the left is the 100% glass-surrounded 'Boss Woman' Executive Office (burl-wood desk in middle, cream bouclé chair behind desk facing away from wall, layered Persian/zebra rugs); and on the right are brass-framed B&W rock portraits, carved African masks, a vintage Gibson Les Paul guitar on a brass stand, and arched doorways into Bedrooms #2 & #3 and Full Bath #2.",
+        highlights: [
+          "100% Consistent Glass-Surrounded 'Boss Woman' Office Overlooking the Main Space (Left): Floor-to-ceiling black steel-and-glass grid walls on all interior sides housing the sculptural burl-wood desk in the middle of the office, cream bouclé chair behind the desk facing away from the wall, layered Persian/zebra rugs, leopard-pillow cognac chair, and arched walnut Zoom backdrop.",
+          "85-Inch 4K TV Wall, Burl-Wood Vinyl Console & Straight-Run Staircase (Center): Flush-mounted 85-inch TV on the fluted smoked-walnut wall above a burl-wood vinyl turntable credenza, right beside the single straight-run floating walnut staircase descending into the main room.",
+          "Rock Photography Gallery, Carved African Masks & Vintage Les Paul Guitar (Right): Charcoal-espresso Venetian plaster gallery wall with oversized brass-framed B&W rock portraits, carved West African masks, a sunburst Gibson Les Paul guitar on a brass stand, and arched doorways into Upstairs Bedrooms #2 & #3 and Full Bathroom #2."
+        ]
+      },
+      {
+        src: "static/images/11_breezeway_spa.jpg?v=c68cd32201?v=c68cd32201",
+        category: "outbuildings",
+        zone: "Wellness Facility L1 (Hot Tub, Sauna & Open Shower)",
+        badge: "Outbuilding 2 • Wellness / Health Facility Level 1: Hot Tub, Sauna & Open Shower Area to Pool",
+        title: "Wellness / Health Facility Level 1 — In-Ground Stone Hot Tub, Finnish Cedar Sauna & Walk-Through Open Shower Area Opening Directly to Pool Area",
+        dims: "~850 Sq Ft Ground Floor (~1,600 Sq Ft Total) • Open Shower Area + Bi-Fold Doors to Pool",
+        desc: "Connected via the east breezeway, the second building is now a dedicated Two-Story Wellness / Health Facility (~1,600 sq ft). Downstairs features a sunken bubbling heated stone Hot Tub in the center, a glass-front Finnish red-cedar dry sauna on the left, and an architectural Walk-Through Open Shower Area (with zero glass enclosure, fluted travertine wet-wall, dual brass ceiling rain heads, and linear slot floor drains) that opens directly out to the pool area through tall black-steel bi-folding glass doors.",
+        highlights: [
+          "Walk-Through Open Shower Area (Left — Zero Glass Enclosure): Open-concept fluted travertine wet-deck with dual unlacquered brass ceiling rain showerheads, body jets, and recessed linear floor drainage so you can rinse off effortlessly between the pool, sauna, and hot tub.",
+          "In-Ground Bubbling Stone Hot Tub & Finnish Cedar Sauna: Sunken heated hydrotherapy Hot Tub in the center floor beside the glass-front aromatic red-cedar dry sauna.",
+          "Direct Pool Access & Interior Stairs to Level 2 Gym: Tall black-steel glass doors fold open to the turquoise pool deck at the rear, while floating white-oak stairs on the right ascend to the Upstairs Workout Facility & Full Bathroom."
+        ]
+      },
+      {
+        src: "static/images/11b_sauna_building_upstairs_loft.jpg?v=df826ffe73?v=df826ffe73",
+        category: "outbuildings",
+        zone: "Wellness Facility L2 (Workout + Full Bath)",
+        badge: "Outbuilding 2 • Wellness / Health Facility Level 2: Workout Facility w/ 85\" TV & Full Bathroom",
+        title: "Wellness / Health Facility Level 2 — Upstairs Workout Facility with Large 85-Inch Flat-Screen TV & Complete Upstairs Full Bathroom",
+        dims: "~750 Sq Ft Upper Level • 85\" 4K Wall TV + Spin, Pilates, Bench Press & Complete Full Bathroom",
+        desc: "Upstairs on Level 2 of the Wellness / Health Facility sits a bright, vaulted Workout Facility equipped with a large flush-mounted 85-inch 4K flat-screen TV on the right wall, studio spin bikes, Reformer Pilates, slat-belt treadmills, and an Olympic bench press & dumbbell rack—plus a complete Upstairs Full Bathroom in the rear-right corner.",
+        highlights: [
+          "Complete Upstairs Full Bathroom (Rear-Right Corner): Arched white-oak doorway opens into a dedicated upstairs Calacatta marble Full Bathroom featuring a fluted oak vanity, backlit arched mirror, water closet, and glass-enclosed walk-in rain shower.",
+          "Large 85-Inch Flat-Screen TV & Interior Stairs to Hot Tub/Sauna (Right Wall): Flush-mounted 85-inch 4K OLED TV above the glass-railed staircase descending straight down into the Level 1 Hot Tub, Sauna, and Open Shower Area.",
+          "Full Strength, Spin, Pilates & Cardio Suite: Olympic bench press & tiered adjustable dumbbells (back-left), 2 studio spin bikes, walnut Reformer Pilates carriage, and commercial treadmills overlooking the pool."
+        ]
+      },
+      {
+        src: "static/images/12_collectors_barn.jpg?v=4017499283?v=barn_fleet_v2",
+        category: "outbuildings",
+        zone: "Detached Barn (1. 4-Car Black Fleet & Hidden Wine Door)",
+        badge: "Outbuilding 3 (Mode A) • 4-Vehicle All-Black Fleet, Windowed Side Space & Hidden Door to Wine Cellar Stairs",
+        title: "Detached Collector's Barn (Daily Collector Mode) — 4-Vehicle All-Black Fleet, Sunlit Windowed Side Space & Concealed Dark-Walnut Hidden Door to the Descending Wine Cellar Stairs",
+        dims: "~3,250 Sq Ft Total (1,600 Sq Ft Main Hall + 450 Sq Ft Windowed Side Space + 1,200 Sq Ft Loft)",
+        desc: "Showcasing your 4-vehicle all-black fleet (Jet-Black Porsche Panamera, Matte-Black Tesla Cybertruck, Matte-Black GMC Hummer EV, and Black Tesla Model Y on the 4-post lift) on a 100% flat continuous stone slab floor, with the lower shed-roofed Windowed Side Space on the right overlooking the estate lawn (matching the property aerial view), floating white-oak stairs ascending UP to the Level 2 Bourbon & Billiards Loft, and a concealed heavy dark-walnut Hidden Door swung open on the right wall revealing illuminated limestone steps descending DOWNWARD into the Subterranean Wine Cellar Tunnel.",
+        highlights: [
+          "4-Vehicle Blacked-Out Fleet on a 100% Flat Stone Floor: Jet-black Porsche Panamera, matte-black Tesla Cybertruck, matte-black GMC Hummer EV, and black Tesla Model Y elevated on the 4-post lift.",
+          "Windowed Side Space (Right Wing Matching Property Aerial View): Opens between white-oak colonnade posts into the lower shed-roofed side wing with a front driveway window and tall right-side windows overlooking the lawn and trees.",
+          "Concealed Dark-Walnut Hidden Door to the Subterranean Wine Cellar Stairs: Set into the right wall beneath the mezzanine, swinging open to reveal illuminated limestone steps and a brass handrail descending 12 feet DOWNWARD into the arched brick wine cellar tunnel."
+        ]
+      },
+      {
+        src: "static/images/12b_collectors_barn_wedding.jpg?v=0afb679061?v=barn_wedding_v2",
+        category: "outbuildings",
+        zone: "Detached Barn (2. Luxury Wedding & Banquet Conversion)",
+        badge: "Outbuilding 3 (Event Option 1) • Cars Moved Out — Luxury Wedding Ceremony & Candlelit Banquet Reception",
+        title: "Detached Collector's Barn (Event Conversion Option 1 — Weddings & Banquets) — Cars Moved Out to Leverage the Whole Space, Windowed Side Space Bridal Champagne Lounge & Hidden Wine Cellar Door",
+        dims: "120–180 Seated Banquet Guests • Full Barn + Windowed Side Space + Bourbon Loft",
+        desc: "With all 4 vehicles moved out to leverage the entire space, the Detached Barn transforms into an enchanted wedding ceremony and candlelit reception venue: white Belgian-linen imperial and round banquet tables, gold velvet chairs, cascading white rose and hydrangea floral runners, crystal empire chandeliers and fairy-light garlands hung from the timber trusses, a white marble dance floor and live band stage at the rear, the sunlit Windowed Side Space on the right activated as a Bridal Champagne & Cocktail Lounge, and the Hidden Dark-Walnut Door open to the descending underground wine cellar stairs.",
+        highlights: [
+          "Full-Floor Wedding Banquet & Dance Hall: Two long imperial head tables and round 10-top banquet tables beneath crystal chandeliers and fairy-light timber trusses, leading to a white marble dance floor and live band stage.",
+          "Windowed Side Space Activated as a Bridal Champagne Lounge: The sunlit right side wing with tall dark-framed windows overlooking the estate lawn serves as an airy champagne bar and cocktail lounge.",
+          "Sommelier Access via the Hidden Wine Cellar Door + Level 2 Loft: The open dark-walnut hidden door reveals the descending limestone stairs to the 2,000+ bottle subterranean wine cellar, while floating white-oak stairs lead UP to the Bourbon & Billiards Loft."
+        ]
+      },
+      {
+        src: "static/images/12c_collectors_barn_gala.jpg?v=f4ddf6cef6?v=barn_gala_v2",
+        category: "outbuildings",
+        zone: "Detached Barn (3. Evening Gala & Special Event Conversion)",
+        badge: "Outbuilding 3 (Event Option 2) • Cars Moved Out — Evening Black-Tie Gala, Cocktail Lounge & Live Music Venue",
+        title: "Detached Collector's Barn (Event Conversion Option 2 — Special Events & Galas) — Cars Moved Out for a Twilight Cocktail Lounge, Live Music Stage, Windowed Side Bar & Hidden Wine Cellar Door",
+        dims: "200–250+ Cocktail & Gala Guests • Main Lounge + Windowed Bar Wing + VIP Loft",
+        desc: "Converted for evening special occasions, milestone celebrations, or black-tie galas with all vehicles moved out: triple concentric brass ring chandeliers illuminate emerald-green velvet and cognac leather Chesterfield lounge groupings over vintage Persian rugs, Nero Marquina marble high-top cocktail tables, a polished dance floor and live acoustic/jazz stage at the rear, a glowing marble Craft Cocktail & Raw Bar inside the Windowed Side Space on the right, floating stairs UP to the Bourbon & Billiards Loft, and the fluted-walnut Hidden Door open to the descending subterranean wine cellar stairs.",
+        highlights: [
+          "Twilight Lounge, High-Tops & Live Music Stage: Tufted emerald velvet and cognac saddle-leather lounges, black-and-gold marble cocktail tables, triple brass ring chandeliers, and a rear dance floor with live stage.",
+          "Windowed Side Space Craft Cocktail & Raw Bar: The right-hand windowed wing houses a backlit Calacatta marble bar overlooking fairy-lit twilight trees.",
+          "Hidden Walnut Door to Descending Wine Cellar Stairs + Upstairs VIP Loft: Guests can ascend the floating oak stairs to the Bourbon & Billiards Loft or step through the open hidden walnut door down into the subterranean wine cellar."
+        ]
+      },
+      {
+        src: "static/images/13_garage_barn_connection.jpg?v=4d50024a64?v=4d50024a64",
+        category: "outbuildings",
+        zone: "Estate Garages & Connections",
+        badge: "West Estate Spine • Garages & Walkways",
+        title: "Attached 3-Car Side-Load Garage & Barn-to-Pool-to-Home Connection",
+        dims: "3-Car Attached Garage + Pergola Walk + Cobblestone Drive",
+        desc: "Looking north along the west side of the estate, showing how the Main House's Attached 3-Car Garage, the Pool Courtyard, and the Detached Barn connect seamlessly above ground.",
+        highlights: [
+          "Left Foreground: Main House's Attached 3-Car Side-Load Carriage Garage with arched oak doors and a Mudroom entry leading straight into the Scullery & Kitchen.",
+          "Right Midground: Covered white wisteria pergola and limestone walkway leading onto the Pool Terrace and Pool House.",
+          "Center Background: Sweeping cobblestone driveway continuing up the lawn into the Detached Collector's Barn."
+        ]
+      },
+      {
+        src: "static/images/14_subterranean_wine_tunnel.jpg?v=0adcd5a7d1?v=0adcd5a7d1",
+        category: "outbuildings",
+        zone: "Subterranean Wine Cellar Tunnel",
+        badge: "100% Underground Spine • Opposite-Direction Stairs",
+        title: "Subterranean Barrel-Vaulted Wine Cellar — Barn Stairs (Left) Opposite Main House & Pool House Stairs (Right)",
+        dims: "12' Wide × 110' Long • 12 Ft Underground • 2,000+ Bottle Cellar & Cask Vault",
+        desc: "Excavated 12 feet beneath the west lawn line, this barrel-vaulted antique brick and carved limestone wine gallery aligns with the estate's true site geometry: the Detached Collector's Barn stairs ascend to the LEFT, while the Main Residence and Pool House stairs ascend in the opposite direction to the RIGHT.",
+        highlights: [
+          "Left Wall (◄ Up to Detached Collector's Barn): Arched steel-and-limestone stairwell ascending UP and to the LEFT toward the Barn on the west side of the drive.",
+          "Right Wall (Up to Main Residence Speakeasy & Pantry ► + Pool House & Spa ►): Opposing staircases ascending UP and to the RIGHT toward the Main House and Pool Courtyard on the east side.",
+          "Far End Terminus: Wrought-iron gated Private Vintage Wine & Bourbon Cask Reserve Vault behind the live-edge walnut decanting table."
+        ]
+      }
+    ];
+
+    let currentSlide = 3; // Start on the new Living Room / Soaring Great Room view
+    let activeFilter = 'all';
+
+    function renderCarousel() {
+      const s = slides[currentSlide];
+      const img = document.getElementById('carousel-img');
+      img.src = s.src;
+      img.alt = s.title;
+      document.getElementById('carousel-counter').textContent = `${currentSlide + 1} / ${slides.length}`;
+      document.getElementById('carousel-zone').textContent = s.zone;
+      document.getElementById('carousel-badge').textContent = s.badge;
+      document.getElementById('carousel-title').textContent = s.title;
+      document.getElementById('carousel-dims').textContent = s.dims;
+      document.getElementById('carousel-desc').textContent = s.desc;
+      document.getElementById('carousel-highlights').innerHTML = s.highlights.map(h => `
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 font-bold">•</span>
+          <span>${h}</span>
+        </li>
+      `).join('');
+
+      const thumbs = document.getElementById('carousel-thumbs');
+      thumbs.innerHTML = slides.map((item, idx) => `
+        <button onclick="goToSlide(${idx})" class="relative rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${idx === currentSlide ? 'border-amber-400 ring-2 ring-amber-400/40 scale-105' : 'border-stone-700 opacity-60 hover:opacity-100'}">
+          <img src="${item.src}" alt="${item.title}" class="w-20 h-14 object-cover" />
+          <span class="absolute bottom-0 inset-x-0 bg-black/75 text-[10px] text-white px-1 truncate">${idx + 1}. ${item.zone}</span>
+        </button>
+      `).join('');
+    }
+
+    function goToSlide(idx) {
+      currentSlide = (idx + slides.length) % slides.length;
+      renderCarousel();
+    }
+    function nextSlide() { goToSlide(currentSlide + 1); }
+    function prevSlide() { goToSlide(currentSlide - 1); }
+
+    function renderGalleryGrid() {
+      const grid = document.getElementById('gallery-grid');
+      const filtered = slides.map((s, idx) => ({ ...s, idx })).filter(s => activeFilter === 'all' || s.category === activeFilter);
+      grid.innerHTML = filtered.map(s => `
+        <article class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="relative group cursor-zoom-in overflow-hidden bg-black" onclick="openLightbox(${s.idx})">
+              <img src="${s.src}" alt="${s.title}" class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/75 backdrop-blur-md text-xs font-semibold text-amber-400 border border-white/10">
+                ${s.zone}
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-md bg-black/75 text-xs text-white opacity-0 group-hover:opacity-100 transition">
+                🔍 Click to Enlarge
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="text-xs font-mono text-stone-400">${s.dims}</div>
+              <h3 class="text-lg font-bold text-white mt-1">${s.title}</h3>
+              <p class="text-sm text-stone-300 mt-2 leading-relaxed">${s.desc}</p>
+              <ul class="mt-3 pt-3 border-t border-stone-800 space-y-1.5 text-xs text-stone-300">
+                ${s.highlights.map(h => `<li class="flex items-start gap-2"><span class="text-amber-400">•</span><span>${h}</span></li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function filterGallery(cat) {
+      activeFilter = cat;
+      ['all', 'level1', 'level2', 'outbuildings'].forEach(c => {
+        const btn = document.getElementById('flt-' + c);
+        if (c === cat) {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-stone-950";
+        } else {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white";
+        }
+      });
+      renderGalleryGrid();
+    }
+
+    // Lightbox
+    let lightboxIdx = 0;
+    function openLightbox(idx) {
+      lightboxIdx = idx;
+      updateLightbox();
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+    }
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+    }
+    function updateLightbox() {
+      const s = slides[lightboxIdx];
+      document.getElementById('lightbox-img').src = s.src;
+      document.getElementById('lightbox-title').textContent = `${lightboxIdx + 1} / ${slides.length} — ${s.title}`;
+      document.getElementById('lightbox-caption').textContent = s.desc;
+    }
+    function lightboxNext() { lightboxIdx = (lightboxIdx + 1) % slides.length; updateLightbox(); }
+    function lightboxPrev() { lightboxIdx = (lightboxIdx - 1 + slides.length) % slides.length; updateLightbox(); }
+
+    document.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') lightboxNext();
+        if (e.key === 'ArrowLeft') lightboxPrev();
+      }
+    });
+
+    // Top-level Tab Switching
+    function switchMainTab(tab) {
+      ['gallery', 'floorplan', 'specs'].forEach(t => {
+        document.getElementById('tab-' + t).classList.toggle('hidden', t !== tab);
+        const nav = document.getElementById('nav-' + t);
+        if (t === tab) {
+          nav.className = "px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-amber-500 text-stone-950 shadow";
+        } else {
+          nav.className = "px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-stone-300 hover:text-white";
+        }
+      });
+    }
+
+    // Interactive Floor Plan Data & Logic
+    const rooms = {
+      greatroom: {
+        badge: "Level 1 • Central Volume (15' Separation & Front Door View)",
+        dims: "32' × 26' • 24' Vaulted Oak Trusses • 15' From Kitchen",
+        title: "Living Room / Soaring Great Room (15-Foot Separation From Kitchen & Front Door View)",
+        desc: "Looking toward the Front of the Home and the Arched Wrought-Iron Front Door (overlooking the circular cobblestone motor court): separated from the 22-foot Kitchen Island by a generous 15-foot-wide open European white-oak gallery walkway so the Living Room and Kitchen never feel crowded together. Features the cream slipcovered linen sofa, two dark brown leather club armchairs, and rustic wood coffee table facing the carved French limestone fireplace, 85-inch TV, and curved Grand Staircase.",
+        specs: [
+          "Generous 15-Foot Open Floor Separation: 15-foot-wide expanse of open wide-plank European white-oak flooring between the back of the Living Room sofa and the 22-foot Kitchen Island.",
+          "Front of Home & Arched Front Door Sightline: Grand arched black wrought-iron double Front Door and multi-pane front windows looking out to the circular cobblestone driveway and boxwood roundabout.",
+          "100% Consistent Living Room Furniture & Fireplace Wall: Cream slipcovered linen 3-cushion sofa, two dark brown distressed leather club armchairs, and rustic wood coffee table facing the carved French limestone fireplace, recessed 85\" TV, and curved Grand Staircase."
+        ]
+      },
+      staircase: {
+        badge: "Level 1 • Rear of Great Room (Near Speakeasy & Back Door)",
+        dims: "22' × 14' • Rear Pool Window & Back Door",
+        title: "Dining Room Area & Back Door to Pool Terrace (Near Speakeasy)",
+        desc: "Located on the opposite (rear/north) side of the Great Room near the Hidden Speakeasy and the 20-foot black-steel Back Door opening to the swimming pool terrace.",
+        specs: [
+          "Positioned at the rear of the Great Room near the Speakeasy and back door (opposite the Front Door and Living Room view).",
+          "Custom wooden dining room table and chairs set directly in front of the 20-foot black-steel grid windows and glass doors opening to the swimming pool courtyard."
+        ]
+      },
+      kitchen: {
+        badge: "Level 1 • Unified Deep Dark Cherry / Mahogany Kitchen (22' Calacatta Verde/Viola Island & 32°F Oyster Raw Bar)",
+        dims: "36' × 26' • 22' Extra-Long Calacatta Verde/Viola Slab Island • 20' Vaulted Ceiling",
+        title: "Large Open-Concept Elite Chef's Kitchen (100% Unified Deep Dark Cherry / Mahogany Wood Cabinetry, 22' Calacatta Verde/Viola Island & 32°F Oyster Raw Bar)",
+        desc: "Expanded to 36' × 26' in a true open-concept layout with 100% unified deep dark cherry / mahogany stained wood across every cabinet (the Oyster Raw Bar & Knife Vault column inside and out, the upper and lower stove cabinets, the 22-foot island base, and the built-in China Cabinet Speakeasy door): anchored by a clutter-free, extra-long 22-foot polished Calacatta Verde / Calacatta Viola Italian marble slab island on a matching deep dark cherry / mahogany base with warm LED toe-kick lighting, 6 plush cream channel-split-back stools, and 3 cylindrical ribbed glass & brass drum chandeliers—separated from the Living Room by a 15-foot-wide open oak gallery walkway.",
+        specs: [
+          "100% Unified Deep Dark Cherry / Mahogany Wood Cabinetry Throughout: Every wooden cabinet in the kitchen—the 32°F–34°F Oyster Raw Bar & Damascus Knife Vault column (exterior and interior wood backing), the upper glass-front & lower drawer cabinets around the 60\" stove, the 22-foot island base, and the built-in China Cabinet Speakeasy door (exterior and interior back panels)—is crafted in the exact same deep, rich dark cherry / mahogany wood.",
+          "Extra-Long 22-Foot Clutter-Free Calacatta Verde/Viola Slab Island & 15' Separation: Monumental 22-foot single-span stone slab on a deep dark cherry / mahogany shaker drawer base with oversized brass bar pulls, warm LED toe-kick ribbon, radiant-heated overhang, 6 cream upholstered channel-split-back stools, and 3 ribbed glass & brass drum chandeliers.",
+          "32°F–34°F Chilled Oyster Raw Bar Vitrine, Knife Vault & Pro Appliances: Dedicated 32°F–34°F forced-air & humidity-controlled (85%–90% RH) Chilled Oyster Raw Bar Vitrine with self-draining plumbed crushed-ice pans + backlit Magnetic Damascus & Oyster-Shucking Knife Vault + Steamed Oshibori Towel Drawer + 60\" black-and-brass gas range & sleek matte-black/brass tapered range hood."
+        ]
+      },
+      scullery: {
+        badge: "Level 1 • Built-In Deep Dark Cherry / Mahogany China Cabinet Secret Door (Opens Towards Kitchen)",
+        dims: "18' × 8' • Secret Hinged China Cabinet Host",
+        title: "Built-In Deep Dark Cherry / Mahogany Illuminated China Cabinet Secret Door (Swings Open Towards the Kitchen Area into Speakeasy)",
+        desc: "Located at the far end of the Kitchen wall immediately past the 60\" black-and-brass range next to the 20-foot black-steel window: a floor-to-ceiling built-in glass-front China Cabinet crafted in matching deep dark cherry / mahogany wood (both exterior frame and interior back panels, displaying fine porcelain china dinnerware and crystal stemware) swings open outward as a single 1-piece cabinet unit TOWARDS the kitchen area, revealing the Hidden Speakeasy Bar behind it.",
+        specs: [
+          "Secret Hinged Deep Dark Cherry / Mahogany China Cabinet Opening Towards the Kitchen Area: Crafted inside and out in matching deep dark cherry / mahogany wood with mullioned glass doors and warm LED shelf lighting displaying fine porcelain china and crystal stemware—unlatches on heavy-duty concealed pivot hinges and swings outward as a single solid cabinet door towards the kitchen.",
+          "100% Kitchen Consistency Across All Views: Matches the deep dark cherry / mahogany stove cabinetry, sleek matte-black & brass tapered range hood, Calacatta Verde/Viola marble backsplash, and 22-foot island in every kitchen photo.",
+          "Inside Speakeasy View Matches 100%: From inside the Speakeasy, the open deep dark cherry / mahogany China Cabinet door is seen outside the brick doorway swung outward onto the kitchen floor toward the house."
+        ]
+      },
+      speakeasy: {
+        badge: "Level 1 • Secret Lounge Behind Solid Range Wall & Dark Cherry China Cabinet Door",
+        dims: "18' × 14' • Moody 11' Coffered Ceiling",
+        title: "Hidden Speakeasy Bar (Accessed via Secret Dark Cherry / Mahogany China Cabinet Opening Outward Into Kitchen + High Center-Brick TV & Stair Rail)",
+        desc: "Positioned directly behind the solid Kitchen range/oven wall and entered through the secret built-in deep dark cherry / mahogany China Cabinet that swings open outward into the kitchen area, with black-steel French doors opening to the nighttime pool courtyard at the center rear, a mounted flat-screen TV high on the center brick spandrel between the two liquor arches on the left, and the wall-connected wine-cellar stair rail on the right.",
+        specs: [
+          "Left Wall (Backed Against Solid Kitchen Wall): Two illuminated antique-brick liquor arches flanking a high center-brick mounted 4K flat-screen TV above a leathered Nero Marquina marble bar.",
+          "Right Wall (Secret Dark Cherry / Mahogany China Cabinet Door Opened Outward Into Kitchen + Wall-Connected Stair Rail): Through the open brick doorway on the right wall, the deep dark cherry / mahogany China Cabinet door is swung open outward onto the kitchen floor toward the house, while the wrought-iron stair railing connects solidly to the wall at the top of the stairs descending to the Subterranean Wine Tunnel.",
+          "Center Rear Wall: Tall black-steel French doors opening directly out to the illuminated nighttime swimming pool terrace."
+        ]
+      },
+      garage: {
+        badge: "Level 1 • Far-Left Wing",
+        dims: "36' × 26' • 3-Car Side-Load + Mudroom",
+        title: "Attached 3-Car Side-Load Garage & Mudroom",
+        desc: "Tucked into the far-left (west) wing of the main residence where the stone driveway curves past the house—keeping carriage garage doors completely hidden from the front circular motor court.",
+        specs: [
+          "Three insulated arched dark-oak carriage doors facing the west driveway, EV fast chargers, and built-in storage cabinetry.",
+          "Enters through a Mudroom (with lockers, bench, and dog-wash station) leading straight into the Walk-In Scullery and Chef's Kitchen."
+        ]
+      },
+      office: {
+        badge: "Level 1 • West Wing Front (\"Mad Men\" Style + Flush TV)",
+        dims: "18' × 16' • 14' Walnut-Beamed Ceiling",
+        title: "\"Mad Men\" Executive Office & Library (Flush Flat-Screen TV Above Fireplace & No Ladder)",
+        desc: "Occupying the front-left gable wing with its carved French limestone fireplace preserved on the left and a sleek flush-mounted flat-screen TV recessed into the stone overmantel directly above the fireplace, styled in 1960s \"Mad Men\" mid-century modern luxury with floor-to-ceiling oiled American black walnut bookcases (with no rolling ladder or rail—tailored for your 6'8\" reach) and a built-in crystal whiskey decanter bar.",
+        specs: [
+          "Left Wall — Carved French Limestone Fireplace + Flush Flat-Screen TV Above: Grand carved French limestone fireplace with a sleek flush-mounted 4K OLED flat-screen TV recessed cleanly into the stone overmantel above.",
+          "Unobstructed Floor-to-Ceiling American Black Walnut Bookcases (zero rolling ladder or brass rail) + built-in mid-century crystal whiskey decanter bar.",
+          "1960s floating-top walnut & brass executive desk, Eames Time-Life leather chair, rosewood Eames Lounge Chair & Ottoman, and mid-century brass Stilnovo chandelier."
+        ]
+      },
+      theater: {
+        badge: "Level 1 • West Wing Rear (Both Burgundy Velvet Couches Facing Screen)",
+        dims: "22' × 18' • 12' Acoustic Coffered Ceiling",
+        title: "Dedicated Cinema / Theater Room (Two Rows of Deep Burgundy Velvet Couches — Both Facing Screen, First Couch Closer)",
+        desc: "Tucked into the interior west structural envelope where natural light is completely controlled, featuring two tiered stadium rows of extra-deep, ultra-plush Vintage Tufted Burgundy Velvet Snuggle Couches with twin chaise extensions that BOTH face straight forward toward the 150-inch CinemaScope screen—with the first (front-row) burgundy velvet couch positioned closer to the screen on the lower level.",
+        specs: [
+          "Both Burgundy Velvet Couches Facing 100% Straight Toward the Screen (First Row Closer): Front-row channel-tufted deep burgundy/merlot velvet snuggle couch positioned closer to the 150\" movie screen on the lower level, and matching second-row button-tufted deep burgundy/merlot velvet snuggle couch elevated on the stadium riser behind it—both parallel to and facing dead-on straight at the screen.",
+          "Dolby Atmos 9.4.6 concealed speaker array, 150-inch 4K CinemaScope laser projection screen, dark navy velvet acoustic wall panels, and fiber-optic starlight ceiling.",
+          "Rear illuminated Nero Marquina marble snack, popcorn, and cocktail bar."
+        ]
+      },
+      bed2: {
+        badge: "Level 1 • West Wing Daybed & Media Suite",
+        dims: "16' × 15' • 12' Beamed Ceiling",
+        title: "Downstairs Bedroom Suite 2 — Daybed & 85\" Flat-Screen Viewing Lounge Suite",
+        desc: "Located in the West Wing of Level 1, this relaxed downstairs bedroom suite replaces a rigid traditional bed frame with an ultra-deep, oversized custom upholstered Belgian-linen & bouclé Daybed Lounge piled high with plush pillows and bolsters, facing a flush-mounted 85-inch 4K OLED flat-screen TV over a floating white-oak console.",
+        specs: [
+          "Oversized Plush Daybed Lounge: King-depth built-in/platform daybed upholstered in warm oatmeal Belgian linen and cream bouclé, layered with an abundance of sink-in plush pillows, bolsters, and cashmere throws.",
+          "85-Inch 4K Flat-Screen Viewing Wall: Flush-mounted 85-inch OLED flat-screen TV centered opposite the daybed above a floating European white-oak media credenza with concealed Dolby Atmos soundbar.",
+          "Private Calacatta Marble En-Suite Bath: Arched doorway into a private Calacatta Gold marble bathroom with fluted oak vanity and curbless walk-in rain shower."
+        ]
+      },
+      bed3: {
+        badge: "Level 1 • East Guest Wing Rear",
+        dims: "17' × 15' • 12' Beamed Ceiling",
+        title: "Poolside Guest Bedroom Suite 3",
+        desc: "Located in the quiet rear-right wing with tall black-steel French doors on the left opening directly onto the rear limestone pool veranda and an arched doorway on the right into a private Calacatta marble en-suite bath.",
+        specs: ["Tall black-steel French doors to the rear pool veranda + private Calacatta marble en-suite bath."]
+      },
+      bed4: {
+        badge: "Level 1 • East Guest Wing Front",
+        dims: "17' × 16' • Vaulted Oak Rafters",
+        title: "4th Bedroom \"Garden Loggia Suite\"",
+        desc: "Completing the 4-bedroom main-house program, featuring a carved French limestone fireplace on the left, a four-poster white-oak king bed in the center, and French doors on the right opening onto the east columned loggia overlooking the English boxwood hedge maze.",
+        specs: ["Carved limestone corner fireplace, four-poster white-oak king bed, en-suite spa bath & doors to the east veranda."]
+      },
+      primarybed: {
+        badge: "Level 2 • Step 1 (Far West End)",
+        dims: "28' × 22' • 16' Vaulted Gable Ceiling",
+        title: "1. Upstairs Master Bedroom",
+        desc: "Positioned at the far west end of the second floor. Looking East through the room: the upholstered king platform bed sits on the Left (North wall), the carved limestone fireplace, espresso bar, and second-story windows overlooking the lower metal roofline sit on the Right (South wall), and the doorway straight ahead (East) opens into Step 2: Her's Upstairs Marble Bathroom.",
+        specs: [
+          "North Wall (Left of Photo): Custom upholstered Belgian-linen king platform bed with floating white-oak nightstands.",
+          "South Wall (Right of Photo): Carved French limestone fireplace, recessed morning espresso/champagne bar, and second-story black-steel windows overlooking the lower standing-seam metal roof.",
+          "East Wall (Straight Ahead): Opens directly into Step 2: Her's Upstairs Marble Bathroom."
+        ]
+      },
+      bathA: {
+        badge: "Level 2 • Step 2 (88\"×48\" 2-Person Tub Sized for 6'8\")",
+        dims: "22' × 16' • Groin-Vaulted Ceiling • 7.3' Long 2-Person Tub",
+        title: "2. Her's Upstairs Marble Bathroom (88\"×48\" Two-Person Tub Sized for 6'8\" & Shower #1)",
+        desc: "Entered directly from the east wall of the Master Bedroom. Looking East toward Her's Closet: the 10-foot fluted oak double vanity is on the Left (North wall), a monumental custom 88\" × 48\" × 26\" (7.3-foot-long by 4-foot-wide) carved white Calacatta stone Two-Person Soaking Tub engineered for your 6'8\" height is in the Center, and the 10'×8' frameless glass Calacatta Gold marble Walk-In Shower is on the Right (South wall).",
+        specs: [
+          "Centerpiece — 88\" × 48\" × 26\" (7.3-Foot) Two-Person Soaking Tub (Engineered for 6'8\"): Extra-long, extra-wide, extra-deep carved white Calacatta stone two-person tub with dual sloped ergonomic backrests and center brass floor filler.",
+          "North Wall (Left of Photo): 10-foot custom fluted white-oak double vanity with Calacatta Gold marble countertop and arched brass mirrors.",
+          "South Wall (Right of Photo): Oversized 10'×8' frameless glass Walk-In Rain & Steam Shower (#1) with dual brass rain heads, body jets, heated marble bench, and second-story window."
+        ]
+      },
+      bathB: {
+        badge: "Level 2 • Step 5 (88\"×48\" 2-Person Tub Sized for 6'8\")",
+        dims: "22' × 16' • Smoked-Oak Rafters • 7.3' Long 2-Person Tub",
+        title: "5. Separate His Bathroom (88\"×48\" Dark Stone Two-Person Tub Sized for 6'8\" & Shower #2)",
+        desc: "Positioned at the far east terminus of the second floor, entered directly from His Closet. Looking East: features a monumental custom 88\" × 48\" × 26\" (7.3-foot-long by 4-foot-wide) honed charcoal Pietra Grey stone Two-Person Soaking Tub in the Center engineered for your 6'8\" height, flanked by the 10'×8' blackened-steel Walk-In Shower on the Left (North wall) and the 12-foot smoked-walnut barber double vanity on the Right (South wall).",
+        specs: [
+          "Centerpiece — 88\" × 48\" × 26\" (7.3-Foot) Dark Stone Two-Person Soaking Tub (Engineered for 6'8\"): Honed dark charcoal Pietra Grey marble two-person soaking tub with dual sloped backrests and matte-black floor-mounted filler for full-body immersion.",
+          "North Wall (Left of Photo): Oversized 10'×8' Walk-In Shower (#2) in honed charcoal Pietra Grey marble with dual matte-black rain heads, 6 vertical body jets, and floating dark stone bench.",
+          "South Wall (Right of Photo): 12-foot floating smoked-walnut and dark stone barber grooming double vanity beneath a second-story clerestory window."
+        ]
+      },
+      closetWest: {
+        badge: "Level 2 • Step 3 (East of Marble Bathroom)",
+        dims: "~1,050 Sq Ft • 650 Pairs + Couture",
+        title: "3. Her's Walk-In Closet & 650-Pair Shoe Suite",
+        desc: "Entered directly from the Upstairs Marble Bathroom on the west and connecting straight East into His Closet. Looking East: the 650-pair floor-to-ceiling walnut shoe gallery with brass rolling ladder is on the Left (North wall), twin velvet jewelry islands sit in the Center, and 95 linear feet of glass-front couture gown & handbag cases line the Right (South wall).",
+        specs: [
+          "North Wall (Left of Photo): 55 linear feet of 10-tier LED-backlit walnut shoe shelving (650 pairs) with library rolling ladder.",
+          "Center & South Wall (Right of Photo): Two velvet jewelry islands + 95 linear feet of glass-front evening gown cabinets and handbag vitrines."
+        ]
+      },
+      closetEast: {
+        badge: "Level 2 • Step 4 (East of Her's Closet)",
+        dims: "~900 Sq Ft • 470 Pairs + Tailored Suits",
+        title: "4. His Walk-In Closet & 470-Pair Sneaker/Suit Vault",
+        desc: "Entered directly from Her's Closet on the west and opening straight East into the Separate His Bathroom. Looking East: the 470-pair fumed dark walnut sneaker, dress shoe, and boot vault with blackened rolling ladder is on the Left (North wall), two cognac saddle-leather watch-winder islands sit in the Center, and 80 linear feet of bronze-glass tailored suit wardrobes line the Right (South wall).",
+        specs: [
+          "North Wall (Left of Photo): 37 linear feet of 10-tier fumed dark walnut shoe & sneaker shelving (470 pairs) with blackened-steel rolling ladder.",
+          "Center & South Wall (Right of Photo): Two saddle-leather watch-winder islands + 80 linear feet of bronze-glass tailored suit wardrobes."
+        ]
+      },
+      mezzanine: {
+        badge: "Level 2 • Grand Arrival & Valet",
+        dims: "32' × 8' Bridge + Laundry Valet",
+        title: "Grand Staircase Gallery Bridge & Shared Laundry Valet",
+        desc: "At the top of the curved Grand Staircase, the gallery bridge overlooks the 24-foot Living Room and Chef's Kitchen below and provides direct access to the Primary Suite and central Laundry/Steam Valet room.",
+        specs: ["Dual commercial washer/dryers, built-in garment steam closets, and wrought-iron balustrade overlooking the Living Room."]
+      },
+      driveway: {
+        badge: "Estate Site Spine • West Side",
+        dims: "Cobblestone Drive + Wisteria Pergola Walk",
+        title: "Above-Ground Garage, Pool & Barn Connections",
+        desc: "Follows the sweeping west cobblestone driveway along the left side of the estate, linking the Main House's Attached 3-Car Garage, the Pool Courtyard, and the Detached Collector's Barn.",
+        specs: [
+          "Sweeping West Cobblestone Driveway links the Main House's Attached 3-Car Side-Load Garage → 3-Bedroom Guest House → Detached Collector's Barn.",
+          "Covered white wisteria pergola and lighted limestone footpath link the garage court and Barn lawn directly onto the Pool Terrace."
+        ]
+      },
+      tunnel: {
+        badge: "100% Underground Spine • -12' Elevation",
+        dims: "12' Wide × 110' Long • 2,000+ Bottles",
+        title: "Subterranean Barrel-Vaulted Wine Cellar Tunnel (Opposite-Direction Stairs)",
+        desc: "Excavated 12 feet beneath the west lawn, this barrel-vaulted antique brick and carved limestone wine gallery aligns with the estate's site geometry: the Detached Collector's Barn stairs ascend to the LEFT, while the Main Residence Speakeasy and Guest House stairs ascend in the opposite direction to the RIGHT.",
+        specs: [
+          "Left Wall (◄ Up to Detached Collector's Barn): Arched steel-and-limestone stairwell ascending UP and to the LEFT into the Barn's right-foreground stairwell.",
+          "Right Wall (Up to Main Residence Speakeasy ► + Guest House & Wellness Facility ►): Opposing staircases ascending UP and to the RIGHT into the Hidden Speakeasy Bar and Guest House.",
+          "2,000+ bottle illuminated walnut wine racking, live-edge walnut decanting table, and wrought-iron gated Private Vintage Bourbon & Wine Reserve Vault."
+        ]
+      },
+      poolhouse: {
+        badge: "Outbuilding 1 • Lenny Kravitz Paris Hôtel Particulier Maximalist Guest House",
+        dims: "~2,800 Sq Ft Across 2 Levels • Lenny-Level Rock-and-Roll Maximalism + Straight Stairs + Glass Office",
+        title: "Two-Story 3-Bedroom Detached Guest House (Lenny Kravitz Maximalism, Straight-Up Stairs & 100% Glass-Surrounded 'Boss Woman' Office)",
+        desc: "Where the Pool House previously stood is now a complete ~2,800 sq ft Two-Story 3-Bedroom, 2-Bathroom Detached Guest House dialed up to full Lenny Kravitz Paris Hôtel Particulier & Kravitz Design × CB2 rock-and-roll maximalism: a monumental cascading 1970s Murano smoked-amber glass & brass chandelier, charcoal-espresso Venetian plaster gallery walls with oversized brass-framed B&W rock photography and carved African tribal masks, zebra-hide layered over a vintage Moroccan rug, leopard velvet pillows & shearling throw on the cognac leather sectional, a vintage Gibson Les Paul guitar on a brass stand, a burl-wood vinyl turntable console, a single straight-run floating walnut staircase going straight up (zero wrap-around), and the 100% Glass-Surrounded 'Boss Woman' Executive Office on Level 2.",
+        specs: [
+          "Lenny Kravitz Rock-and-Roll Maximalist Layering (Level 1 & Level 2): Cascading 1970s Murano smoked-amber glass chandelier, charcoal-espresso Venetian plaster gallery walls with brass-framed B&W rock photography and carved African masks/sculptures, zebra-hide layered over a Moroccan rug, leopard velvet pillows & shearling throw on the cognac leather sectional, vintage Gibson Les Paul guitar on a brass stand, and burl-wood vinyl turntable credenza.",
+          "Consistent Single Straight-Run Staircase (Goes Straight Up, Zero Wrap-Around Across All 3 Views): Floating dark-walnut staircase with frameless glass railing rises in a single unbroken straight flight along the side wall to the flat smoked-walnut herringbone mezzanine (with the 85-inch 4K TV mounted on the wall at the top of the straight stairs).",
+          "Large 100% Glass-Surrounded 'Boss Woman' Executive Office Overlooking the Main Part of the House (18' × 15'): Completely enclosed on all interior sides in floor-to-ceiling matte-black steel-and-glass grid walls—with the sculptural burl-wood desk in the middle of the office, the cream bouclé chair behind the desk facing away from the wall, layered Persian/zebra rugs, and a leopard-pillow cognac lounge chair."
+        ]
+      },
+      casita: {
+        badge: "Outbuilding 2 • Two-Story Wellness / Health Facility (~1,600 Sq Ft)",
+        dims: "~1,600 Sq Ft Across 2 Levels • L1 Open Shower/Spa + L2 Gym & Full Bath",
+        title: "Two-Story Wellness / Health Facility (L1 Hot Tub, Sauna & Open Shower to Pool + L2 Workout Facility w/ 85\" TV & Full Bathroom)",
+        desc: "Connected via the east breezeway, this dedicated two-story Wellness / Health Facility features a sunken stone Hot Tub, Finnish Cedar Sauna, and Walk-Through Open Shower Area downstairs that opens directly to the pool area, while upstairs houses the Workout Facility with a large 85-inch flat-screen TV and a complete Upstairs Full Bathroom.",
+        specs: [
+          "Level 1 Downstairs (~850 Sq Ft — Opens to Pool Area): Sunken bubbling stone Hot Tub (center), glass-front Finnish red-cedar dry sauna (left), and a Walk-Through Open Shower Area (fluted travertine wet-deck, dual brass ceiling rain heads, body jets, and zero glass enclosure) with tall black-steel bi-folding glass doors opening directly to the pool deck.",
+          "Level 2 Upstairs Workout Facility (~750 Sq Ft): Large flush-mounted 85-inch 4K flat-screen TV on the right wall above the stairs, Olympic Bench Press & adjustable dumbbells (back-left), 2 studio spin bikes, Reformer Pilates carriage, and commercial treadmills.",
+          "Level 2 Complete Upstairs Full Bathroom: Dedicated upstairs Calacatta marble Full Bathroom (in the rear-right corner) with fluted oak vanity, backlit arched mirror, water closet, and enclosed glass walk-in rain shower."
+        ]
+      },
+      barn: {
+        badge: "Outbuilding 3 • Upper Estate Grounds",
+        dims: "~2,800 Sq Ft • 4-Vehicle All-Black Fleet + Loft",
+        title: "Detached Collector's Barn (4-Vehicle Blacked-Out Fleet, Bourbon Loft & Tunnel Stairs)",
+        desc: "Twin-bay white gabled barn at the north end of the estate showcasing your 4-vehicle all-black fleet on Level 1, right-side dual staircases (down to the Subterranean Wine Tunnel and up to the Level 2 Loft), and a vaulted Bourbon, Poker & Billiards Loft above.",
+        specs: [
+          "Level 1 Auto Gallery (4-Vehicle All-Black Fleet): Jet-black Porsche Panamera with limo tint & black rims (left), stealth black-wrapped Tesla Cybertruck (center), matte-black GMC Hummer EV (right), and a new black Tesla Model Y on the 4-post lift.",
+          "Right-Side Dual Staircases: Glass-railed limestone stairs in the right foreground descending 12' into the Subterranean Wine Tunnel + floating oak-and-iron stairs in the right midground ascending to Level 2.",
+          "Level 2 Loft: Vaulted timber-truss championship billiards table, tufted leather poker lounge, and backlit Bourbon Tasting Bar."
+        ]
+      },
+      outdoor: {
+        badge: "Rear Pool Courtyard • Outdoor Living",
+        dims: "Timber Pergola Kitchen + Water-Level Fire Pit",
+        title: "Outdoor Summer Kitchen, Wood-Fired Pizza Oven & Sunken Fire Pit Cabana",
+        desc: "Positioned between the Main Residence rear veranda and the Two-Story 3-Bedroom Guest House beside the turquoise swimming pool and Baja sun shelf.",
+        specs: [
+          "Covered Summer Kitchen Pergola (Left): Honed limestone bar, commercial gas/wood grill, limewash dome wood-fired artisanal pizza oven, under-counter beverage chillers, and barstool counter.",
+          "Sunken Poolside Fire Pit Cabana (Center): Recessed flush with the water level next to the Baja sun shelf, featuring built-in bouclé seating around a linear gas fire trough."
+        ]
+      }
+    };
+
+    const floorMetrics = {
+      1: [
+        { label: "Large Open Kitchen", value: "36'×26' • 22' Island", sub: "15' Separation to Living Room" },
+        { label: "Living & Great Room", value: "32'×26' • 24' High", sub: "Front Door View & Curved Stairs" },
+        { label: "Theater Room", value: "2 Velvet Rows Face Screen", sub: "1st Couch Closer to 150\" Screen" },
+        { label: "Speakeasy & Office", value: "1 Secret Door + TV", sub: "Mad Men Office w/ Flush TV Above" }
+      ],
+      2: [
+        { label: "West-to-East Flow", value: "5 Aligned Rooms", sub: "Bed ➔ Her's Bath ➔ Her's ➔ His ➔ His Bath" },
+        { label: "Two 2-Person Tubs", value: "88\"×48\" (7.3' Long)", sub: "Both Baths Sized for 6'8\" & 2 People" },
+        { label: "Combined Shoe Vaults", value: "1,120+ Pairs", sub: "650 Her's (North) + 470 His (North)" },
+        { label: "Apparel Hanging", value: "175 Linear Feet", sub: "95' Couture (South) + 80' Suits (South)" }
+      ],
+      3: [
+        { label: "3-Bed Guest House", value: "Lenny Kravitz × CB2", sub: "100% Glass-Enclosed Boss Office" },
+        { label: "Wellness Facility", value: "L1 Spa + L2 Gym/Bath", sub: "Open Shower to Pool + Upstairs Bath" },
+        { label: "Collector's Barn", value: "4 All-Black Vehicles", sub: "Panamera, Cybertruck, Hummer EV, Model Y" },
+        { label: "Underground Spine", value: "110' Wine Tunnel", sub: "◄ Left to Barn | Right to House/Guest ►" }
+      ]
+    };
+
+    let speakeasyOpen = false;
+
+    function renderMetrics(floor) {
+      const container = document.getElementById('metrics-bar');
+      container.innerHTML = floorMetrics[floor].map(m => `
+        <div class="bg-stone-900 border border-stone-800 rounded-xl p-3.5">
+          <div class="text-xs text-stone-400">${m.label}</div>
+          <div class="text-sm sm:text-base font-bold text-white mt-0.5">${m.value}</div>
+          <div class="text-xs text-stone-400 mt-0.5">${m.sub}</div>
+        </div>
+      `).join('');
+    }
+
+    function switchFloor(floor) {
+      const btn1 = document.getElementById('btn-floor-1');
+      const btn2 = document.getElementById('btn-floor-2');
+      const btn3 = document.getElementById('btn-floor-3');
+      const svg1 = document.getElementById('svg-floor-1');
+      const svg2 = document.getElementById('svg-floor-2');
+      const svg3 = document.getElementById('svg-floor-3');
+      const title = document.getElementById('floor-title');
+      const subtitle = document.getElementById('floor-subtitle');
+      const spkBtn = document.getElementById('speakeasy-toggle');
+      const compass = document.getElementById('compass-top');
+
+      const activeCls = "px-3.5 py-2 rounded-lg text-xs font-semibold bg-amber-500 text-stone-950 shadow";
+      const inactiveCls = "px-3.5 py-2 rounded-lg text-xs font-semibold text-stone-400 hover:text-white";
+
+      btn1.className = floor === 1 ? activeCls : inactiveCls;
+      btn2.className = floor === 2 ? activeCls : inactiveCls;
+      btn3.className = floor === 3 ? activeCls : inactiveCls;
+
+      svg1.classList.toggle('hidden', floor !== 1);
+      svg2.classList.toggle('hidden', floor !== 2);
+      svg3.classList.toggle('hidden', floor !== 3);
+      spkBtn.classList.toggle('hidden', floor !== 1);
+
+      if (floor === 1) {
+        title.textContent = "First Floor Schematic (~6,050 Sq Ft + 3-Car Attached Garage)";
+        subtitle.textContent = "Large Open Kitchen (22' Island) • 15' Separation to Living Room • Velvet Couch Theater • 'Mad Men' Office";
+        compass.textContent = "▲ REAR COURTYARD POOL, SUNKEN FIRE PIT, 3-BED GUEST HOUSE & WELLNESS / HEALTH FACILITY ▲";
+        selectRoom('greatroom');
+      } else if (floor === 2) {
+        title.textContent = "Second Floor Schematic (~3,800 Sq Ft Exclusive Primary Level — West to East)";
+        subtitle.textContent = "West ➔ East: 1. Master Bed ➔ 2. Her's Bath (7.3' 2-Person Tub) ➔ 3. Her's Closet ➔ 4. His Closet ➔ 5. His Bath (7.3' 2-Person Tub)";
+        compass.textContent = "◄ WEST TO EAST: 1. BEDROOM ➔ 2. HER'S BATH (7.3' TUB) ➔ 3. HER'S CLOSET ➔ 4. HIS CLOSET ➔ 5. HIS BATH (7.3' TUB) ►";
+        selectRoom('primarybed');
+      } else {
+        title.textContent = "Outbuildings, Pool Courtyard & Subterranean Wine Tunnel (~7,200 Sq Ft)";
+        subtitle.textContent = "3-Bed/2-Bath Guest House (w/ Full Kitchen & Boss Woman Office), 2-Story Wellness Facility & 4-Vehicle All-Black Barn";
+        compass.textContent = "▲ NORTH WOODS & UPPER COLLECTOR'S BARN MOTOR COURT ▲";
+        selectRoom('poolhouse');
+      }
+      renderMetrics(floor);
+    }
+
+    function selectRoom(id) {
+      const r = rooms[id];
+      if (!r) return;
+      document.getElementById('detail-badge').textContent = r.badge;
+      document.getElementById('detail-dims').textContent = r.dims;
+      document.getElementById('detail-title').textContent = r.title;
+      document.getElementById('detail-desc').textContent = r.desc;
+      document.getElementById('detail-specs').innerHTML = r.specs.map(s => `
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 font-bold mt-0.5">•</span>
+          <span>${s}</span>
+        </li>
+      `).join('');
+
+      document.querySelectorAll('svg [id^="room-"]').forEach(el => {
+        el.setAttribute('stroke-width', '1.8');
+      });
+      const activeRect = document.getElementById('room-' + id);
+      if (activeRect) {
+        activeRect.setAttribute('stroke-width', '3.5');
+      }
+    }
+
+    function toggleSpeakeasy() {
+      speakeasyOpen = !speakeasyOpen;
+      const marker = document.getElementById('secret-door-marker');
+      const label = document.getElementById('speakeasy-door-label');
+      const btn = document.getElementById('speakeasy-toggle');
+      if (speakeasyOpen) {
+        marker.setAttribute('transform', 'rotate(35 330 166)');
+        marker.setAttribute('fill', '#10b981');
+        label.textContent = "🔓 CHINA CABINET OPEN TOWARDS KITCHEN!";
+        btn.textContent = "🔒 Close China Cabinet Door";
+        selectRoom('speakeasy');
+      } else {
+        marker.removeAttribute('transform');
+        marker.setAttribute('fill', '#f59e0b');
+        label.textContent = "  Opens Towards Kitchen + Stair Rail";
+        btn.textContent = "🍸 Open Secret China Cabinet Door";
+      }
+    }
+
+    function updateShoeCalc() {
+      const west = parseInt(document.getElementById('slider-west').value, 10);
+      const east = parseInt(document.getElementById('slider-east').value, 10);
+      const total = west + east;
+      const westPct = Math.round((west / total) * 100);
+      const eastPct = 100 - westPct;
+      const westWall = Math.round((west - 100) / 10);
+      const eastWall = Math.round((east - 100) / 10);
+
+      document.getElementById('lbl-west-shoes').textContent = `${west} Pairs (${westWall}' Wall + 2 Islands)`;
+      document.getElementById('lbl-east-shoes').textContent = `${east} Pairs (${eastWall}' Wall + 2 Islands)`;
+      document.getElementById('calc-total-shoes').textContent = `${total.toLocaleString()} Pairs (${westPct}% West / ${eastPct}% East)`;
+      document.getElementById('shoe-count-badge').textContent = `${total.toLocaleString()} Pairs Total`;
+    }
+
+    // Initialize
+    renderCarousel();
+    renderGalleryGrid();
+    renderMetrics(1);
+    selectRoom('greatroom');
+  </script>
+</body>
+</html>
