@@ -257,150 +257,214 @@
           <div class="flex items-center justify-between mb-3">
             <div>
               <h3 id="floor-title" class="text-base font-bold text-white">First Floor Schematic (~6,050 Sq Ft + 3-Car Attached Garage)</h3>
-              <p id="floor-subtitle" class="text-xs text-stone-400">Open 24' Great Hall (Arched Windows, 3 Lounges/Dining &amp; Crittall Partition) • Barrel-Vaulted Zellige Loggia • Unchanged Dark Cherry Kitchen (22' Island), Theater &amp; Bedrooms</p>
+              <p id="floor-subtitle" class="text-xs text-stone-400">Open 24' Great Hall (Arched Windows, 3 Lounges/Dining &amp; Crittall Partition) • Barrel-Vaulted Zellige Loggia • Unchanged Dark Cherry Kitchen (22' Island) &amp; Back-of-Home Pool Doors Next to China Cabinet</p>
             </div>
             <button id="speakeasy-toggle" onclick="toggleSpeakeasy()" class="px-3 py-1.5 rounded-lg text-xs font-semibold border border-amber-500/40 bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 transition">
-              🍸 Open Single Secret Door
+              🍸 Open Secret China Cabinet Door
             </button>
           </div>
 
-          <div id="compass-top" class="text-center text-xs font-medium text-stone-400 py-1.5 mb-2 rounded-lg bg-stone-950 border border-stone-800">
-            ▲ REAR COURTYARD POOL, SUNKEN FIRE PIT, 3-BED GUEST HOUSE &amp; WELLNESS / HEALTH FACILITY ▲
+          <div id="compass-top" class="text-center text-xs font-medium text-sky-300 py-1.5 mb-2 rounded-lg bg-stone-950 border border-sky-500/30">
+            ▲ BACK OF HOME (NORTH): RESORT SWIMMING POOL, LIMESTONE TERRACE, TWO-STORY WELLNESS CENTER &amp; 3-BED GUEST HOUSE ▲
           </div>
 
-          <!-- Floor 1 SVG: 100% ALIGNED WITH OPEN FIRST FLOOR GREAT HALL (DcL3q3doXhq), CRITTALL PARTITION, ZELLIGE LOGGIA, UNCHANGED DARK CHERRY KITCHEN (22' ISLAND), THEATER & BEDROOMS -->
+          <!-- Floor 1 SVG: 100% ALIGNED WITH OPEN FIRST FLOOR GREAT HALL (DcL3q3doXhq), CRITTALL PARTITION, ZELLIGE LOGGIA, UNCHANGED DARK CHERRY KITCHEN (22' ISLAND) & BACK-OF-HOME POOL DOORS NEXT TO CHINA CABINET -->
           <div id="svg-floor-1" class="w-full overflow-x-auto">
             <svg viewBox="0 0 800 560" class="w-full h-auto rounded-xl border border-stone-800 bg-stone-950 text-stone-100">
-              <rect x="180" y="8" width="440" height="30" rx="6" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.5)" stroke-dasharray="4 2"/>
-              <text x="400" y="27" text-anchor="middle" fill="currentColor" class="text-xs opacity-85" font-size="11.5">▲ REAR COVERED VERANDA &amp; POOL TERRACE (20' STEEL GRID DOORS FROM ZELLIGE LOGGIA, SPEAKEASY &amp; SUITE 3) ▲</text>
+              <!-- BACK OF HOME: REAR POOL TERRACE & BACK-OF-HOME POOL DOORS BANNER -->
+              <rect x="198" y="6" width="587" height="34" rx="6" fill="rgba(56, 189, 248, 0.20)" stroke="rgba(56, 189, 248, 0.75)" stroke-width="1.5" stroke-dasharray="5 2"/>
+              <text x="491" y="21" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="10.5">▲ BACK OF HOME (NORTH): SPARKLING TURQUOISE RESORT SWIMMING POOL &amp; TWO-STORY WELLNESS CENTER ▲</text>
+              <text x="491" y="34" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9">Black-Steel Back Pool Doors From: Speakeasy (L) • Kitchen Next to China Cabinet (Center-L) • Barrel-Vaulted Zellige Loggia (Center-R) • Suite 3 (R)</text>
 
               <!-- FAR-LEFT WING: Attached 3-Car Side-Load Garage & Mudroom -->
               <g onclick="selectRoom('garage')" class="cursor-pointer">
-                <rect id="room-garage" x="15" y="46" width="90" height="154" rx="8" fill="rgba(148, 163, 184, 0.22)" stroke="currentColor" stroke-width="2"/>
-                <text x="60" y="88" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">ATTACHED</text>
-                <text x="60" y="104" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">3-CAR GARAGE</text>
-                <text x="60" y="122" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">3 Rolled-Up Doors</text>
-                <text x="60" y="138" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">➔ 2 Limestone Steps</text>
-                <text x="60" y="154" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">➔ Mudroom &amp; Dog Wash</text>
-                <text x="60" y="170" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">➔ Scullery &amp; Kitchen</text>
+                <rect id="room-garage" x="15" y="46" width="88" height="154" rx="8" fill="rgba(148, 163, 184, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="59" y="86" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">ATTACHED</text>
+                <text x="59" y="102" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">3-CAR GARAGE</text>
+                <text x="59" y="120" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">3 Rolled-Up Doors</text>
+                <text x="59" y="136" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">➔ 2 Limestone Steps</text>
+                <text x="59" y="151" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">➔ Mudroom &amp; Dog Wash</text>
+                <text x="59" y="166" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">➔ Scullery &amp; Kitchen</text>
               </g>
 
-              <!-- LEFT WING REAR: Dedicated Cinema / Theater Room (Two Rows of Burgundy Velvet Couches Facing Screen) -->
+              <!-- LEFT WING REAR: Dedicated Cinema / Theater Room (Two Rows of Burgundy Velvet Couches w/ 5'-6' Aisle) -->
               <g onclick="selectRoom('theater')" class="cursor-pointer">
-                <rect id="room-theater" x="112" y="46" width="85" height="154" rx="8" fill="rgba(139, 92, 246, 0.22)" stroke="currentColor" stroke-width="2"/>
-                <text x="154" y="84" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">THEATER</text>
-                <text x="154" y="100" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">22' × 18' • 150" 4K</text>
-                <text x="154" y="116" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• 2 Rows Burgundy</text>
-                <text x="154" y="129" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">  Velvet Couches</text>
-                <text x="154" y="143" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9">• Both Face Screen</text>
-                <text x="154" y="156" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">• 1st Row Closer</text>
-                <text x="154" y="169" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">  to Movie Screen</text>
+                <rect id="room-theater" x="109" y="46" width="83" height="154" rx="8" fill="rgba(139, 92, 246, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="150" y="82" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">THEATER</text>
+                <text x="150" y="97" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">22' × 18' • 150" 4K</text>
+                <text x="150" y="113" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">• 2 Rows Burgundy</text>
+                <text x="150" y="125" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">  Velvet Couches</text>
+                <text x="150" y="139" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.8">• Both Face Screen</text>
+                <text x="150" y="152" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">• Wide 5'-6' Aisle</text>
+                <text x="150" y="165" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="8.5">  Between Rows</text>
               </g>
 
               <!-- LEFT WING MIDDLE: Guest Suite 2 (Daybed & Flat-Screen Viewing Lounge Suite) -->
               <g onclick="selectRoom('bed2')" class="cursor-pointer">
-                <rect id="room-bed2" x="15" y="208" width="182" height="128" rx="8" fill="rgba(16, 185, 129, 0.22)" stroke="currentColor" stroke-width="2"/>
-                <text x="106" y="242" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">GUEST SUITE 2 (DAYBED)</text>
-                <text x="106" y="259" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">16' × 15' • Plush Daybed Lounge</text>
-                <text x="106" y="275" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• 85" Flat-Screen Viewing Wall</text>
-                <text x="106" y="291" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10">• Layered Plush Pillows &amp; Bolsters</text>
-                <text x="106" y="307" text-anchor="middle" fill="currentColor" opacity="0.75" font-size="10">• Private Calacatta En-Suite Bath</text>
+                <rect id="room-bed2" x="15" y="208" width="177" height="128" rx="8" fill="rgba(16, 185, 129, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="103" y="242" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">GUEST SUITE 2 (DAYBED)</text>
+                <text x="103" y="259" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">16' × 15' • Plush Daybed Lounge</text>
+                <text x="103" y="275" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• 85" Flat-Screen Viewing Wall</text>
+                <text x="103" y="291" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="9.5">• Layered Plush Pillows &amp; Bolsters</text>
+                <text x="103" y="307" text-anchor="middle" fill="currentColor" opacity="0.75" font-size="9.5">• Private Calacatta En-Suite Bath</text>
               </g>
 
               <!-- LEFT WING FRONT: "Mad Men" Executive Office & Library (Flush TV Above Fireplace & No Ladder) -->
               <g onclick="selectRoom('office')" class="cursor-pointer">
-                <rect id="room-office" x="15" y="344" width="182" height="148" rx="8" fill="rgba(59, 130, 246, 0.22)" stroke="currentColor" stroke-width="2"/>
-                <text x="106" y="376" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">"MAD MEN" OFFICE</text>
-                <text x="106" y="392" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">&amp; WALNUT LIBRARY</text>
-                <text x="106" y="410" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Limestone Fireplace +</text>
-                <text x="106" y="423" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">  Flush Flatscreen TV Above (L)</text>
-                <text x="106" y="439" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Walnut Shelves (No Ladder)</text>
-                <text x="106" y="455" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10">• Whiskey Decanter Bar</text>
-                <text x="106" y="471" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10">• Eames Chairs &amp; Desk</text>
+                <rect id="room-office" x="15" y="344" width="177" height="148" rx="8" fill="rgba(59, 130, 246, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <text x="103" y="376" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">"MAD MEN" OFFICE</text>
+                <text x="103" y="392" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">&amp; WALNUT LIBRARY</text>
+                <text x="103" y="410" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Limestone Fireplace +</text>
+                <text x="103" y="423" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">  Flush Flatscreen TV Above (L)</text>
+                <text x="103" y="439" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Walnut Shelves (No Ladder)</text>
+                <text x="103" y="455" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Whiskey Decanter Bar</text>
+                <text x="103" y="471" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="9.5">• Eames Chairs &amp; Desk</text>
               </g>
 
-              <!-- HIDDEN SPEAKEASY BAR (Directly Behind Solid Kitchen Range Wall on Back-Left) -->
+              <!-- HIDDEN SPEAKEASY BAR (West of Kitchen Range/China Cabinet Wall — Single Straight Wall From Back Pool to Wine Cellar Stairs) -->
               <g onclick="selectRoom('speakeasy')" class="cursor-pointer">
-                <rect id="room-speakeasy" x="205" y="46" width="182" height="114" rx="8" fill="rgba(217, 119, 6, 0.28)" stroke="currentColor" stroke-width="2" stroke-dasharray="6 3"/>
-                <text x="296" y="70" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12">HIDDEN SPEAKEASY BAR</text>
-                <text x="296" y="86" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• Rear: French Doors to Night Pool</text>
-                <text x="296" y="101" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• High Center Brick TV Between</text>
-                <text x="296" y="114" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  2 Backlit Brick Liquor Arches</text>
-                <text x="296" y="129" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• Secret China Cabinet Door</text>
-                <text id="speakeasy-door-label" x="296" y="143" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">  Opens Towards Kitchen + Stair Rail</text>
+                <rect id="room-speakeasy" x="198" y="46" width="84" height="226" rx="8" fill="rgba(217, 119, 6, 0.28)" stroke="currentColor" stroke-width="2" stroke-dasharray="6 3"/>
+                <rect x="204" y="46" width="72" height="18" rx="3" fill="rgba(56, 189, 248, 0.30)" stroke="rgba(56, 189, 248, 0.8)" stroke-width="1"/>
+                <text x="240" y="58" text-anchor="middle" fill="#bae6fd" font-weight="700" font-size="7.5">▲ BACK POOL DOOR</text>
+                <text x="240" y="82" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">HIDDEN</text>
+                <text x="240" y="95" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">SPEAKEASY</text>
+                <text x="240" y="110" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">18' × 14' Bar</text>
+                <text x="240" y="126" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">• Left: Brick Arches</text>
+                <text x="240" y="138" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">  &amp; High Center TV</text>
+                <text x="240" y="153" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">• Right: Straight</text>
+                <text x="240" y="165" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">  Wall to Stairs</text>
+                <text id="speakeasy-door-label" x="240" y="182" text-anchor="middle" fill="#fcd34d" font-weight="700" font-size="7.8">• Door Swings Into</text>
+                <text x="240" y="193" text-anchor="middle" fill="#fcd34d" font-weight="700" font-size="7.8">  Kitchen Area ►</text>
+                <rect x="205" y="206" width="70" height="58" rx="4" fill="rgba(120, 53, 15, 0.45)" stroke="currentColor" stroke-width="1"/>
+                <text x="240" y="223" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8">▼ WINE CELLAR</text>
+                <text x="240" y="235" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8">STAIRS (-12')</text>
+                <text x="240" y="248" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="7.5">To Subterranean</text>
+                <text x="240" y="258" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="7.5">Tasting Gallery</text>
               </g>
 
-              <!-- SOLID PERMANENT WALL BETWEEN KITCHEN RANGE & SPEAKEASY BAR -->
-              <rect x="205" y="160" width="116" height="10" fill="currentColor" fill-opacity="0.55"/>
-              <text x="263" y="168" text-anchor="middle" fill="#0c0a09" font-weight="700" font-size="7.5">SOLID RANGE / BAR WALL</text>
+              <!-- WALK-IN SCULLERY & MUDROOM CONNECTION (South-West of Kitchen, Connecting to 3-Car Garage) -->
+              <rect x="198" y="278" width="84" height="214" rx="8" fill="rgba(148, 163, 184, 0.16)" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="240" y="310" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">MUDROOM &amp;</text>
+              <text x="240" y="323" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">SCULLERY</text>
+              <text x="240" y="340" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="8">• 40°F Cold Pantry</text>
+              <text x="240" y="353" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="8">• 3rd Pro Dishwasher</text>
+              <text x="240" y="366" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="8">• Dog-Wash Station</text>
+              <text x="240" y="384" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8.2">◄ West Oak Portal</text>
+              <text x="240" y="396" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8.2">  to Theater, Bed 2,</text>
+              <text x="240" y="408" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8.2">  Office &amp; Garage</text>
 
-              <!-- SECRET CHINA CABINET DOOR (Swings Outward Towards the Kitchen Area) -->
-              <g onclick="selectRoom('scullery')" class="cursor-pointer">
-                <rect id="room-scullery" x="323" y="162" width="64" height="82" rx="6" fill="rgba(168, 85, 247, 0.24)" stroke="currentColor" stroke-width="1.8"/>
-                <rect id="secret-door-marker" x="330" y="156" width="50" height="10" rx="3" fill="#f59e0b" stroke="currentColor" stroke-width="1.5"/>
-                <text x="355" y="185" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9">CHINA</text>
-                <text x="355" y="198" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9">CABINET</text>
-                <text x="355" y="213" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Secret Door</text>
-                <text x="355" y="225" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Opens Toward</text>
-                <text x="355" y="237" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Kitchen Area</text>
-              </g>
-
-              <!-- BARREL-VAULTED ZELLIGE-TILE POOLSIDE BREAKFAST LOGGIA (Adjoining Kitchen & Opening Through Crittall Grid Wall to Great Hall) -->
-              <g onclick="selectRoom('staircase')" class="cursor-pointer">
-                <rect id="room-staircase" x="395" y="46" width="222" height="120" rx="8" fill="rgba(236, 72, 153, 0.20)" stroke="currentColor" stroke-width="2"/>
-                <text x="506" y="70" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">BARREL-VAULTED ZELLIGE LOGGIA</text>
-                <text x="506" y="86" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">(Adjoins Kitchen &amp; Opens to Great Hall)</text>
-                <text x="506" y="103" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Pearlescent Moroccan Zellige Vault</text>
-                <text x="506" y="118" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Checkerboard Limestone Tile Floor</text>
-                <text x="506" y="133" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Potted Olive Tree &amp; Bistro Table</text>
-                <text x="506" y="148" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Black-Steel French Doors to Pool</text>
-              </g>
-
-              <!-- LEFT SIDE OF GREAT ROOM: 100% Unchanged Open-Concept Elite Chef's Kitchen (36'×26' w/ 22' Extra-Long Calacatta Verde/Viola Island — @builtbycarlene Style) -->
+              <!-- 100% UNCHANGED CHEF'S KITCHEN (36'×26' w/ 22' Calacatta Verde/Viola Island & BACK-OF-HOME POOL DOOR NEXT TO CHINA CABINET) -->
               <g onclick="selectRoom('kitchen')" class="cursor-pointer">
-                <path id="room-kitchen" d="M 205 172 L 319 172 L 319 248 L 392 248 L 392 492 L 205 492 Z" fill="rgba(14, 165, 233, 0.20)" stroke="currentColor" stroke-width="2.5"/>
-                <text x="262" y="192" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">60" Range, Zellige Tile</text>
-                <text x="262" y="205" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">&amp; Fluted Glass Uppers</text>
-                <text x="262" y="220" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">+ 32°F Oyster Raw Bar &amp; Oak Portal</text>
-                <rect x="275" y="256" width="106" height="142" rx="4" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.5"/>
-                <text x="328" y="286" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">EXTRA-LONG 22'</text>
-                <text x="328" y="301" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">Calacatta Verde/</text>
-                <text x="328" y="316" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">Viola Slab Island</text>
-                <text x="328" y="334" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">Dark Cherry Base + LED</text>
-                <text x="328" y="348" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.5">6 Cream Split-Back Stools</text>
-                <text x="298" y="420" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">UNCHANGED CHEF'S KITCHEN</text>
-                <text x="298" y="436" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">36' × 26' • 22' Calacatta Verde Island</text>
-                <text x="298" y="451" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">All Dark Cherry / Mahogany Wood</text>
+                <rect id="room-kitchen" x="286" y="46" width="130" height="446" rx="8" fill="rgba(14, 165, 233, 0.20)" stroke="currentColor" stroke-width="2.5"/>
+                <!-- BACK-OF-HOME POOL DOOR AT NORTH END OF KITCHEN (RIGHT NEXT TO CHINA CABINET!) -->
+                <rect x="292" y="46" width="118" height="24" rx="4" fill="rgba(56, 189, 248, 0.35)" stroke="#38bdf8" stroke-width="1.5"/>
+                <text x="351" y="57" text-anchor="middle" fill="#e0f2fe" font-weight="700" font-size="8">▲ KITCHEN BACK POOL DOOR ▲</text>
+                <text x="351" y="67" text-anchor="middle" fill="#bae6fd" font-weight="600" font-size="7.2">(Next to China Cabinet ➔ Pool View)</text>
+
+                <!-- WEST WALL OF KITCHEN: 60" Range & Hood + 32°F Oyster Raw Bar Column -->
+                <rect x="290" y="166" width="44" height="106" rx="4" fill="rgba(120, 53, 15, 0.45)" stroke="currentColor" stroke-width="1.2"/>
+                <text x="312" y="190" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8">60" RANGE</text>
+                <text x="312" y="202" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8">&amp; HOOD</text>
+                <text x="312" y="216" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.3">Dark Cherry</text>
+                <text x="312" y="227" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.3">Glass Uppers</text>
+                <text x="312" y="238" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.3">&amp; Slab Back</text>
+
+                <rect x="290" y="278" width="44" height="114" rx="4" fill="rgba(120, 53, 15, 0.45)" stroke="currentColor" stroke-width="1.2"/>
+                <text x="312" y="302" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8">32°F–34°F</text>
+                <text x="312" y="314" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8">OYSTER BAR</text>
+                <text x="312" y="328" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.3">&amp; Damascus</text>
+                <text x="312" y="339" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.3">Knife Vault</text>
+                <text x="312" y="350" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.3">+ Espresso</text>
+
+                <!-- 22-FOOT CALACATTA VERDE / VIOLA MARBLE SLAB ISLAND -->
+                <rect x="340" y="156" width="68" height="236" rx="5" fill="currentColor" fill-opacity="0.20" stroke="currentColor" stroke-width="1.6"/>
+                <text x="374" y="198" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9">22' ISLAND</text>
+                <text x="374" y="212" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.2">Calacatta</text>
+                <text x="374" y="224" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.2">Verde/Viola</text>
+                <text x="374" y="236" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.2">Marble Slab</text>
+                <text x="374" y="254" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.8">• Dark Cherry</text>
+                <text x="374" y="265" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.8">  Drawer Base</text>
+                <text x="374" y="280" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.8">• LED Toe-Kick</text>
+                <text x="374" y="295" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.8">• 6 Cream Stools</text>
+                <text x="374" y="310" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.8">• Tiered Drum</text>
+                <text x="374" y="321" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.8">  Chandeliers</text>
+
+                <text x="351" y="422" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5">UNCHANGED KITCHEN</text>
+                <text x="351" y="437" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9">36' × 26' • Dark Cherry</text>
+                <text x="351" y="451" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="8.5">&amp; Mahogany Cabinetry</text>
+                <text x="351" y="466" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="8">▲ North = Back Pool View</text>
+              </g>
+
+              <!-- BUILT-IN DARK CHERRY / MAHOGANY CHINA CABINET SECRET DOOR (AT BACK/NORTH END OF KITCHEN NEXT TO BACK POOL DOOR!) -->
+              <g onclick="selectRoom('scullery')" class="cursor-pointer">
+                <rect id="room-scullery" x="288" y="74" width="50" height="84" rx="5" fill="rgba(168, 85, 247, 0.30)" stroke="currentColor" stroke-width="1.8"/>
+                <rect id="secret-door-marker" x="282" y="78" width="9" height="74" rx="3" fill="#f59e0b" stroke="currentColor" stroke-width="1.4"/>
+                <text x="315" y="95" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.2">CHINA</text>
+                <text x="315" y="106" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.2">CABINET</text>
+                <text x="315" y="119" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="7.5">Secret Door</text>
+                <text x="315" y="130" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.2">Next to Back</text>
+                <text x="315" y="140" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.2">Pool Door ▲</text>
+                <text x="315" y="151" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="7.2">Swings Out ►</text>
               </g>
 
               <!-- FLOOR-TO-CEILING MATTE-BLACK STEEL & GLASS SLIDING CRITTALL GRID PARTITION WALL -->
-              <rect x="394" y="172" width="38" height="320" rx="4" fill="rgba(251, 191, 36, 0.14)" stroke="rgba(251, 191, 36, 0.65)" stroke-dasharray="4 3"/>
-              <text x="413" y="330" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.5" transform="rotate(-90 413 330)">◄ FLOOR-TO-CEILING BLACK-STEEL CRITTALL GLASS SLIDING WALL ►</text>
+              <rect x="418" y="46" width="24" height="446" rx="4" fill="rgba(251, 191, 36, 0.16)" stroke="rgba(251, 191, 36, 0.75)" stroke-width="1.5" stroke-dasharray="5 3"/>
+              <text x="430" y="270" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8.5" transform="rotate(-90 430 270)">◄ FLOOR-TO-CEILING BLACK-STEEL CRITTALL GLASS SLIDING PARTITION WALL ►</text>
 
-              <!-- RIGHT & FRONT SIDE OF CENTRAL CORE: Soaring 24' Open First Floor Great Hall (DcL3q3doXhq Video Style) -->
+              <!-- BARREL-VAULTED ZELLIGE-TILE POOLSIDE BREAKFAST LOGGIA (AT BACK/NORTH OVERLOOKING RESORT SWIMMING POOL) -->
+              <g onclick="selectRoom('staircase')" class="cursor-pointer">
+                <rect id="room-staircase" x="444" y="46" width="174" height="122" rx="8" fill="rgba(236, 72, 153, 0.22)" stroke="currentColor" stroke-width="2"/>
+                <rect x="450" y="46" width="162" height="22" rx="4" fill="rgba(56, 189, 248, 0.35)" stroke="#38bdf8" stroke-width="1.4"/>
+                <text x="531" y="60" text-anchor="middle" fill="#e0f2fe" font-weight="700" font-size="8">▲ LOGGIA BLACK-STEEL DOORS TO BACK POOL ▲</text>
+                <text x="531" y="82" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5">BARREL-VAULTED ZELLIGE</text>
+                <text x="531" y="95" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">POOLSIDE LOGGIA (22'×14')</text>
+                <text x="531" y="111" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">• Pearl Moroccan Zellige Vault</text>
+                <text x="531" y="124" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">• Checkerboard Limestone Floor</text>
+                <text x="531" y="137" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">• Potted Olive Tree &amp; Bistro Set</text>
+                <text x="531" y="151" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="8.5">• Overlooks Back Pool &amp; Spa</text>
+              </g>
+
+              <!-- SOARING 24' OPEN FIRST FLOOR GREAT HALL (DcL3q3doXhq Video Architecture: 3 Zones, Single Pier & Front Arched Cathedral Windows) -->
               <g onclick="selectRoom('greatroom')" class="cursor-pointer">
-                <rect id="room-greatroom" x="434" y="172" width="183" height="320" rx="8" fill="rgba(245, 158, 11, 0.22)" stroke="currentColor" stroke-width="2.5"/>
-                <rect x="488" y="255" width="14" height="14" rx="2" fill="currentColor" fill-opacity="0.55"/>
-                <text x="525" y="198" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">SOARING 24' OPEN FIRST</text>
-                <text x="525" y="213" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">FLOOR GREAT HALL</text>
-                <text x="525" y="229" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">(Instagram Video DcL3q3doXhq)</text>
-                <text x="525" y="247" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• 24' Arched Black-Steel</text>
-                <text x="525" y="260" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">  Cathedral Windows &amp; Pier</text>
-                <text x="525" y="276" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Zone 1: Curved Bouclé Sofa</text>
-                <text x="525" y="289" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">  &amp; Striped Table on Rug</text>
-                <text x="525" y="305" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Zone 2: Camel Daybed &amp;</text>
-                <text x="525" y="318" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">  Travertine Coffee Tables</text>
-                <text x="525" y="334" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Zone 3: Open 12-Seat</text>
-                <text x="525" y="347" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">  Natural Oak Dining Hall</text>
-                <text x="525" y="363" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Warm Oak Portals to Wings</text>
-                <rect x="442" y="446" width="166" height="38" rx="6" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-width="1.2"/>
-                <text x="525" y="463" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">▼ ARCHED CATHEDRAL WINDOWS ▼</text>
-                <text x="525" y="478" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9">Overlooking Motor Court &amp; Gardens</text>
+                <rect id="room-greatroom" x="444" y="172" width="174" height="320" rx="8" fill="rgba(245, 158, 11, 0.22)" stroke="currentColor" stroke-width="2.5"/>
+                <text x="531" y="194" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">SOARING 24' OPEN FIRST</text>
+                <text x="531" y="208" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">FLOOR GREAT HALL</text>
+                <text x="531" y="221" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">(38'×28' • Video DcL3q3doXhq)</text>
+
+                <!-- ZONE 3: Open 12-Seat Natural Oak Formal Dining Hall -->
+                <rect x="452" y="230" width="158" height="58" rx="5" fill="currentColor" fill-opacity="0.13" stroke="currentColor" stroke-width="1"/>
+                <text x="531" y="246" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.8">ZONE 3: OPEN 12-SEAT DINING</text>
+                <text x="531" y="259" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">12-Seat Natural Oak Table &amp; Bouclé</text>
+                <text x="531" y="271" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="8">Chairs + Warm Oak Wing Portals</text>
+
+                <!-- SINGLE SQUARE STRUCTURAL PIER + ZONE 2: Camel Daybed & Travertine Lounge -->
+                <rect x="452" y="294" width="158" height="62" rx="5" fill="currentColor" fill-opacity="0.13" stroke="currentColor" stroke-width="1"/>
+                <rect x="458" y="311" width="22" height="22" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+                <text x="469" y="325" text-anchor="middle" fill="#0c0a09" font-weight="800" font-size="6.8">PIER</text>
+                <text x="542" y="311" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.5">ZONE 2: CENTER LOUNGE</text>
+                <text x="542" y="324" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">Camel Leather Daybed &amp;</text>
+                <text x="542" y="336" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">Nested Travertine Tables</text>
+                <text x="542" y="348" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="7.5">◄ Single Square Pier</text>
+
+                <!-- ZONE 1: Curved Ivory Bouclé Sofa & Striped Round Coffee Table on Checkered Rug -->
+                <rect x="452" y="362" width="158" height="74" rx="5" fill="currentColor" fill-opacity="0.13" stroke="currentColor" stroke-width="1"/>
+                <text x="531" y="378" text-anchor="middle" fill="currentColor" font-weight="700" font-size="8.8">ZONE 1: ARCHED-WINDOW LOUNGE</text>
+                <text x="531" y="391" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">• Curved Ivory Bouclé Sofa</text>
+                <text x="531" y="403" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">• B&amp;W Striped Round Coffee Table</text>
+                <text x="531" y="415" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8">• Black Armchairs on Checkered Rug</text>
+                <text x="531" y="428" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="7.5">• Herringbone &amp; Wide-Plank Oak</text>
+
+                <!-- FRONT (SOUTH) ARCHED BLACK-STEEL CATHEDRAL WINDOWS -->
+                <rect x="450" y="442" width="162" height="44" rx="6" fill="rgba(251, 191, 36, 0.22)" stroke="#f59e0b" stroke-width="1.4"/>
+                <text x="531" y="459" text-anchor="middle" fill="#fef3c7" font-weight="700" font-size="9">▼ 24' ARCHED CATHEDRAL WINDOWS ▼</text>
+                <text x="531" y="474" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.2">Front of Home (South): Motor Court &amp; Gardens</text>
               </g>
 
               <!-- RIGHT WING: Guest Suites 3 & 4 -->
               <g onclick="selectRoom('bed3')" class="cursor-pointer">
                 <rect id="room-bed3" x="625" y="46" width="160" height="214" rx="8" fill="rgba(16, 185, 129, 0.18)" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="633" y="46" width="144" height="20" rx="3" fill="rgba(56, 189, 248, 0.28)" stroke="rgba(56, 189, 248, 0.7)" stroke-width="1"/>
+                <text x="705" y="59" text-anchor="middle" fill="#bae6fd" font-weight="700" font-size="7.8">▲ FRENCH DOORS TO BACK POOL</text>
                 <text x="705" y="122" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">GUEST SUITE 3</text>
                 <text x="705" y="140" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">17' × 15' • Poolside</text>
                 <text x="705" y="158" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="10.5">• French Doors to Pool</text>
@@ -419,7 +483,7 @@
 
               <!-- FRONT CIRCULAR MOTOR COURT & SHREK/FIONA STATUE -->
               <rect x="180" y="504" width="440" height="44" rx="22" fill="rgba(148, 163, 184, 0.18)" stroke="currentColor" stroke-dasharray="4 2"/>
-              <text x="400" y="523" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">▼ FRONT ARCHED ENTRY • CIRCULAR COBBLESTONE MOTOR COURT ▼</text>
+              <text x="400" y="523" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11.5">▼ FRONT OF HOME (SOUTH) • CIRCULAR COBBLESTONE MOTOR COURT ▼</text>
               <text x="400" y="539" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">Center Shrub Island: ~4.8-Ft Statue of Shrek &amp; Princess Fiona • East Side: Boxwood Hedge Maze</text>
             </svg>
           </div>
@@ -521,14 +585,14 @@
               <g onclick="selectRoom('mezzanine')" class="cursor-pointer">
                 <rect id="room-mezzanine" x="20" y="412" width="760" height="78" rx="8" fill="rgba(236, 72, 153, 0.16)" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 3"/>
                 <text x="400" y="445" text-anchor="middle" fill="currentColor" font-weight="700" font-size="13">GRAND STAIRCASE GALLERY BRIDGE &amp; SHARED LAUNDRY / STEAM VALET</text>
-                <text x="400" y="465" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">Overlooks 24' Living Room &amp; Chef's Kitchen Below • Connects Grand Staircase to Primary Suite &amp; Closets</text>
+                <text x="400" y="465" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11.5">Overlooks Soaring 24' Open First Floor Great Hall, Crittall Glass Partition &amp; Unchanged Dark Cherry Chef's Kitchen Below</text>
               </g>
 
-              <text x="400" y="520" text-anchor="middle" fill="currentColor" class="text-xs opacity-75" font-size="11.5">▼ SOUTH SIDE: 2ND-STORY WINDOWS OVERLOOKING LOWER METAL ROOFLINES &amp; DOUBLE-HEIGHT LIVING ROOM/KITCHEN VOIDS ▼</text>
+              <text x="400" y="520" text-anchor="middle" fill="currentColor" class="text-xs opacity-75" font-size="11.5">▼ SOUTH SIDE: 2ND-STORY WINDOWS OVERLOOKING LOWER METAL ROOFLINES &amp; 24' OPEN FIRST FLOOR GREAT HALL VOID ▼</text>
             </svg>
           </div>
 
-          <!-- Floor 3 SVG: OUTBUILDINGS (3-BED GUEST HOUSE, WELLNESS FACILITY, 4-CAR BARN) & SUBTERRANEAN WINE CELLAR TUNNEL -->
+          <!-- Floor 3 SVG: OUTBUILDINGS (3-BED GUEST HOUSE, WELLNESS FACILITY, 4-CAR BARN v8) & SUBTERRANEAN WINE CELLAR v4 -->
           <div id="svg-floor-3" class="w-full overflow-x-auto hidden">
             <svg viewBox="0 0 800 540" class="w-full h-auto rounded-xl border border-stone-800 bg-stone-950 text-stone-100">
               <g onclick="selectRoom('driveway')" class="cursor-pointer">
@@ -545,24 +609,25 @@
 
               <g onclick="selectRoom('tunnel')" class="cursor-pointer">
                 <rect id="room-tunnel" x="15" y="280" width="108" height="220" rx="10" fill="rgba(217, 119, 6, 0.28)" stroke="currentColor" stroke-width="2"/>
-                <text x="69" y="312" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">SUBTERRANEAN</text>
-                <text x="69" y="327" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">WINE TUNNEL</text>
-                <text x="69" y="344" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">12' × 110' (-12' Elev)</text>
-                <text x="69" y="368" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">◄ Left Stairs UP</text>
-                <text x="69" y="382" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  to Barn</text>
-                <text x="69" y="404" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">► Right Stairs UP</text>
-                <text x="69" y="418" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  to Speakeasy &amp;</text>
-                <text x="69" y="432" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  Guest House</text>
-                <text x="69" y="456" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• 2,000+ Bottles</text>
-                <text x="69" y="470" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">• Bourbon Vault</text>
+                <text x="69" y="306" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5">SUBTERRANEAN</text>
+                <text x="69" y="320" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10.5">WINE CELLAR</text>
+                <text x="69" y="335" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">16' × 110' (-12' Elev)</text>
+                <text x="69" y="356" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9">▲ Left Stairs UP</text>
+                <text x="69" y="368" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">  North to Barn</text>
+                <text x="69" y="388" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9">▼ Right Stairs UP</text>
+                <text x="69" y="400" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">  South (180° Opp.)</text>
+                <text x="69" y="412" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">  to Speakeasy</text>
+                <text x="69" y="434" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">• Sommelier Bar</text>
+                <text x="69" y="447" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="8.8">• 15-Guest Table</text>
+                <text x="69" y="460" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="8.8">• 2,000+ Bottles</text>
               </g>
 
               <g onclick="selectRoom('barn')" class="cursor-pointer">
                 <rect id="room-barn" x="135" y="22" width="650" height="142" rx="10" fill="rgba(245, 158, 11, 0.22)" stroke="currentColor" stroke-width="2.5"/>
-                <text x="460" y="50" text-anchor="middle" fill="currentColor" font-weight="700" font-size="14.5">DETACHED COLLECTOR'S BARN (~3,250 Sq Ft • 4-Car Black Fleet + Event Conversions)</text>
-                <text x="460" y="72" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="11">• L1 Auto Gallery: All 4 Black Cars Backed In &amp; Angled in a Row on Left Wall (Zero Lift/Platform — Converts for Weddings &amp; Galas)</text>
-                <text x="460" y="92" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">• Under-Stairs Wine Cellar Stairwell: Limestone Stairs Going Straight DOWN (-12') Tucked Directly UNDERNEATH the Stairs That Lead Upstairs</text>
-                <text x="460" y="112" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">• L2 Event Bar &amp; VIP Lounge Mezzanine: Full Backlit Marble Bar (R), DJ &amp; Lighting Overlook (C) &amp; VIP Tufted Lounge (L)</text>
+                <text x="460" y="48" text-anchor="middle" fill="currentColor" font-weight="700" font-size="14">DETACHED COLLECTOR'S BARN v8 (~3,250 Sq Ft • 4-Car Black Fleet + Wedding &amp; Gala Modes)</text>
+                <text x="460" y="69" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10.5">• L1 Auto Gallery: 4 All-Black Cars Backed In &amp; Angled in a Row on Left Wall (Zero Lift) • 5 Circular Ring Lights • Single Rear Bath Door</text>
+                <text x="460" y="88" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• Right Wall: Unobstructed Full-Length Floating White-Oak Stairs to Floor + Wine Cellar Stairs (-12') Tucked Beneath Upper Span</text>
+                <text x="460" y="107" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="10.5">• L2 Event Mezzanine &amp; Side Wing: Full Backlit Bar (R), DJ &amp; Lighting Overlook (C), VIP Lounge (L) + Sunlit Windowed Side Space</text>
               </g>
 
               <g onclick="selectRoom('poolhouse')" class="cursor-pointer">
@@ -605,10 +670,10 @@
 
                 <text x="555" y="425" text-anchor="middle" fill="currentColor" font-weight="700" font-size="14">RESORT COURTYARD SWIMMING POOL &amp; SPA</text>
                 <text x="555" y="446" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="11.5">• Baja Sun Shelf Loungers • Water-Level Sunken Fire Pit Cabana</text>
-                <text x="555" y="466" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">• Honed French Limestone Coping &amp; Resort Daybeds</text>
+                <text x="555" y="466" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="11">• Seen Directly Through Kitchen/China Cabinet Back Doors &amp; Zellige Loggia Doors</text>
               </g>
 
-              <text x="400" y="524" text-anchor="middle" fill="currentColor" class="text-xs opacity-80" font-size="11.5">▼ CONNECTS SOUTH TO MAIN RESIDENCE LIVING ROOM, SPEAKEASY &amp; CHEF'S KITCHEN VERANDA ▼</text>
+              <text x="400" y="524" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="11">▼ CONNECTS SOUTH TO BACK OF MAIN RESIDENCE: KITCHEN &amp; CHINA CABINET BACK POOL DOORS, ZELLIGE LOGGIA &amp; SPEAKEASY ▼</text>
             </svg>
           </div>
         </div>
@@ -669,46 +734,185 @@
       </div>
     </section>
 
-    <!-- ==================== TAB 3: ARCHITECT'S SPECIFICATION SHEET ==================== -->
+    <!-- ==================== TAB 3: ARCHITECT'S SPECIFICATION SHEET & ARCHITECTURE DIAGRAMS ==================== -->
     <section id="tab-specs" class="hidden space-y-6">
+      <!-- Visual Architecture & Sightline Flow Diagrams -->
+      <div class="bg-stone-900 border border-stone-800 rounded-2xl p-6 space-y-5">
+        <div>
+          <h2 class="text-xl font-bold text-white">Estate Architecture &amp; Spatial Sightline Diagrams</h2>
+          <p class="text-sm text-stone-400 mt-1">Updated architectural flowcharts showing the Open First Floor (`DcL3q3doXhq`), Crittall Glass Partition, Barrel-Vaulted Zellige Loggia, Back-of-Home Pool Sightlines from the China Cabinet &amp; Kitchen, and Estate-Wide Circulation.</p>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+          <!-- Architecture Diagram A: Level 1 Open First Floor & Back-of-Home Pool Sightline Architecture -->
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm sm:text-base font-bold text-amber-400">Diagram A — Level 1 Open First Floor &amp; Back-of-Home Pool Sightline Architecture</h3>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-500/15 text-sky-300 border border-sky-500/30">Front (South) ➔ Back Pool (North)</span>
+            </div>
+            <svg viewBox="0 0 760 450" class="w-full h-auto rounded-lg border border-stone-800 bg-stone-900/60 text-stone-100">
+              <!-- NORTH / BACK OF HOME: RESORT SWIMMING POOL & WELLNESS CENTER -->
+              <rect x="20" y="12" width="720" height="58" rx="8" fill="rgba(56, 189, 248, 0.22)" stroke="#38bdf8" stroke-width="2"/>
+              <text x="380" y="34" text-anchor="middle" fill="#e0f2fe" font-weight="800" font-size="12">▲ BACK OF HOME (NORTH): SPARKLING TURQUOISE RESORT SWIMMING POOL, LIMESTONE TERRACE &amp; TWO-STORY WELLNESS CENTER ▲</text>
+              <text x="380" y="54" text-anchor="middle" fill="#bae6fd" font-weight="600" font-size="10">All Exterior Doors Near the China Cabinet, Kitchen &amp; Barrel-Vaulted Zellige Loggia Open Directly Onto the Back Swimming Pool</text>
+
+              <!-- ARROWS UP TO BACK POOL -->
+              <text x="125" y="86" text-anchor="middle" fill="#38bdf8" font-weight="800" font-size="10">▲ Rear Pool Door</text>
+              <text x="325" y="86" text-anchor="middle" fill="#38bdf8" font-weight="800" font-size="10">▲ Kitchen Back Pool Door (Next to China Cabinet)</text>
+              <text x="605" y="86" text-anchor="middle" fill="#38bdf8" font-weight="800" font-size="10">▲ Loggia Black-Steel Pool Doors</text>
+
+              <!-- ROW 2: SPEAKEASY + CHINA CABINET + UNCHANGED KITCHEN + ZELLIGE LOGGIA -->
+              <rect x="20" y="96" width="175" height="112" rx="8" fill="rgba(217, 119, 6, 0.24)" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="5 3"/>
+              <text x="107" y="118" text-anchor="middle" fill="#fcd34d" font-weight="700" font-size="11">HIDDEN SPEAKEASY BAR</text>
+              <text x="107" y="135" text-anchor="middle" fill="currentColor" font-size="9.5">• 2 Brick Liquor Arches &amp; High TV</text>
+              <text x="107" y="151" text-anchor="middle" fill="currentColor" font-size="9.5">• Straight Wall From Back Pool</text>
+              <text x="107" y="165" text-anchor="middle" fill="currentColor" font-size="9.5">  Door to -12' Wine Cellar Stairs</text>
+              <text x="107" y="182" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9">◄ Secret China Cabinet Entry ►</text>
+
+              <rect x="205" y="96" width="265" height="112" rx="8" fill="rgba(14, 165, 233, 0.22)" stroke="#38bdf8" stroke-width="2"/>
+              <text x="337" y="117" text-anchor="middle" fill="#e0f2fe" font-weight="700" font-size="11">100% UNCHANGED DARK CHERRY KITCHEN (36'×26')</text>
+              <text x="337" y="134" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9.5">• Built-In Dark Cherry China Cabinet Secret Door</text>
+              <text x="337" y="148" text-anchor="middle" fill="#bae6fd" font-weight="700" font-size="9">  (Right Next to Back Pool Door — Swings Into Kitchen)</text>
+              <text x="337" y="164" text-anchor="middle" fill="currentColor" font-size="9.5">• 22' Calacatta Verde/Viola Island &amp; 6 Cream Stools</text>
+              <text x="337" y="179" text-anchor="middle" fill="currentColor" font-size="9.5">• 32°F–34°F Oyster Raw Bar &amp; Damascus Knife Vault</text>
+              <text x="337" y="194" text-anchor="middle" fill="currentColor" font-size="9.5">• 60" Black-and-Brass Range &amp; Tapered Hood</text>
+
+              <rect x="480" y="96" width="260" height="112" rx="8" fill="rgba(236, 72, 153, 0.20)" stroke="#f472b6" stroke-width="1.8"/>
+              <text x="610" y="117" text-anchor="middle" fill="#fbcfe8" font-weight="700" font-size="11">BARREL-VAULTED ZELLIGE LOGGIA (22'×14')</text>
+              <text x="610" y="135" text-anchor="middle" fill="currentColor" font-size="9.5">• Pearlescent Moroccan Zellige Vaulted Ceiling</text>
+              <text x="610" y="151" text-anchor="middle" fill="currentColor" font-size="9.5">• Diagonal Gray &amp; Cream Checkerboard Floor</text>
+              <text x="610" y="167" text-anchor="middle" fill="currentColor" font-size="9.5">• Sculptural Potted Olive Tree &amp; Bistro Table</text>
+              <text x="610" y="183" text-anchor="middle" fill="#bae6fd" font-weight="700" font-size="9.5">• Black-Steel Doors to Back Swimming Pool</text>
+
+              <!-- CRITTALL PARTITION BAND -->
+              <rect x="205" y="218" width="535" height="28" rx="5" fill="rgba(251, 191, 36, 0.18)" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="6 3"/>
+              <text x="472" y="236" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="10.5">▲▼ FLOOR-TO-CEILING MATTE-BLACK STEEL &amp; GLASS SLIDING CRITTALL GRID PARTITION WALL ▲▼</text>
+
+              <!-- ROW 3: UNCHANGED WEST WING + SOARING 24' GREAT HALL + UNCHANGED EAST WING -->
+              <rect x="20" y="256" width="175" height="122" rx="8" fill="rgba(139, 92, 246, 0.20)" stroke="#a78bfa" stroke-width="1.8"/>
+              <text x="107" y="276" text-anchor="middle" fill="#ddd6fe" font-weight="700" font-size="10.5">UNCHANGED WEST WING</text>
+              <text x="107" y="294" text-anchor="middle" fill="currentColor" font-size="9">• Dedicated Burgundy-Velvet</text>
+              <text x="107" y="307" text-anchor="middle" fill="currentColor" font-size="9">  Theater (5'–6' Aisle Between Rows)</text>
+              <text x="107" y="323" text-anchor="middle" fill="currentColor" font-size="9">• "Mad Men" Office (Flush TV)</text>
+              <text x="107" y="338" text-anchor="middle" fill="currentColor" font-size="9">• Guest Suite #2 (Daybed &amp; 85" TV)</text>
+              <text x="107" y="353" text-anchor="middle" fill="currentColor" font-size="9">• Mudroom &amp; 3-Car Side Garage</text>
+              <text x="107" y="368" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8.5">◄ Warm Oak Gallery Portal</text>
+
+              <rect x="205" y="256" width="355" height="122" rx="8" fill="rgba(245, 158, 11, 0.22)" stroke="#f59e0b" stroke-width="2.2"/>
+              <text x="382" y="276" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="11.5">SOARING 24-FOOT OPEN FIRST FLOOR GREAT HALL (38'×28')</text>
+              <text x="382" y="293" text-anchor="middle" fill="#fde68a" font-weight="600" font-size="9.2">Single Square Structural Pier Anchoring 3 Wall-Free Open Zones:</text>
+              <text x="382" y="310" text-anchor="middle" fill="currentColor" font-size="9.2">1. Window Lounge: Curved Ivory Bouclé Sofa &amp; B&amp;W Striped Round Table</text>
+              <text x="382" y="325" text-anchor="middle" fill="currentColor" font-size="9.2">2. Center Lounge: Low-Profile Camel Leather Daybed &amp; Travertine Tables</text>
+              <text x="382" y="340" text-anchor="middle" fill="currentColor" font-size="9.2">3. Open Dining Hall: 12-Seat Natural Oak Table &amp; Sculpted Bouclé Chairs</text>
+              <text x="382" y="366" text-anchor="middle" fill="#fef3c7" font-weight="700" font-size="9.5">▼ Towering Two-Story Arched Black-Steel Cathedral Windows (South) ▼</text>
+
+              <rect x="570" y="256" width="170" height="122" rx="8" fill="rgba(16, 185, 129, 0.20)" stroke="#34d399" stroke-width="1.8"/>
+              <text x="655" y="276" text-anchor="middle" fill="#a7f3d0" font-weight="700" font-size="10.5">UNCHANGED EAST WING</text>
+              <text x="655" y="296" text-anchor="middle" fill="currentColor" font-size="9">• Guest Suite #3 (Poolside</text>
+              <text x="655" y="309" text-anchor="middle" fill="currentColor" font-size="9">  En-Suite w/ Pool Doors)</text>
+              <text x="655" y="327" text-anchor="middle" fill="currentColor" font-size="9">• Guest Suite #4 (Garden</text>
+              <text x="655" y="340" text-anchor="middle" fill="currentColor" font-size="9">  Loggia Suite w/ Fireplace &amp;</text>
+              <text x="655" y="353" text-anchor="middle" fill="currentColor" font-size="9">  4-Poster White-Oak Bed)</text>
+              <text x="655" y="368" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8.5">Warm Oak Gallery Portal ►</text>
+
+              <!-- SOUTH / FRONT OF HOME: MOTOR COURT & SHREK/FIONA STATUE -->
+              <rect x="20" y="390" width="720" height="48" rx="8" fill="rgba(148, 163, 184, 0.18)" stroke="rgba(148, 163, 184, 0.6)" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="380" y="411" text-anchor="middle" fill="currentColor" font-weight="700" font-size="11">▼ FRONT OF HOME (SOUTH): CIRCULAR COBBLESTONE MOTOR COURT &amp; FORMAL ENGLISH BOXWOOD HEDGE MAZE ▼</text>
+              <text x="380" y="427" text-anchor="middle" fill="currentColor" opacity="0.85" font-size="9.5">Center Shrub Island: ~4.8-Foot Bronze-Patina Statue of Shrek &amp; Princess Fiona • Sweeping West Cobblestone Driveway to Garage &amp; Barn</text>
+            </svg>
+          </div>
+
+          <!-- Architecture Diagram B: Full Estate Above-Ground & Subterranean (-12') Circulation Architecture -->
+          <div class="bg-stone-950 border border-stone-800 rounded-xl p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm sm:text-base font-bold text-amber-400">Diagram B — Full Estate Above-Ground &amp; Subterranean (`-12'`) Circulation Architecture</h3>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">3D Compound &amp; Wine Cellar Loop</span>
+            </div>
+            <svg viewBox="0 0 760 450" class="w-full h-auto rounded-lg border border-stone-800 bg-stone-900/60 text-stone-100">
+              <!-- TOP: DETACHED COLLECTOR'S BARN v8 -->
+              <rect x="20" y="12" width="720" height="92" rx="8" fill="rgba(245, 158, 11, 0.22)" stroke="#f59e0b" stroke-width="2"/>
+              <text x="380" y="32" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="12">NORTH ESTATE GROUNDS: DETACHED COLLECTOR'S BARN v8 (~3,250 SQ FT • 3 EVENT &amp; FLEET MODES)</text>
+              <text x="380" y="50" text-anchor="middle" fill="currentColor" font-size="9.8">• Level 1: All 4 All-Black Cars Backed In &amp; Angled in a Single Row Along Left Wall (Zero Lift) • 5 Circular LED Ring Chandeliers • Single Rear Bath Door</text>
+              <text x="380" y="66" text-anchor="middle" fill="#fde68a" font-weight="600" font-size="9.8">• Right Wall: Unobstructed Full-Length Floating White-Oak Stairs to Floor + Subterranean Wine Cellar Stairs (-12') Tucked Beneath Upper Span</text>
+              <text x="380" y="82" text-anchor="middle" fill="currentColor" font-size="9.5">• Level 2 Event Mezzanine &amp; Side Wing: Full Backlit Bar (Right), DJ &amp; Lighting Overlook (Center), VIP Lounge (Left) + Sunlit Windowed Side Space</text>
+
+              <!-- MIDDLE LEFT: SUBTERRANEAN WINE CELLAR v4 (-12' ELEV) -->
+              <rect x="20" y="120" width="345" height="196" rx="8" fill="rgba(217, 119, 6, 0.26)" stroke="#f59e0b" stroke-width="2"/>
+              <text x="192" y="142" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="11">100% UNDERGROUND SPINE (-12' BELOW GRADE)</text>
+              <text x="192" y="159" text-anchor="middle" fill="#fcd34d" font-weight="700" font-size="10.5">SUBTERRANEAN VAULTED WINE CELLAR v4 (16'×110')</text>
+              <text x="192" y="179" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9.5">▲ Left Wall Stairs Ascend North (Front-to-Back)</text>
+              <text x="192" y="193" text-anchor="middle" fill="currentColor" font-size="9">  UP to Detached Barn Under-Stair Stairwell</text>
+              <text x="192" y="213" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9.5">▼ Right Wall Stairs Ascend South (Back-to-Front,</text>
+              <text x="192" y="227" text-anchor="middle" fill="currentColor" font-size="9">  180° Opposite Direction) UP to Main House Speakeasy</text>
+              <text x="192" y="247" text-anchor="middle" fill="currentColor" font-size="9.2">• Backlit Calacatta Viola Marble Sommelier Pouring Bar</text>
+              <text x="192" y="263" text-anchor="middle" fill="currentColor" font-size="9.2">• Live-Edge Walnut Table (Hosts 15+ Tasting Guests)</text>
+              <text x="192" y="279" text-anchor="middle" fill="currentColor" font-size="9.2">• 2,000+ Bottle Climate-Controlled Glass Wine Vaults</text>
+              <text x="192" y="299" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="9">▼ Connects Directly to Main Residence Speakeasy &amp; Kitchen ▼</text>
+
+              <!-- MIDDLE RIGHT: POOL COURTYARD, 3-BED GUEST HOUSE & 2-STORY WELLNESS FACILITY -->
+              <rect x="380" y="120" width="360" height="196" rx="8" fill="rgba(14, 165, 233, 0.20)" stroke="#38bdf8" stroke-width="2"/>
+              <text x="560" y="142" text-anchor="middle" fill="#e0f2fe" font-weight="800" font-size="11">REAR RESORT COURTYARD &amp; OUTBUILDINGS</text>
+              <text x="560" y="161" text-anchor="middle" fill="#bae6fd" font-weight="700" font-size="10">1. Lenny Kravitz 3-Bed / 2-Bath Guest House (~2,800 Sq Ft)</text>
+              <text x="560" y="176" text-anchor="middle" fill="currentColor" font-size="9">• L1: Smoked-Walnut &amp; Nero Marquina Kitchen, Zebra/Leather</text>
+              <text x="560" y="189" text-anchor="middle" fill="currentColor" font-size="9">  Lounge, Murano Chandelier, Bed #1, Bath #1 &amp; Straight Stairs</text>
+              <text x="560" y="203" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9">• L2: 100% Glass-Surrounded "Boss Woman" Office (18'×15'),</text>
+              <text x="560" y="216" text-anchor="middle" fill="currentColor" font-size="9">  85" TV &amp; Vinyl Wall, Bedrooms #2 &amp; #3 + Full Bath #2</text>
+              <text x="560" y="236" text-anchor="middle" fill="#a7f3d0" font-weight="700" font-size="10">2. Two-Story Wellness / Health Facility (~1,600 Sq Ft)</text>
+              <text x="560" y="251" text-anchor="middle" fill="currentColor" font-size="9">• L1: Bubbling Hot Tub, Cedar Sauna &amp; Walk-Through Open</text>
+              <text x="560" y="264" text-anchor="middle" fill="currentColor" font-size="9">  Shower Area Opening Directly to the Outdoor Pool Deck</text>
+              <text x="560" y="278" text-anchor="middle" fill="currentColor" font-size="9">• L2: Workout Facility w/ 85" TV + Complete Upstairs Full Bath</text>
+              <text x="560" y="299" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="9">▼ Across Resort Pool From Kitchen, China Cabinet &amp; Loggia ▼</text>
+
+              <!-- BOTTOM: MAIN RESIDENCE LEVEL 1 & LEVEL 2 SUMMARY -->
+              <rect x="20" y="330" width="720" height="108" rx="8" fill="rgba(16, 185, 129, 0.18)" stroke="#34d399" stroke-width="2"/>
+              <text x="380" y="351" text-anchor="middle" fill="#d1fae5" font-weight="800" font-size="11.5">MAIN RESIDENCE (~9,850 SQ FT): LEVEL 1 OPEN FIRST FLOOR + LEVEL 2 EXCLUSIVE 5-ROOM PRIMARY FLOOR</text>
+              <text x="380" y="369" text-anchor="middle" fill="currentColor" font-size="9.5">• Level 1 (~6,050 Sq Ft): Attached 3-Car Garage (3 Rolled-Up Doors ➔ 2 Steps to Mudroom/Scullery) ➔ Unchanged Dark Cherry Kitchen (22' Island,</text>
+              <text x="380" y="383" text-anchor="middle" fill="currentColor" font-size="9.5">  32°F Oyster Bar &amp; China Cabinet Next to Back Pool Door) ➔ Crittall Glass Wall ➔ 24' Open Great Hall &amp; Zellige Loggia + Unchanged Theater, Office &amp; Suites 2–4</text>
+              <text x="380" y="402" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9.5">• Level 2 (~3,800 Sq Ft West ➔ East): 1. Master Bed ➔ 2. Her's Bath (7.3' 2-Person Tub) ➔ 3. Her's 650-Pair Closet ➔ 4. His 470-Pair Closet ➔ 5. His Bath (7.3' Tub)</text>
+              <text x="380" y="421" text-anchor="middle" fill="#bae6fd" font-weight="600" font-size="9">• Back of Home (North): Kitchen/China Cabinet Back Pool Door, Barrel-Vaulted Zellige Loggia &amp; Speakeasy All Open Onto the Resort Swimming Pool</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
       <div class="bg-stone-900 border border-stone-800 rounded-2xl p-6 space-y-6">
         <div>
           <h2 class="text-xl font-bold text-white">Architect's Room-by-Room Specification &amp; Engineering Summary</h2>
-          <p class="text-sm text-stone-400 mt-1">100% synchronized with all 27 current architectural renderings and floor plan schematics.</p>
+          <p class="text-sm text-stone-400 mt-1">100% synchronized with all 28 current architectural renderings, floor plan schematics, and sightline diagrams.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
             <h3 class="text-base font-bold text-amber-400">1. Soaring 24-Foot Open First Floor Great Hall (`DcL3q3doXhq` Video Style), Retractable Black-Steel Crittall Glass Partition &amp; Barrel-Vaulted Zellige Loggia</h3>
             <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
-              <li>• <strong>Soaring 24-Foot Gallery-White Great Hall &amp; Arched Black-Steel Cathedral Windows:</strong> Incorporates the exact spatial volume of the Instagram reference (`https://www.instagram.com/p/DcL3q3doXhq/`)—a 24-foot gallery-white architectural hall flooded with sunlight through <strong>towering two-story arched matte-black steel multi-pane cathedral windows</strong> overlooking the estate's live-oak trees and boxwood gardens.</li>
+              <li>• <strong>Soaring 24-Foot Gallery-White Great Hall &amp; Arched Black-Steel Cathedral Windows:</strong> Incorporates the exact spatial volume of the Instagram reference (`https://www.instagram.com/p/DcL3q3doXhq/`)—a 24-foot gallery-white architectural hall flooded with sunlight through <strong>towering two-story arched matte-black steel multi-pane cathedral windows</strong> at the Front (South) overlooking the estate's live-oak trees, circular cobblestone motor court, and boxwood gardens.</li>
               <li>• <strong>Single Structural Pier Defining 3 Seamless Open Zones:</strong> A single sculptural square gallery-white column subtly organizes three wall-free zones across wide-plank and herringbone European white-oak floors: (1) <strong>The Arched-Window Lounge</strong> (curved ivory bouclé sofa, black-and-white striped round coffee table on black cylindrical legs &amp; mid-century black armchairs on a checkered wool rug); (2) <strong>The Center Daybed &amp; Travertine Lounge</strong> (camel leather daybed on a matte-black frame with nested organic travertine stone coffee tables); and (3) <strong>The Open-Concept 12-Seat Natural Oak Formal Dining Hall</strong> beside warm oak-cased portals leading to the unchanged Bedroom &amp; Theater wings.</li>
-              <li>• <strong>Floor-to-Ceiling Matte-Black Steel &amp; Glass Sliding Crittall Grid Partition + Barrel-Vaulted Zellige-Tile Loggia (`00:13–00:21` of Video):</strong> Full-height multi-panel black-steel Crittall glass sliding doors frame the wide opening between the 24-foot Great Hall, your <strong>100% unchanged Dark Cherry / Mahogany Chef's Kitchen &amp; 22-foot Island</strong>, and an adjoining <strong>Barrel-Vaulted Pearlescent Moroccan Zellige-Tile Indoor-Outdoor Breakfast Loggia</strong> with diagonal gray-and-cream checkerboard limestone floor tiles, a potted olive tree, and black-steel doors to the pool terrace.</li>
+              <li>• <strong>Floor-to-Ceiling Matte-Black Steel &amp; Glass Sliding Crittall Grid Partition + Barrel-Vaulted Zellige-Tile Loggia (`00:13–00:21` of Video):</strong> Full-height multi-panel black-steel Crittall glass sliding doors frame the wide opening between the 24-foot Great Hall, your <strong>100% unchanged Dark Cherry / Mahogany Chef's Kitchen &amp; 22-foot Island</strong>, and an adjoining <strong>Barrel-Vaulted Pearlescent Moroccan Zellige-Tile Indoor-Outdoor Breakfast Loggia</strong> with diagonal gray-and-cream checkerboard limestone floor tiles, a potted olive tree, and black-steel doors opening to the <strong>Back-of-Home Resort Swimming Pool &amp; Two-Story Wellness Center</strong>.</li>
             </ul>
           </div>
 
           <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
-            <h3 class="text-base font-bold text-amber-400">2. 100% Unchanged Open-Concept Elite Chef's Kitchen (Unified Deep Dark Cherry / Mahogany Wood Cabinetry, 22' Calacatta Verde/Viola Island &amp; Secret China Cabinet Door)</h3>
+            <h3 class="text-base font-bold text-amber-400">2. 100% Unchanged Open-Concept Elite Chef's Kitchen (Unified Deep Dark Cherry / Mahogany Wood Cabinetry, 22' Calacatta Verde/Viola Island &amp; Back-of-Home Pool Doors Next to China Cabinet)</h3>
             <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
               <li>• <strong>Extra-Long 22-Foot Calacatta Verde / Calacatta Viola Stone Slab Island:</strong> Anchored by a monumental <strong>22-foot-long single-span polished Calacatta Verde / Calacatta Viola Italian marble slab</strong> with a creamy alabaster-white background and dramatic brecciated sage-emerald green, deep burgundy-plum/wine, and warm gold veining, resting on a <strong>rich deep dark cherry / mahogany shaker drawer base</strong> with oversized horizontal brushed-brass bar pulls, a warm glowing LED toe-kick ribbon, <strong>6 plush cream upholstered channel-split-back counter stools</strong>, and <strong>tiered ribbed/fluted glass and brushed-brass drum chandeliers</strong> overhead.</li>
-              <li>• <strong>100% Unified Deep Dark Cherry / Mahogany Wood Cabinetry + Secret China Cabinet Door:</strong> Across all kitchen &amp; speakeasy views, every wooden cabinet—the <strong>32°F–34°F Chilled Oyster Raw Bar &amp; Damascus Knife Vault column</strong> (both exterior frame and interior wood backing), the <strong>upper glass-front and lower drawer cabinets around the 60" stove</strong>, the <strong>22-foot island base</strong>, and the <strong>built-in illuminated glass-front China Cabinet at the far end of the kitchen wall (both exterior frame and interior back panels) that swings open outward TOWARDS the kitchen area</strong>—is finished in the <strong>exact same deep, rich dark cherry / mahogany stained wood</strong>.</li>
+              <li>• <strong>100% Unified Deep Dark Cherry / Mahogany Wood Cabinetry + China Cabinet Next to Back-of-Home Pool Doors:</strong> Across all kitchen &amp; speakeasy views, every wooden cabinet—the <strong>32°F–34°F Chilled Oyster Raw Bar &amp; Damascus Knife Vault column</strong>, the <strong>upper glass-front and lower drawer cabinets around the 60" stove</strong>, the <strong>22-foot island base</strong>, and the <strong>built-in illuminated glass-front China Cabinet at the back (north) end of the kitchen wall right next to the tall black-steel Back Pool Doors overlooking the Resort Swimming Pool &amp; Two-Story Wellness Center</strong>—is finished in the <strong>exact same deep, rich dark cherry / mahogany stained wood</strong>.</li>
               <li>• <strong>60" Black &amp; Brass Pro Gas Range, 2 Wall Ovens &amp; 3-Dishwasher Program:</strong> Accompanied by a 60" black-and-brass gas range with brass pot filler, Flamberge rotisserie, Gaggenau Teppanyaki griddle &amp; wok ring, 2 stacked 30" wall ovens, sous-vide drawer, and 3 dishwashers.</li>
             </ul>
           </div>
 
           <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
-            <h3 class="text-base font-bold text-amber-400">3. Hidden Speakeasy Bar (Dark Cherry / Mahogany Secret China Cabinet Door Opening Towards Kitchen, High Center-Brick TV &amp; Wall-Connected Stair Rail)</h3>
+            <h3 class="text-base font-bold text-amber-400">3. Hidden Speakeasy Bar (Dark Cherry / Mahogany Secret China Cabinet Door Next to Back Pool Door, Single Straight Wall to Wine Stairs &amp; Nighttime Pool View)</h3>
             <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
-              <li>• <strong>Secret Built-In Dark Cherry / Mahogany China Cabinet Door That Opens Towards the Kitchen Area:</strong> At the far end of the kitchen wall sits a floor-to-ceiling built-in illuminated glass-front China Cabinet crafted in matching deep dark cherry / mahogany wood (inside and out) displaying fine white porcelain dinnerware and crystal stemware; releasing its hidden magnetic latch allows the <strong>entire 1-piece dark cherry / mahogany China Cabinet box to swing open outward TOWARDS the kitchen area</strong> on heavy-duty concealed pivot hinges to reveal the Hidden Speakeasy Bar behind it.</li>
+              <li>• <strong>Secret Built-In Dark Cherry / Mahogany China Cabinet Door Right Next to the Back-of-Home Pool Door:</strong> At the north (back) end of the kitchen wall right beside the tall black-steel back door overlooking the Resort Swimming Pool &amp; Two-Story Wellness Center sits the floor-to-ceiling built-in illuminated glass-front China Cabinet; releasing its hidden magnetic latch allows the <strong>entire 1-piece dark cherry / mahogany China Cabinet box (hinged on the jamb away from the pool) to swing open outward TOWARDS the kitchen area</strong> on heavy-duty concealed pivot hinges to reveal the Hidden Speakeasy Bar behind it.</li>
               <li>• <strong>Left Wall — Mounted TV High on the Center Brick Between the Two Liquor Arches:</strong> Backed against the solid kitchen range wall, featuring two illuminated antique-brick liquor arches flanking a 4K flat-screen TV mounted high on the center brick spandrel above the leathered Nero Marquina marble bar.</li>
-              <li>• <strong>Right Wall &amp; Rear Pool Doors:</strong> Looking from inside the Speakeasy, the open dark cherry / mahogany China Cabinet door is seen outside the brick doorway swung outward onto the kitchen floor toward the house, while the wrought-iron railing for the Wine Cellar Tunnel stairs connects cleanly to the right wall and tall black-steel French doors open to the nighttime pool terrace.</li>
+              <li>• <strong>Right Wall (Single Straight Wall to Stairs) &amp; View Out to Back Pool Door:</strong> Looking from inside the Speakeasy, a single flat straight wall extends continuously from the back pool entrance through the dark cherry doorway frame all the way to the Subterranean Wine Cellar stairs; the China Cabinet door is hinged on the right (stair-side) jamb swinging outward into the kitchen (showing only its solid dark cherry wood back), and looking out the open doorway into the kitchen shows the kitchen's tall black-steel back door and the nighttime swimming pool &amp; Two-Story Wellness Center.</li>
             </ul>
           </div>
 
           <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
-            <h3 class="text-base font-bold text-amber-400">4. Burgundy Velvet Snuggle-Couch Theater (Both Facing Screen, 1st Closer), "Mad Men" Office &amp; All 3 Downstairs Guest Suites</h3>
+            <h3 class="text-base font-bold text-amber-400">4. Burgundy Velvet Snuggle-Couch Theater (Wide 5'–6' Aisle Between Rows), "Mad Men" Office &amp; All 3 Downstairs Guest Suites</h3>
             <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
-              <li>• <strong>Dedicated Home Theater — Two Tiered Rows of Deep Burgundy Velvet Couches BOTH Facing the Screen (First Couch Closer):</strong> Replaces individual leather recliners with <strong>two tiered stadium rows of extra-deep, oversized Vintage Tufted Burgundy Velvet Couches &amp; Twin Chaise Daybeds</strong> positioned horizontally parallel to and facing dead-on straight toward the 150" 4K CinemaScope laser screen—with the <strong>first (front-row) channel-tufted deep burgundy/merlot velvet couch positioned closer to the screen</strong> on the lower level and the matching second (rear-row) button-tufted deep burgundy/merlot velvet couch elevated on the stadium riser behind it.</li>
+              <li>• <strong>Dedicated Home Theater — Two Tiered Rows of Deep Burgundy Velvet Couches BOTH Facing the Screen with a Wide ~5-to-6-Foot Open Walkway Aisle:</strong> Features <strong>two tiered stadium rows of extra-deep Vintage Tufted Burgundy Velvet Snuggle Couches &amp; Twin Chaise Extensions</strong> both facing straight forward toward the 150" 4K CinemaScope laser screen, separated by a generous <strong>~5-to-6-foot open carpeted walking aisle and continuous glowing LED stadium step riser</strong>.</li>
               <li>• <strong>"Mad Men" Mid-Century Modern Office &amp; Library (Front-Left Wing):</strong> Features a sleek <strong>flush-mounted 4K OLED flat-screen TV recessed cleanly into the stone overmantel above the carved French limestone fireplace</strong> on the left, unobstructed walnut bookcases with zero ladder (for your 6'8" reach), and a crystal whiskey decanter bar.</li>
               <li>• <strong>All 3 Downstairs Guest Bedroom Suites Shown Individually:</strong> (1) <strong>Guest Suite #2 (West Wing Daybed &amp; 85" Flat-Screen Viewing Lounge Suite)</strong>; (2) <strong>Poolside Guest Suite #3</strong>; and (3) <strong>Garden Loggia Suite #4</strong>.</li>
             </ul>
@@ -724,12 +928,12 @@
           </div>
 
           <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
-            <h3 class="text-base font-bold text-amber-400">6. Lenny Kravitz × CB2 3-Bedroom Guest House (Straight-Up Stairs &amp; 100% Glass-Surrounded Boss Woman Office Overlooking Main House), 2-Story Wellness Facility &amp; 4-Car Barn</h3>
+            <h3 class="text-base font-bold text-amber-400">6. Lenny Kravitz 3-Bed Guest House, 2-Story Wellness Facility, Collector's Barn (`v8`) &amp; Subterranean Wine Cellar (`v4`)</h3>
             <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
-              <li>• <strong>Two-Story 3-Bedroom, 2-Bathroom Detached Guest House (~2,800 Sq Ft — Straight-Run Stairs &amp; 100% Glass-Surrounded Office Overlooking Main Part of House):</strong> Styled in a soulful <strong>Lenny Kravitz × CB2 ("Kravitz Design for CB2")</strong> 1970s Paris/New York rock-and-roll modernist aesthetic. Across all 3 views, a <strong>single straight-run floating dark-walnut staircase goes 100% straight up (zero wrap-around)</strong> to the flat Level 2 mezzanine, where the <strong>large 100% Glass-Surrounded "Boss Woman" Executive Video-Conference Office (18'×15')</strong> (completely wrapped in floor-to-ceiling black steel-and-glass grid walls) <strong>overlooks both the double-height main living/kitchen room of the Guest House below AND the Main Residence across the swimming pool</strong>! Includes a Kravitz × CB2 fluted smoked-walnut &amp; Nero Marquina Chef's Kitchen, cognac leather &amp; bouclé Living Lounge, <strong>Downstairs Bedroom #1 &amp; Full Bathroom #1</strong>, <strong>Upstairs Bedrooms #2 &amp; #3 + Full Bathroom #2</strong>, and an <strong>85" TV wall</strong> at the top of the straight stairs.</li>
-              <li>• <strong>Two-Story Wellness / Health Facility (~1,600 Sq Ft — East Breezeway Building):</strong> Level 1 features an in-ground bubbling stone <strong>Hot Tub</strong>, <strong>Finnish Cedar Sauna</strong>, and a <strong>Walk-Through Open Shower Area</strong> (fluted travertine wet-deck with dual brass rain heads &amp; zero glass enclosure) opening directly to the pool area; Level 2 houses the <strong>Upstairs Workout Facility with Large 85" Flat-Screen TV</strong> (spin bikes, Reformer Pilates, bench press/dumbbells &amp; treadmills) AND a <strong>Complete Upstairs Full Bathroom</strong>.</li>
-              <li>• <strong>Detached Collector's Barn (3 Modes: 4-Car All-Black Fleet, Wedding Reception &amp; Evening Gala) + Upstairs Full Event Bar/Lounge &amp; Realistic Downward Wine Cellar Stairwell:</strong> Showcases all 4 of your all-black vehicles (<strong>Jet-Black Porsche Panamera, Black Tesla Model Y, Matte-Black Tesla Cybertruck, and Matte-Black GMC Hummer EV</strong>) <strong>backed in against the left wall and angled in a single continuous row directly on the flat stone floor (zero lift/platform)</strong>—and converts with cars moved out for 150-guest Weddings or 200+ guest Galas using the exact same architectural view. Features the <strong>Windowed Side Space</strong> on the right, the <strong>subterranean wine cellar stairwell descending straight DOWN (-12' below floor level) directly UNDERNEATH the floating white-oak stairs that lead upstairs</strong>, and a redesigned <strong>Upstairs Event-Hosting Mezzanine Loft</strong> with a <strong>Full Backlit Marble &amp; Brass Bar (right)</strong>, <strong>DJ / Sound &amp; Lighting Overlook (center)</strong>, and <strong>VIP Velvet &amp; Leather Lounge (left)</strong>.</li>
-              <li>• <strong>Attached 3-Car Side-Load Garage Interior &amp; House Connection (36' × 26'):</strong> Features three insulated arched dark-oak carriage doors that roll completely UP overhead above a car-free polished dove-grey terrazzo/stone slab floor with 3 fast EV chargers. Opens into the Main House on the east wall via <strong>two wide honed limestone steps through double dark-oak &amp; black-steel glass French doors</strong> directly into the <strong>Luxury Mudroom &amp; Dog-Wash Vestibule (14' × 10')</strong>, which flows straight ahead through the <strong>Walk-In Butler's Scullery</strong> into the <strong>36' × 26' Open Chef's Kitchen</strong> (and connects via a side doorway to the West Wing Hallway &amp; Theater Room).</li>
+              <li>• <strong>Two-Story 3-Bedroom, 2-Bathroom Detached Guest House (~2,800 Sq Ft — Lenny Kravitz Maximalism, Straight-Up Stairs &amp; 100% Glass-Surrounded Boss Woman Office):</strong> Cascading 1970s Murano smoked-amber glass chandelier, charcoal-espresso Venetian plaster walls with brass-framed B&amp;W rock photography &amp; carved African masks, zebra-hide &amp; Moroccan rugs, leopard velvet pillows, vintage Gibson Les Paul guitar, a <strong>single straight-run floating dark-walnut staircase (zero wrap-around)</strong>, and the <strong>100% Glass-Surrounded "Boss Woman" Executive Office (18'×15')</strong> overlooking the main living room and the Main Residence across the pool.</li>
+              <li>• <strong>Two-Story Wellness / Health Facility (~1,600 Sq Ft — East Breezeway Building):</strong> Level 1 features an in-ground bubbling stone <strong>Hot Tub</strong>, <strong>Finnish Cedar Sauna</strong>, and a <strong>Walk-Through Open Shower Area</strong> opening directly to the pool area; Level 2 houses the <strong>Upstairs Workout Facility with Large 85" Flat-Screen TV</strong> AND a <strong>Complete Upstairs Full Bathroom</strong>.</li>
+              <li>• <strong>Detached Collector's Barn (`v8` — 3 Modes: 4-Car All-Black Fleet, Wedding Reception &amp; Evening Gala):</strong> All 4 all-black vehicles (<strong>Porsche Panamera, Tesla Model Y, Tesla Cybertruck &amp; GMC Hummer EV</strong>) backed in against the left wall in an angled row on the flat floor (zero lift), <strong>identical 5 circular LED ring chandeliers</strong>, a <strong>clean rear shiplap wall with only a single bathroom entrance door</strong>, <strong>unobstructed full-length floating white-oak stairs all the way to the floor</strong>, and <strong>subterranean wine cellar stairs descending straight DOWN (-12') tucked beneath the upper span of the floating stairs (with no cellar door showing)</strong>.</li>
+              <li>• <strong>Subterranean Vaulted Wine Cellar &amp; 15-Guest Entertaining Extension (`v4` — 16' × 110', -12' Below Grade):</strong> Connects the Barn and Main Residence Speakeasy with <strong>opposite-direction staircases</strong> (Left stairs ascending North front-to-back UP to the Barn; Right stairs ascending South back-to-front in the 180° opposite direction UP to the Speakeasy), a backlit Calacatta Viola marble sommelier pouring bar, live-edge walnut tasting table for 15+ guests, and 2,000+ bottle climate-controlled glass wine vaults.</li>
             </ul>
           </div>
         </div>
@@ -1347,46 +1551,47 @@
         ]
       },
       staircase: {
-        badge: "Level 1 • Rear Poolside Loggia (00:13–00:21 of Instagram Video DcL3q3doXhq)",
-        dims: "22' × 14' • Pearlescent Moroccan Zellige Vault & Checkerboard Limestone Floor",
-        title: "Barrel-Vaulted Pearlescent Moroccan Zellige-Tile Indoor-Outdoor Breakfast Loggia",
-        desc: "Adjoining the preserved Dark Cherry / Mahogany Chef's Kitchen along the rear poolside glass wall and opening through the floor-to-ceiling black-steel Crittall glass partition into the 24-foot Great Hall: features a shimmering barrel-vaulted handmade cream/pearl Moroccan zellige-tile ceiling, diagonal gray-and-cream checkerboard limestone floor tiles, a sculptural potted olive tree, morning coffee bistro seating, and black-steel French doors opening onto the resort pool terrace.",
+        badge: "Level 1 • Back-of-Home Poolside Loggia (00:13–00:21 of Instagram Video DcL3q3doXhq)",
+        dims: "22' × 14' • Pearlescent Moroccan Zellige Vault, Checkerboard Floor & Back Pool Doors",
+        title: "Barrel-Vaulted Pearlescent Moroccan Zellige-Tile Indoor-Outdoor Breakfast Loggia (Overlooking Back-of-Home Resort Swimming Pool)",
+        desc: "Positioned at the Back of the Home (North) adjoining the preserved Dark Cherry / Mahogany Chef's Kitchen and opening through the floor-to-ceiling black-steel Crittall glass partition into the 24-foot Great Hall: features a shimmering barrel-vaulted handmade cream/pearl Moroccan zellige-tile ceiling, diagonal gray-and-cream checkerboard limestone floor tiles, a sculptural potted olive tree, morning coffee bistro seating, and tall black-steel French doors opening directly onto the Back-of-Home Resort Swimming Pool, limestone pool terrace, and Two-Story Wellness Center.",
         specs: [
           "Shimmering Barrel-Vaulted Pearlescent Moroccan Zellige-Tile Ceiling & Checkerboard Limestone Floor: Directly inspired by 00:13–00:21 of the reference video.",
-          "Seamless Indoor-Outdoor Flow: Connects the unchanged Dark Cherry / Mahogany Kitchen & 22-foot Island, the 24-foot Arched-Window Great Hall (through the open black-steel Crittall glass partition), and the outdoor swimming pool terrace."
+          "Back-of-Home Resort Swimming Pool View: Tall black-steel French doors open directly onto the turquoise Resort Swimming Pool, limestone terrace, and Two-Story Wellness Center.",
+          "Seamless Indoor-Outdoor Flow: Connects the unchanged Dark Cherry / Mahogany Kitchen & 22-foot Island, the 24-foot Arched-Window Great Hall (through the open black-steel Crittall glass partition), and the back pool terrace."
         ]
       },
       kitchen: {
-        badge: "Level 1 • 100% Unchanged Deep Dark Cherry / Mahogany Kitchen (22' Calacatta Verde/Viola Island & 32°F Oyster Raw Bar)",
-        dims: "36' × 26' • 22' Extra-Long Calacatta Verde/Viola Slab Island • Opens Through Crittall Glass Wall to 24' Great Hall",
-        title: "100% Unchanged Open-Concept Elite Chef's Kitchen (Unified Deep Dark Cherry / Mahogany Wood Cabinetry, 22' Calacatta Verde/Viola Island & 32°F Oyster Raw Bar)",
-        desc: "Preserved 100% intact with unified deep dark cherry / mahogany stained wood across every cabinet (the Oyster Raw Bar & Knife Vault column inside and out, the upper and lower stove cabinets, the 22-foot island base, and the built-in China Cabinet Speakeasy door): anchored by a clutter-free, extra-long 22-foot polished Calacatta Verde / Calacatta Viola Italian marble slab island on a matching deep dark cherry / mahogany base with warm LED toe-kick lighting, 6 plush cream channel-split-back stools, and tiered ribbed glass & brass drum chandeliers—now opening through the floor-to-ceiling black-steel Crittall sliding glass grid partition into the 24-foot Great Hall and Barrel-Vaulted Zellige Loggia.",
+        badge: "Level 1 • 100% Unchanged Deep Dark Cherry / Mahogany Kitchen (22' Island, 32°F Oyster Bar & Back Pool Door Next to China Cabinet)",
+        dims: "36' × 26' • 22' Calacatta Verde/Viola Island • Back-of-Home Pool Door & Open Crittall Glass Wall to 24' Great Hall",
+        title: "100% Unchanged Open-Concept Elite Chef's Kitchen (Unified Deep Dark Cherry / Mahogany Wood, 22' Island & Back-of-Home Pool Doors Next to China Cabinet)",
+        desc: "Preserved 100% intact with unified deep dark cherry / mahogany stained wood across every cabinet (the Oyster Raw Bar & Knife Vault column, the upper and lower stove cabinets, the 22-foot island base, and the built-in China Cabinet Speakeasy door right next to the tall black-steel Back Pool Door overlooking the Resort Swimming Pool & Two-Story Wellness Center): anchored by a clutter-free, extra-long 22-foot polished Calacatta Verde / Calacatta Viola Italian marble slab island with warm LED toe-kick lighting, 6 plush cream channel-split-back stools, and tiered ribbed glass & brass drum chandeliers—opening through the floor-to-ceiling black-steel Crittall sliding glass grid partition into the 24-foot Great Hall and Barrel-Vaulted Zellige Loggia.",
         specs: [
-          "100% Unified Deep Dark Cherry / Mahogany Wood Cabinetry Throughout: Every wooden cabinet in the kitchen—the 32°F–34°F Oyster Raw Bar & Damascus Knife Vault column (exterior and interior wood backing), the upper glass-front & lower drawer cabinets around the 60\" stove, the 22-foot island base, and the built-in China Cabinet Speakeasy door (exterior and interior back panels)—is crafted in the exact same deep, rich dark cherry / mahogany wood.",
+          "100% Unified Deep Dark Cherry / Mahogany Wood Cabinetry & Back-of-Home Pool Doors: Every wooden cabinet in the kitchen—the 32°F–34°F Oyster Raw Bar & Damascus Knife Vault column, the upper glass-front & lower drawer cabinets around the 60\" stove, the 22-foot island base, and the built-in China Cabinet Speakeasy door sitting right next to the tall black-steel Back Pool Door—is crafted in the exact same deep, rich dark cherry / mahogany wood.",
           "Extra-Long 22-Foot Clutter-Free Calacatta Verde/Viola Slab Island: Monumental 22-foot single-span stone slab on a deep dark cherry / mahogany shaker drawer base with oversized brass bar pulls, warm LED toe-kick ribbon, radiant-heated overhang, 6 cream upholstered channel-split-back stools, and tiered ribbed glass & brass drum chandeliers.",
           "32°F–34°F Chilled Oyster Raw Bar Vitrine, Knife Vault & Pro Appliances: Dedicated 32°F–34°F forced-air & humidity-controlled (85%–90% RH) Chilled Oyster Raw Bar Vitrine with self-draining plumbed crushed-ice pans + backlit Magnetic Damascus & Oyster-Shucking Knife Vault + Steamed Oshibori Towel Drawer + 60\" black-and-brass gas range & sleek matte-black/brass tapered range hood."
         ]
       },
       scullery: {
-        badge: "Level 1 • Built-In Deep Dark Cherry / Mahogany China Cabinet Secret Door (Opens Towards Kitchen)",
-        dims: "18' × 8' • Secret Hinged China Cabinet Host",
-        title: "Built-In Deep Dark Cherry / Mahogany Illuminated China Cabinet Secret Door (Swings Open Towards the Kitchen Area into Speakeasy)",
-        desc: "Located at the far end of the Kitchen wall immediately past the 60\" black-and-brass range next to the 20-foot black-steel window: a floor-to-ceiling built-in glass-front China Cabinet crafted in matching deep dark cherry / mahogany wood (both exterior frame and interior back panels, displaying fine porcelain china dinnerware and crystal stemware) swings open outward as a single 1-piece cabinet unit TOWARDS the kitchen area, revealing the Hidden Speakeasy Bar behind it.",
+        badge: "Level 1 • Built-In Deep Dark Cherry / Mahogany China Cabinet Secret Door (Next to Back-of-Home Pool Door)",
+        dims: "18' × 8' • Secret Hinged China Cabinet Next to Back Pool Door",
+        title: "Built-In Deep Dark Cherry / Mahogany Illuminated China Cabinet Secret Door (Right Next to Back-of-Home Pool Door — Swings Open Towards Kitchen Into Speakeasy)",
+        desc: "Located at the back (north) end of the Kitchen wall immediately past the 60\" black-and-brass range right next to the tall black-steel Back Door overlooking the sparkling turquoise Resort Swimming Pool and Two-Story Wellness Center: a floor-to-ceiling built-in glass-front China Cabinet crafted in matching deep dark cherry / mahogany wood (displaying fine porcelain china dinnerware and crystal stemware) swings open outward as a single 1-piece cabinet unit TOWARDS the kitchen area, revealing the Hidden Speakeasy Bar behind it.",
         specs: [
-          "Secret Hinged Deep Dark Cherry / Mahogany China Cabinet Opening Towards the Kitchen Area: Crafted inside and out in matching deep dark cherry / mahogany wood with mullioned glass doors and warm LED shelf lighting displaying fine porcelain china and crystal stemware—unlatches on heavy-duty concealed pivot hinges and swings outward as a single solid cabinet door towards the kitchen.",
-          "100% Kitchen Consistency Across All Views: Matches the deep dark cherry / mahogany stove cabinetry, sleek matte-black & brass tapered range hood, Calacatta Verde/Viola marble backsplash, and 22-foot island in every kitchen photo.",
-          "Inside Speakeasy View Matches 100%: From inside the Speakeasy, the open deep dark cherry / mahogany China Cabinet door is seen outside the brick doorway swung outward onto the kitchen floor toward the house."
+          "Positioned at the Back of the Home Right Next to the Pool Door: Across all views where the China Cabinet is close to the door, that tall black-steel mullioned door is the Back of the Home looking out to the turquoise Resort Swimming Pool, limestone pool deck, and Two-Story Wellness Center.",
+          "Secret Hinged Deep Dark Cherry / Mahogany China Cabinet Opening Towards the Kitchen Area: Hinged on the jamb away from the pool, the entire illuminated China Cabinet unlatches on heavy-duty concealed pivot hinges and swings outward as a single solid cabinet door towards the kitchen island.",
+          "Inside Speakeasy View Matches 100%: From inside the Speakeasy, a single flat straight wall runs from the back pool entrance through the dark cherry doorway frame to the Wine Cellar stairs, with the China Cabinet hinged on the right (stair-side) jamb swinging outward into the kitchen."
         ]
       },
       speakeasy: {
-        badge: "Level 1 • Secret Lounge Behind Solid Range Wall & Dark Cherry China Cabinet Door",
-        dims: "18' × 14' • Moody 11' Coffered Ceiling",
-        title: "Hidden Speakeasy Bar (Accessed via Secret Dark Cherry / Mahogany China Cabinet Opening Outward Into Kitchen + High Center-Brick TV & Stair Rail)",
-        desc: "Positioned directly behind the solid Kitchen range/oven wall and entered through the secret built-in deep dark cherry / mahogany China Cabinet that swings open outward into the kitchen area, with black-steel French doors opening to the nighttime pool courtyard at the center rear, a mounted flat-screen TV high on the center brick spandrel between the two liquor arches on the left, and the wall-connected wine-cellar stair rail on the right.",
+        badge: "Level 1 • Secret Lounge Behind Solid Range Wall & Dark Cherry China Cabinet Door (Back-of-Home Pool Side)",
+        dims: "18' × 14' • Single Straight Wall From Back Pool to Wine Stairs",
+        title: "Hidden Speakeasy Bar (Accessed via Secret Dark Cherry China Cabinet Next to Back Pool Door + Single Straight Wall to Wine Cellar Stairs)",
+        desc: "Positioned directly behind the solid Kitchen range/oven wall at the Back of the Home (North) and entered through the secret built-in deep dark cherry / mahogany China Cabinet that swings open outward into the kitchen area right beside the Kitchen's tall black-steel Back Pool Door—featuring two illuminated antique-brick liquor arches and a high center-brick TV on the left wall, and a single flat straight wall on the right extending from the back pool entrance through the China Cabinet doorway all the way to the Subterranean Wine Cellar stairs.",
         specs: [
           "Left Wall (Backed Against Solid Kitchen Wall): Two illuminated antique-brick liquor arches flanking a high center-brick mounted 4K flat-screen TV above a leathered Nero Marquina marble bar.",
-          "Right Wall (Secret Dark Cherry / Mahogany China Cabinet Door Opened Outward Into Kitchen + Wall-Connected Stair Rail): Through the open brick doorway on the right wall, the deep dark cherry / mahogany China Cabinet door is swung open outward onto the kitchen floor toward the house, while the wrought-iron stair railing connects solidly to the wall at the top of the stairs descending to the Subterranean Wine Tunnel.",
-          "Center Rear Wall: Tall black-steel French doors opening directly out to the illuminated nighttime swimming pool terrace."
+          "Right Wall (Single Straight Wall to Wine Stairs & Right-Jamb Hinged China Cabinet): A single flat straight wall extends continuously from the back pool entrance through the dark cherry doorway frame to the Wine Cellar stairs; the China Cabinet door is hinged on the right (stair-side) jamb swinging outward into the kitchen (showing only its solid dark cherry wood back).",
+          "Back-of-Home Pool View: Looking out the open doorway into the kitchen shows the kitchen's tall black-steel back door and the nighttime Resort Swimming Pool with the Two-Story Wellness Center glowing across the water."
         ]
       },
       garage: {
@@ -1504,8 +1709,8 @@
         badge: "Level 2 • Grand Arrival & Valet",
         dims: "32' × 8' Bridge + Laundry Valet",
         title: "Grand Staircase Gallery Bridge & Shared Laundry Valet",
-        desc: "At the top of the curved Grand Staircase, the gallery bridge overlooks the 24-foot Living Room and Chef's Kitchen below and provides direct access to the Primary Suite and central Laundry/Steam Valet room.",
-        specs: ["Dual commercial washer/dryers, built-in garment steam closets, and wrought-iron balustrade overlooking the Living Room."]
+        desc: "At the top of the curved Grand Staircase, the gallery bridge overlooks the Soaring 24-Foot Open First Floor Great Hall, the Floor-to-Ceiling Black-Steel Crittall Glass Partition, and the Preserved Dark Cherry Chef's Kitchen below, and provides direct access to the Primary Suite and central Laundry/Steam Valet room.",
+        specs: ["Dual commercial washer/dryers, built-in garment steam closets, and wrought-iron balustrade overlooking the 24-Foot Open First Floor Great Hall."]
       },
       driveway: {
         badge: "Estate Site Spine • West Side",
@@ -1518,14 +1723,14 @@
         ]
       },
       tunnel: {
-        badge: "100% Underground Spine • -12' Elevation",
-        dims: "12' Wide × 110' Long • 2,000+ Bottles",
-        title: "Subterranean Barrel-Vaulted Wine Cellar Tunnel (Opposite-Direction Stairs)",
-        desc: "Excavated 12 feet beneath the west lawn, this barrel-vaulted antique brick and carved limestone wine gallery aligns with the estate's site geometry: the Detached Collector's Barn stairs ascend to the LEFT, while the Main Residence Speakeasy and Guest House stairs ascend in the opposite direction to the RIGHT.",
+        badge: "100% Underground Spine • -12' Elevation (Wine Cellar & 15-Guest Tasting Extension v4)",
+        dims: "16' Wide × 110' Long • Opposite-Direction Stairs + 2,000+ Bottles",
+        title: "Subterranean Vaulted Wine Cellar & 15-Guest Entertaining Extension (Opposite-Direction Staircases to Barn & Speakeasy)",
+        desc: "Excavated 12 feet beneath the west lawn as both an all-weather connector and a luxury subterranean entertaining extension from the Detached Collector's Barn: the Left Wall staircase ascends North (front-to-back) UP into the Barn's under-stair stairwell, while the Right Wall staircase ascends in the 180° opposite direction (South, back-to-front) UP into the Main Residence Ground-Floor Speakeasy.",
         specs: [
-          "Left Wall (◄ Up to Detached Collector's Barn): Arched steel-and-limestone stairwell ascending UP and to the LEFT into the Barn's right-foreground stairwell.",
-          "Right Wall (Up to Main Residence Speakeasy ► + Guest House & Wellness Facility ►): Opposing staircases ascending UP and to the RIGHT into the Hidden Speakeasy Bar and Guest House.",
-          "2,000+ bottle illuminated walnut wine racking, live-edge walnut decanting table, and wrought-iron gated Private Vintage Bourbon & Wine Reserve Vault."
+          "Left Wall Staircase (▲ Ascends North / Front-to-Back UP to Detached Barn): Starts in the foreground-left and climbs UP and backward (North) to emerge directly beneath the floating white-oak staircase inside the Collector's Barn.",
+          "Right Wall Staircase (▼ Ascends South / Back-to-Front in 180° Opposite Direction UP to Speakeasy): Starts in the background-right beside the sommelier bar and climbs in the opposite longitudinal direction (UP and forward/South) into the Main Residence Speakeasy.",
+          "15-Guest Wine Tasting & Entertaining Extension: Backlit Calacatta Viola marble sommelier pouring bar with 16-bottle Enomatic dispensers, live-edge dark walnut tasting table for 10–14 seated guests, and 2,000+ bottle climate-controlled glass wine vaults."
         ]
       },
       poolhouse: {
@@ -1551,21 +1756,21 @@
         ]
       },
       barn: {
-        badge: "Outbuilding 3 • Upper Estate Grounds (3 Modes: 4-Car Angled Row, Wedding & Gala)",
-        dims: "~3,250 Sq Ft • 4 Cars in Angled Row (No Lift) + L2 Full Event Bar/Lounge + Under-Stairs Wine Cellar",
-        title: "Detached Collector's Barn (4 All-Black Cars in Angled Row, Upstairs Event Bar & Wine Stairs Underneath Upstairs Stairs)",
-        desc: "Multi-purpose luxury barn at the north end of the estate featuring all 4 of your all-black vehicles backed in against the left wall and angled in a single continuous row on the flat floor (with no lift/platform)—and converting in the exact same architectural view for 150-guest Weddings or 200+ guest Galas. Along the right wall, the downward-descending subterranean wine cellar stairwell (-12' below floor level) is tucked directly UNDERNEATH the floating white-oak stairs that lead upstairs, leaving the main floor completely open.",
+        badge: "Outbuilding 3 • Detached Collector's Barn v8 (3 Modes: 4-Car Angled Row, Wedding & Gala)",
+        dims: "~3,250 Sq Ft • 4 Cars in Angled Row (Zero Lift) • 5 Circular Ring Lights • Under-Stair Wine Cellar",
+        title: "Detached Collector's Barn v8 (4 All-Black Cars in Angled Row, 5 Circular Ring Lights, Single Rear Bath Door, Full-Length Floating Stairs & Under-Stair Wine Cellar)",
+        desc: "Multi-purpose luxury barn at the north end of the estate featuring all 4 of your all-black vehicles backed in against the left wall and angled in a single continuous row on the flat floor (zero lift/platform), 5 sleek matte-black circular LED ring chandeliers on the vaulted timber trusses, and a clean rear shiplap wall with only a single bathroom entrance door—converting in the exact same architectural view for 150-guest Weddings or 200+ guest Galas. Along the right wall, the floating white-oak staircase is 100% unobstructed all the way to the bottom floor step, with the downward-descending subterranean wine cellar stairs (-12') tucked beneath the upper span (and no cellar door showing).",
         specs: [
-          "All 4 All-Black Cars Backed In & Angled in a Single Row (Zero Lift/Platform): Jet-Black Porsche Panamera, Black Tesla Model Y, Matte-Black Tesla Cybertruck, and Matte-Black GMC Hummer EV lined up at a 45-degree showroom angle along the left wall.",
-          "Wine Cellar Stairs Directly UNDERNEATH the Upstairs Staircase: Tucked directly beneath the ascending floating white-oak stairs along the right wall, LED-lit limestone steps and red-brick walls descend 12' straight DOWN to the arched oak wine cellar vault door.",
-          "Upstairs Event-Hosting Mezzanine & Windowed Side Space: Features a full backlit marble & brass bar on the right, a DJ/sound & lighting control booth at the center railing, and a VIP lounge on the left, plus the sunlit right-hand Windowed Side Space."
+          "All 4 All-Black Cars Backed In & Angled in a Single Row (Zero Lift/Platform) + 5 Circular Ring Lights: Jet-Black Porsche Panamera, Black Tesla Model Y, Matte-Black Tesla Cybertruck, and Matte-Black GMC Hummer EV lined up at a 45-degree showroom angle beneath 5 circular LED ring chandeliers.",
+          "Unobstructed Full-Length Floating White-Oak Stairs to Floor + Wine Cellar Stairs Tucked Beneath Upper Span: The floating white-oak stairs reach cleanly to the floor slab, while LED-lit limestone steps descend 12' straight DOWN into the Subterranean Wine Cellar tucked beneath the upper span (with no cellar door showing).",
+          "Single Rear Bathroom Door, Upstairs Event Mezzanine & Windowed Side Space: Clean rear shiplap wall with only a single bathroom door, Level 2 Full Backlit Bar (right), DJ/Lighting Overlook (center), VIP Lounge (left), and sunlit Windowed Side Space."
         ]
       },
       outdoor: {
         badge: "Rear Pool Courtyard • Outdoor Living",
         dims: "Timber Pergola Kitchen + Water-Level Fire Pit",
         title: "Outdoor Summer Kitchen, Wood-Fired Pizza Oven & Sunken Fire Pit Cabana",
-        desc: "Positioned between the Main Residence rear veranda and the Two-Story 3-Bedroom Guest House beside the turquoise swimming pool and Baja sun shelf.",
+        desc: "Positioned between the Main Residence Back-of-Home Pool Doors (Kitchen/China Cabinet, Barrel-Vaulted Zellige Loggia & Speakeasy) and the Two-Story 3-Bedroom Guest House beside the turquoise swimming pool and Baja sun shelf.",
         specs: [
           "Covered Summer Kitchen Pergola (Left): Honed limestone bar, commercial gas/wood grill, limewash dome wood-fired artisanal pizza oven, under-counter beverage chillers, and barstool counter.",
           "Sunken Poolside Fire Pit Cabana (Center): Recessed flush with the water level next to the Baja sun shelf, featuring built-in bouclé seating around a linear gas fire trough."
@@ -1577,8 +1782,8 @@
       1: [
         { label: "Open 24' Great Hall", value: "38'×28' • 3 Open Zones", sub: "Arched Windows, Pier & Crittall Wall" },
         { label: "Unchanged Kitchen", value: "36'×26' • 22' Island", sub: "Dark Cherry Wood & Zellige Loggia" },
-        { label: "Theater Room", value: "2 Velvet Rows Face Screen", sub: "1st Couch Closer to 150\" Screen" },
-        { label: "Speakeasy & Office", value: "1 Secret Door + TV", sub: "Mad Men Office w/ Flush TV Above" }
+        { label: "Back-of-Home Pool View", value: "Next to China Cabinet", sub: "Kitchen & Loggia Doors Open to Pool" },
+        { label: "Theater & Office", value: "5'–6' Theater Aisle", sub: "2 Burgundy Rows + Mad Men Office" }
       ],
       2: [
         { label: "West-to-East Flow", value: "5 Aligned Rooms", sub: "Bed ➔ Her's Bath ➔ Her's ➔ His ➔ His Bath" },
@@ -1589,8 +1794,8 @@
       3: [
         { label: "3-Bed Guest House", value: "Lenny Kravitz × CB2", sub: "100% Glass-Enclosed Boss Office" },
         { label: "Wellness Facility", value: "L1 Spa + L2 Gym/Bath", sub: "Open Shower to Pool + Upstairs Bath" },
-        { label: "Collector's Barn", value: "4 All-Black Vehicles", sub: "Panamera, Cybertruck, Hummer EV, Model Y" },
-        { label: "Underground Spine", value: "110' Wine Tunnel", sub: "◄ Left to Barn | Right to House/Guest ►" }
+        { label: "Collector's Barn v8", value: "4 Black Cars + 5 Rings", sub: "Angled Row, 1 Bath Door & Under-Stair Cellar" },
+        { label: "Wine Cellar v4 (-12')", value: "16'×110' • 15+ Guests", sub: "▲ Left North to Barn | ▼ Right South to House" }
       ]
     };
 
@@ -1633,8 +1838,8 @@
 
       if (floor === 1) {
         title.textContent = "First Floor Schematic (~6,050 Sq Ft + 3-Car Attached Garage)";
-        subtitle.textContent = "Open 24' Great Hall (Arched Windows, 3 Lounges/Dining & Crittall Partition) • Barrel-Vaulted Zellige Loggia • Unchanged Dark Cherry Kitchen (22' Island), Theater & Bedrooms";
-        compass.textContent = "▲ REAR COURTYARD POOL, SUNKEN FIRE PIT, 3-BED GUEST HOUSE & WELLNESS / HEALTH FACILITY ▲";
+        subtitle.textContent = "Open 24' Great Hall (Arched Windows, 3 Lounges/Dining & Crittall Partition) • Barrel-Vaulted Zellige Loggia • Unchanged Dark Cherry Kitchen (22' Island) & Back-of-Home Pool Doors Next to China Cabinet";
+        compass.textContent = "▲ BACK OF HOME (NORTH): RESORT SWIMMING POOL, LIMESTONE TERRACE, TWO-STORY WELLNESS CENTER & 3-BED GUEST HOUSE ▲";
         selectRoom('greatroom');
       } else if (floor === 2) {
         title.textContent = "Second Floor Schematic (~3,800 Sq Ft Exclusive Primary Level — West to East)";
@@ -1642,8 +1847,8 @@
         compass.textContent = "◄ WEST TO EAST: 1. BEDROOM ➔ 2. HER'S BATH (7.3' TUB) ➔ 3. HER'S CLOSET ➔ 4. HIS CLOSET ➔ 5. HIS BATH (7.3' TUB) ►";
         selectRoom('primarybed');
       } else {
-        title.textContent = "Outbuildings, Pool Courtyard & Subterranean Wine Tunnel (~7,200 Sq Ft)";
-        subtitle.textContent = "3-Bed/2-Bath Guest House (w/ Full Kitchen & Boss Woman Office), 2-Story Wellness Facility & 4-Vehicle All-Black Barn";
+        title.textContent = "Outbuildings, Pool Courtyard & Subterranean Wine Cellar v4 (~7,600 Sq Ft)";
+        subtitle.textContent = "3-Bed Kravitz Guest House (w/ Glass Boss Office), 2-Story Wellness Facility, Collector's Barn v8 & 16'×110' Subterranean Wine Cellar";
         compass.textContent = "▲ NORTH WOODS & UPPER COLLECTOR'S BARN MOTOR COURT ▲";
         selectRoom('poolhouse');
       }
@@ -1679,15 +1884,15 @@
       const label = document.getElementById('speakeasy-door-label');
       const btn = document.getElementById('speakeasy-toggle');
       if (speakeasyOpen) {
-        marker.setAttribute('transform', 'rotate(35 330 166)');
+        marker.setAttribute('transform', 'rotate(-38 286 152)');
         marker.setAttribute('fill', '#10b981');
-        label.textContent = "🔓 CHINA CABINET OPEN TOWARDS KITCHEN!";
+        label.textContent = "🔓 OPEN TOWARDS KITCHEN!";
         btn.textContent = "🔒 Close China Cabinet Door";
         selectRoom('speakeasy');
       } else {
         marker.removeAttribute('transform');
         marker.setAttribute('fill', '#f59e0b');
-        label.textContent = "  Opens Towards Kitchen + Stair Rail";
+        label.textContent = "• Door Swings Into";
         btn.textContent = "🍸 Open Secret China Cabinet Door";
       }
     }
