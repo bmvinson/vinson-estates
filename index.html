@@ -107,26 +107,28 @@
         <!-- Quick-Jump Bar to Key Updated Rooms -->
         <div class="px-4 py-3 bg-stone-950/90 border-b border-stone-800 flex flex-wrap items-center gap-2">
           <span class="text-xs font-bold uppercase tracking-wider text-amber-400 mr-1">Jump to Room:</span>
+          <button onclick="goToSlide(25)" class="px-2.5 py-1 rounded-lg bg-amber-500 text-stone-950 font-bold text-xs border border-amber-400 transition">💚🚽 Guest House Narrow Half Bath (`DdHE1m_Adpt` Video)</button>
+          <button onclick="goToSlide(35)" class="px-2.5 py-1 rounded-lg bg-amber-500 text-stone-950 font-bold text-xs border border-amber-400 transition">🥃⚙️ Bourbon Pot Still Close-Up (Below Speakeasy)</button>
           <button onclick="goToSlide(4)" class="px-2.5 py-1 rounded-lg bg-amber-500 text-stone-950 font-bold text-xs border border-amber-400 transition">📺 Great Hall: Pop-Up/Swivel TV From Couch</button>
           <button onclick="goToSlide(7)" class="px-2.5 py-1 rounded-lg bg-amber-500 text-stone-950 font-bold text-xs border border-amber-400 transition">🪜 Dual-Sided Stairs (No Window — Closets Behind)</button>
           <button onclick="goToSlide(12)" class="px-2.5 py-1 rounded-lg bg-amber-500 text-stone-950 font-bold text-xs border border-amber-400 transition">🔒🛁 Her's Bath (Integrated Bidet/Toilet Combo)</button>
           <button onclick="goToSlide(15)" class="px-2.5 py-1 rounded-lg bg-amber-500 text-stone-950 font-bold text-xs border border-amber-400 transition">🔒🪜 His Bath (Bidet/Toilet Combo + Stairs DOWN)</button>
           <button onclick="goToSlide(3)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🏛️ Open 1st Floor: 24' Great Hall ➔ Kitchen</button>
-          <button onclick="goToSlide(32)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🚪🧺 90° Side Door Laundry &amp; 3-Car Garage</button>
-          <button onclick="goToSlide(33)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🍷🥃 Long 120' Wine Tunnel &amp; Bourbon Distillery</button>
+          <button onclick="goToSlide(33)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🚪🧺 90° Side Door Laundry &amp; 3-Car Garage</button>
+          <button onclick="goToSlide(34)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🍷🥃 Long 120' Wine Tunnel &amp; Bourbon Distillery</button>
           <button onclick="goToSlide(8)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🚪 Speakeasy (Closed vs. Open)</button>
           <button onclick="goToSlide(16)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🥃 "Mad Men" Office (TV Above Fireplace)</button>
           <button onclick="goToSlide(17)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🎬 Theater (2 Rows Vintage Velvet Couches)</button>
           <button onclick="goToSlide(22)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🏡 3-Bed Guest House &amp; Boss Woman Office</button>
-          <button onclick="goToSlide(27)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🏎️🍸 Barn (4-Car Fleet, Hidden Door &amp; Events)</button>
+          <button onclick="goToSlide(28)" class="px-2.5 py-1 rounded-lg bg-stone-900 hover:bg-amber-500 hover:text-stone-950 text-xs font-medium text-stone-200 border border-stone-700 transition">🏎️🍸 Barn (4-Car Fleet, Hidden Door &amp; Events)</button>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12">
           <!-- Left: Large Carousel Image (8 cols) -->
           <div class="lg:col-span-8 relative bg-black flex items-center justify-center min-h-[320px] sm:min-h-[480px] group">
-            <img id="carousel-img" src="static/images/01d_great_hall_tv_from_couch.jpg?v=tvplinth01" alt="Estate Rendering" onclick="openLightbox(currentSlide)" class="w-full h-[320px] sm:h-[500px] object-cover cursor-zoom-in carousel-fade" />
+            <img id="carousel-img" src="static/images/09e_guest_house_downstairs_bath.jpg?v=narrow02" alt="Estate Rendering" onclick="openLightbox(currentSlide)" class="w-full h-[320px] sm:h-[500px] object-cover cursor-zoom-in carousel-fade" />
             <!-- Slide Counter Pill -->
             <div class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-xs font-semibold text-white">
-              <span id="carousel-counter">5 / 36</span> • <span id="carousel-zone" class="text-amber-400">Level 1 (Great Hall TV From Couch — Pop-Up &amp; Swivel 85" OLED)</span>
+              <span id="carousel-counter">26 / 37</span> • <span id="carousel-zone" class="text-amber-400">Guest House Downstairs Narrow Half Bath (Edwardian Emerald &amp; Brass Cloakroom)</span>
             </div>
             <button onclick="openLightbox(currentSlide)" class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-white/15 text-xs font-medium text-white transition">
               🔍 Full Screen
@@ -166,6 +168,26 @@
         <!-- Scrollable Thumbnail Filmstrip -->
         <div class="p-3 bg-stone-950/90 border-t border-stone-800 overflow-x-auto">
           <div id="carousel-thumbs" class="flex items-center gap-2.5 min-w-max"></div>
+        </div>
+      </div>
+
+      <!-- NEW SHOWCASE CARD 0: GUEST HOUSE DOWNSTAIRS NARROW HALF BATHROOM (EDWARDIAN EMERALD-GREEN GLAZED TILE & BRASS CLOAKROOM FROM INSTAGRAM VIDEO DdHE1m_Adpt) -->
+      <div class="bg-stone-900 border border-emerald-500/40 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+        <div class="flex flex-col lg:flex-row lg:items-center gap-5">
+          <div onclick="openLightbox(25)" class="lg:w-7/12 group cursor-zoom-in relative rounded-xl overflow-hidden border border-emerald-500/40 bg-stone-950">
+            <img src="static/images/09e_guest_house_downstairs_bath.jpg?v=narrow02" alt="Guest House Downstairs Narrow Half Bathroom — Intimate ~4.5-Foot-Wide Edwardian Emerald-Green Glazed Tile & Brass Cloakroom Inspired by Instagram Video DdHE1m_Adpt" class="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-emerald-500 text-xs font-bold text-stone-950">UPDATED • Narrow Half Bathroom (`~4.5' Wide` Like the `DdHE1m_Adpt` Video)</div>
+          </div>
+          <div class="lg:w-5/12 space-y-2.5">
+            <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-bold">Outbuilding 1 • 3-Bedroom Guest House Level 1 Narrow Half Bathroom (`~4.5' × 8'`)</span>
+            <h2 class="text-lg sm:text-xl font-bold text-white">Intimate Narrow Edwardian Emerald-Green Glazed Tile &amp; Brass Half Bathroom / Cloakroom (`https://www.instagram.com/p/DdHE1m_Adpt/`)</h2>
+            <p class="text-xs sm:text-sm text-stone-300 leading-relaxed">Adjusted to match the narrow, intimate cloakroom width (`~4.5' wide × 8' deep`) of your Instagram video (`https://www.instagram.com/p/DdHE1m_Adpt/`) so the downstairs half bathroom feels calm, focused, and jewel-box proportional rather than wide, busy, or overwhelming. The left and right walls feature clean, uncluttered courses of high-gloss Victorian bottle-green beveled subway tiles with a single molded ceramic dado rail, leading straight to the compact white porcelain Edwardian pedestal basin on the narrow back wall.</p>
+            <ul class="text-xs text-stone-200 space-y-1.5 pt-1">
+              <li>• <strong>Narrow, Uncluttered Cloakroom Proportions:</strong> Single-axis `~4.5'` width removes busy side-wall frames and double-wide alcoves so your eye goes straight to the arched brass mirror, twin opal-glass globe sconces, and semicircular radial emerald sunburst fan-arch (`lunette`) on the narrow back wall.</li>
+              <li>• <strong>Half-Bathroom Fixture Program:</strong> Compact white porcelain Edwardian pedestal washbasin with unlacquered brass crosshead taps on the back wall, plus a heritage high-level white porcelain cistern toilet with long brass flush pipe, pull chain, and dark-walnut seat neatly tucked along the right wall.</li>
+              <li>• <strong>Narrow Coved Ceiling &amp; Mosaic Medallion Runner:</strong> Narrow emerald-tiled barrel-coved ceiling with twin brass pipes and a single central brass pendant lantern over the emerald-and-gold mosaic floor runner and central floral medallion.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -229,7 +251,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div onclick="openLightbox(33)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
+          <div onclick="openLightbox(34)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
             <div class="relative overflow-hidden">
               <img src="static/images/14_subterranean_wine_tunnel.jpg?v=longtunnel02" alt="View 1: One Continuous 120-Foot Subterranean Tunnel with Bourbon Barrels on Left Wall & Wine Storage on Right Wall (No Side Room)" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
               <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500 text-xs font-bold text-stone-950">1. View 1: Full 120' Tunnel (Bourbon L / Wine R)</div>
@@ -239,23 +261,23 @@
             </div>
           </div>
 
-          <div onclick="openLightbox(34)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
+          <div onclick="openLightbox(35)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
             <div class="relative overflow-hidden">
-              <img src="static/images/14c_subterranean_bourbon_distillery_tunnel.jpg?v=longtunnel02" alt="View 2: Mid-Tunnel Close-Up of the Same Long Tunnel — Bourbon Barrels & Proofing Station on Left Wall, Wine Storage on Right Wall & Copper Pot Still at Far End" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500 text-xs font-bold text-stone-950">2. View 2: Mid-Tunnel (Bourbon L / Wine R)</div>
+              <img src="static/images/14c_subterranean_bourbon_distillery_tunnel.jpg?v=potstill02" alt="View 2 Close-Up: The Gold / Polished-Brass & Hammered Copper Bourbon Pot Still Machine at the End of the Hall (Directly Below the Speakeasy)" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500 text-xs font-bold text-stone-950">2. View 2: Gold Bourbon Still Close-Up (Below Speakeasy)</div>
             </div>
             <div class="p-3.5">
-              <p class="text-xs text-stone-300">Updated to match View 1's exact single long tunnel: 3-tier white-oak ricks of charred 53-gallon bourbon barrels, brass whiskey thief &amp; proofing ledge along the Left Wall, floor-to-ceiling backlit glass wine storage racks along the Right Wall, and the copper pot still &amp; Barn stairs straight ahead at the far end.</p>
+              <p class="text-xs text-stone-300"><strong>Close-Up of the Gold Bourbon-Making Machine (Directly Below the Speakeasy):</strong> 100-Gal Hammered Copper &amp; Brass Pot Belly Kettle Boiler (right), Onion-Dome Whiskey Head &amp; Swan-Neck Lyne Arm (top), 6-Plate Reflux &amp; Condenser Column (center-left), Brass-and-Crystal Spirit Safe &amp; Hydrometer (far-left), Speakeasy Stairs (right), and Bourbon Barrels + Wine Racks.</p>
             </div>
           </div>
 
-          <div onclick="openLightbox(35)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
+          <div onclick="openLightbox(36)" class="group cursor-zoom-in bg-stone-950 border border-amber-500/40 rounded-xl overflow-hidden">
             <div class="relative overflow-hidden">
               <img src="static/images/14b_subterranean_wine_tunnel_tasting.jpg?v=longtunnel03" alt="View 3: Active 15-Guest Wine & Bourbon Tasting Reception Inside the Updated Long 120-Foot Tunnel" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
               <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500 text-xs font-bold text-stone-950">3. View 3: 15-Guest Tasting in Long Tunnel</div>
             </div>
             <div class="p-3.5">
-              <p class="text-xs text-stone-300">Updated to the new 120-foot long tunnel: ~15 well-dressed guests and a private sommelier/distiller gathered around the central live-edge walnut tasting table with 3-tier bourbon barrels along the Left Wall, illuminated wine storage along the Right Wall, Speakeasy stairs on the foreground-left, and the copper pot still at the far end.</p>
+              <p class="text-xs text-stone-300">Updated to the new 120-foot long tunnel: ~15 well-dressed Black guests and a private sommelier/distiller gathered around the central live-edge walnut tasting table with 3-tier bourbon barrels along the Left Wall, illuminated wine storage along the Right Wall, Speakeasy stairs on the foreground-left, and the copper pot still at the far end.</p>
             </div>
           </div>
         </div>
@@ -305,14 +327,14 @@
       <!-- Filter Bar for Scrollable Grid Below -->
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-white">Scrollable Room-by-Room Visual Guide (All 36 Renderings)</h2>
+          <h2 class="text-lg sm:text-xl font-bold text-white">Scrollable Room-by-Room Visual Guide (All 37 Renderings)</h2>
           <p class="text-xs sm:text-sm text-stone-400">Filter by zone or scroll down to view every space in high resolution. Tap any photo to enlarge.</p>
         </div>
         <div class="flex flex-wrap gap-1.5">
-          <button onclick="filterGallery('all')" id="flt-all" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-stone-950">All (36)</button>
+          <button onclick="filterGallery('all')" id="flt-all" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-500 text-stone-950">All (37)</button>
           <button onclick="filterGallery('level1')" id="flt-level1" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white">Property &amp; Level 1 Main Home (18)</button>
           <button onclick="filterGallery('level2')" id="flt-level2" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white">Level 2 West-to-East 5-Room Flow (5)</button>
-          <button onclick="filterGallery('outbuildings')" id="flt-outbuildings" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white">Outbuildings, 120' Wine Tunnel &amp; Bourbon (13)</button>
+          <button onclick="filterGallery('outbuildings')" id="flt-outbuildings" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900 text-stone-300 border border-stone-800 hover:text-white">Outbuildings, 120' Wine Tunnel &amp; Bourbon (14)</button>
         </div>
       </div>
 
@@ -805,18 +827,18 @@
                 <text x="78" y="341" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8.0">  Staircase Entry</text>
               </g>
 
-              <!-- NEW DEDICATED CLICKABLE ZONE: UNDERGROUND BOURBON BARREL RICKHOUSE & SMALL-BATCH PRODUCTION AREA -->
+              <!-- NEW DEDICATED CLICKABLE ZONE: GOLD / COPPER BOURBON DISTILLATION MACHINE DIRECTLY BELOW THE SPEAKEASY -->
               <g onclick="selectRoom('bourbon')" class="cursor-pointer">
                 <rect id="room-bourbon" x="15" y="358" width="126" height="148" rx="10" fill="rgba(180, 83, 9, 0.38)" stroke="#f59e0b" stroke-width="2.5"/>
-                <text x="78" y="378" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="9.5">🥃 BOURBON LEFT /</text>
-                <text x="78" y="391" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="9.5">🍷 WINE RIGHT DETAIL</text>
-                <text x="78" y="405" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="8">(Same 120' Long Tunnel)</text>
-                <text x="78" y="421" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="8">• Left Wall: 3-Tier Ricks</text>
-                <text x="78" y="433" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="8">  (24+ 53-Gal Barrels)</text>
-                <text x="78" y="448" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="8">• Right Wall: Continuous</text>
-                <text x="78" y="460" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="8">  Glass Wine Racks</text>
-                <text x="78" y="475" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="8">• Far End: Copper Pot Still</text>
-                <text x="78" y="487" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="8">  &amp; Barn Staircase</text>
+                <text x="78" y="376" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="9">🥃⚙️ BOURBON POT STILL</text>
+                <text x="78" y="389" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="9">(BELOW SPEAKEASY)</text>
+                <text x="78" y="403" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="7.8">Downstairs From Speakeasy</text>
+                <text x="78" y="418" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="7.8">• 100-Gal Copper/Brass Still</text>
+                <text x="78" y="430" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="7.8">• Onion Head &amp; Swan Neck</text>
+                <text x="78" y="442" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="7.8">• 6-Plate Reflux Condenser</text>
+                <text x="78" y="454" text-anchor="middle" fill="currentColor" opacity="0.95" font-size="7.8">• Brass &amp; Glass Spirit Safe</text>
+                <text x="78" y="468" text-anchor="middle" fill="#a7f3d0" font-weight="700" font-size="7.6">• Stairs Up to Speakeasy</text>
+                <text x="78" y="480" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="7.6">• Feeds 53-Gal Barrels</text>
               </g>
 
               <g onclick="selectRoom('barn')" class="cursor-pointer">
@@ -831,8 +853,8 @@
               <g onclick="selectRoom('poolhouse')" class="cursor-pointer">
                 <rect id="room-poolhouse" x="152" y="180" width="346" height="182" rx="10" fill="rgba(14, 165, 233, 0.22)" stroke="currentColor" stroke-width="2.5"/>
                 <text x="325" y="203" text-anchor="middle" fill="currentColor" font-weight="700" font-size="12.5">3-BED GUEST HOUSE (LENNY KRAVITZ × CB2)</text>
-                <text x="325" y="222" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">• L1: Smoked-Walnut &amp; Nero Marquina Kitchen (L),</text>
-                <text x="325" y="237" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="10">  Lounge (C), Bed #1 + Bath #1 + Straight-Up Stairs (No Wrap)</text>
+                <text x="325" y="220" text-anchor="middle" fill="currentColor" opacity="0.9" font-size="9.5">• L1: Smoked-Walnut &amp; Nero Marquina Kitchen (L), Lounge (C), Bed #1</text>
+                <text x="325" y="235" text-anchor="middle" fill="#6ee7b7" font-weight="700" font-size="9.2">• L1 Narrow Half Bath (~4.5'×8'): Edwardian Emerald &amp; Brass (`DdHE1m_Adpt`)</text>
                 <rect x="166" y="249" width="318" height="102" rx="6" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.2"/>
                 <text x="325" y="267" text-anchor="middle" fill="currentColor" font-weight="700" font-size="10">L2 UPSTAIRS (GLASS OFFICE OVERLOOKING MAIN HOUSE + 2 BEDS):</text>
                 <text x="325" y="284" text-anchor="middle" fill="currentColor" font-weight="700" font-size="9.5">• 100% Glass-Surrounded "Boss Woman" Office (18'×15')</text>
@@ -1040,22 +1062,22 @@
               <rect x="20" y="120" width="355" height="196" rx="8" fill="rgba(217, 119, 6, 0.28)" stroke="#f59e0b" stroke-width="2"/>
               <text x="197" y="140" text-anchor="middle" fill="#fef3c7" font-weight="800" font-size="10.8">100% UNDERGROUND SPINE (16' × 120' LONG • NO SIDE ROOM)</text>
               <text x="197" y="156" text-anchor="middle" fill="#fcd34d" font-weight="700" font-size="10.2">ONE LONG TUNNEL: BOURBON BARRELS (L) &amp; WINE STORAGE (R)</text>
-              <text x="197" y="174" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9.2">▲ North End: Glass Copper Pot Still Bay + Barn Hidden Stairs</text>
-              <text x="197" y="189" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9.2">▼ South End (120' Away): Speakeasy Staircase (Zero Side Room)</text>
+              <text x="197" y="174" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9">▲ North End: Collector's Barn Under-Stair Hidden Shiplap Door</text>
+              <text x="197" y="189" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9">▼ Downstairs Below Speakeasy: Gold/Copper Bourbon Pot Still Machine</text>
               <text x="197" y="208" text-anchor="middle" fill="currentColor" font-size="9">• Entire Left Wall: 3-Tier White-Oak Rickhouse Racks Holding</text>
               <text x="197" y="221" text-anchor="middle" fill="currentColor" font-size="9">  24+ Charred 53-Gal Bourbon Barrels + Whiskey Thief &amp; Proofing</text>
-              <text x="197" y="239" text-anchor="middle" fill="#fef08a" font-weight="800" font-size="9.3">🍷 ENTIRE RIGHT WALL &amp; CENTER TASTING AISLE:</text>
-              <text x="197" y="253" text-anchor="middle" fill="#fde68a" font-size="8.8">• Right Wall: Floor-to-Ceiling Backlit Glass Wine Vaults (2,000+ Btls)</text>
-              <text x="197" y="266" text-anchor="middle" fill="#fde68a" font-size="8.8">• Center Aisle: 15-Guest Live-Edge Dark Walnut Tasting Table</text>
-              <text x="197" y="279" text-anchor="middle" fill="#fde68a" font-size="8.8">• Far North End: Hammered Copper Pot Still, Condenser &amp; Mash Tuns</text>
-              <text x="197" y="299" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="9">▼ Identical Single Long Tunnel Across Views 1, 2 &amp; 3 ▼</text>
+              <text x="197" y="239" text-anchor="middle" fill="#fef08a" font-weight="800" font-size="9.3">🥃 GOLD BOURBON MACHINE (BELOW SPEAKEASY) &amp; WINE VAULTS:</text>
+              <text x="197" y="253" text-anchor="middle" fill="#fde68a" font-size="8.8">• 100-Gal Copper/Brass Kettle, Onion Head, Swan Neck &amp; 6-Plate Column</text>
+              <text x="197" y="266" text-anchor="middle" fill="#fde68a" font-size="8.8">• Brass/Crystal Spirit Safe &amp; Hydrometer + Right-Wall 2,000-Btl Wine Racks</text>
+              <text x="197" y="279" text-anchor="middle" fill="#fde68a" font-size="8.8">• Center Aisle: 15-Guest Live-Edge Dark Walnut Tasting Table</text>
+              <text x="197" y="299" text-anchor="middle" fill="#7dd3fc" font-weight="700" font-size="9">▼ View 2 Zooms In on the Gold Bourbon Still Below the Speakeasy ▼</text>
 
               <!-- MIDDLE RIGHT: POOL COURTYARD, 3-BED GUEST HOUSE & 2-STORY WELLNESS FACILITY -->
               <rect x="385" y="120" width="355" height="196" rx="8" fill="rgba(14, 165, 233, 0.20)" stroke="#38bdf8" stroke-width="2"/>
               <text x="562" y="142" text-anchor="middle" fill="#e0f2fe" font-weight="800" font-size="11">REAR RESORT COURTYARD &amp; OUTBUILDINGS</text>
-              <text x="562" y="161" text-anchor="middle" fill="#bae6fd" font-weight="700" font-size="10">1. Lenny Kravitz 3-Bed / 2-Bath Guest House (~2,800 Sq Ft)</text>
-              <text x="562" y="176" text-anchor="middle" fill="currentColor" font-size="9">• L1: Smoked-Walnut &amp; Nero Marquina Kitchen, Zebra/Leather</text>
-              <text x="562" y="189" text-anchor="middle" fill="currentColor" font-size="9">  Lounge, Murano Chandelier, Bed #1, Bath #1 &amp; Straight Stairs</text>
+              <text x="562" y="161" text-anchor="middle" fill="#bae6fd" font-weight="700" font-size="10">1. Lenny Kravitz 3-Bed / 1.5-Bath Guest House (~2,800 Sq Ft)</text>
+              <text x="562" y="175" text-anchor="middle" fill="currentColor" font-size="9">• L1: Smoked-Walnut Kitchen, Lounge, Bed #1 &amp; Straight Stairs</text>
+              <text x="562" y="189" text-anchor="middle" fill="#6ee7b7" font-weight="700" font-size="8.8">• L1 Narrow Half Bath (~4.5'×8'): Edwardian Emerald &amp; Brass (`DdHE1m_Adpt`)</text>
               <text x="562" y="203" text-anchor="middle" fill="#fde68a" font-weight="700" font-size="9">• L2: 100% Glass-Surrounded "Boss Woman" Office (18'×15'),</text>
               <text x="562" y="216" text-anchor="middle" fill="currentColor" font-size="9">  85" TV &amp; Vinyl Wall, Bedrooms #2 &amp; #3 + Full Bath #2</text>
               <text x="562" y="236" text-anchor="middle" fill="#a7f3d0" font-weight="700" font-size="10">2. Two-Story Wellness / Health Facility (~1,600 Sq Ft)</text>
@@ -1129,11 +1151,11 @@
           </div>
 
           <div class="bg-stone-950 border border-stone-800 rounded-xl p-5 space-y-3">
-            <h3 class="text-base font-bold text-amber-400">6. Lenny Kravitz 3-Bed Guest House, 2-Story Wellness Facility, Collector's Barn (`v9`) &amp; One Continuous 120-Foot Subterranean Tunnel (Bourbon Barrels on Left Wall &amp; Wine Storage on Right Wall)</h3>
+            <h3 class="text-base font-bold text-amber-400">6. Lenny Kravitz 3-Bed Guest House (With Narrow Edwardian Emerald &amp; Brass Half Bath Inspired by `DdHE1m_Adpt`), 2-Story Wellness Facility, Collector's Barn (`v9`), 120-Foot Tunnel &amp; Gold/Copper Bourbon Pot Still Directly Below the Speakeasy</h3>
             <ul class="space-y-2 text-xs sm:text-sm text-stone-300">
-              <li>• <strong>Two-Story 3-Bedroom, 2-Bathroom Detached Guest House (~2,800 Sq Ft — Lenny Kravitz Maximalism, Straight-Up Stairs &amp; 100% Glass-Surrounded Boss Woman Office):</strong> Cascading 1970s Murano smoked-amber glass chandelier, charcoal-espresso Venetian plaster walls with brass-framed B&amp;W rock photography &amp; carved African masks, zebra-hide &amp; Moroccan rugs, leopard velvet pillows, vintage Gibson Les Paul guitar, a <strong>single straight-run floating dark-walnut staircase (zero wrap-around)</strong>, and the <strong>100% Glass-Surrounded "Boss Woman" Executive Office (18'×15')</strong>.</li>
-              <li>• <strong>Two-Story Wellness / Health Facility (~1,600 Sq Ft) &amp; Detached Collector's Barn (`v9` — Standard Solid-Riser Staircase &amp; Flush Shiplap Hidden Door):</strong> Wellness Facility houses L1 Hot Tub, Cedar Sauna &amp; Open Shower to Pool + L2 Workout Gym (85" TV) &amp; Full Bath. Collector's Barn features all 4 all-black cars angled in a row on an unbroken stone floor, 5 ring lights, single rear bath door, and a <strong>standard solid-riser white-oak staircase over an enclosed vertical white shiplap wall with a Seamless Flush Shiplap Hidden Door</strong> covering the subterranean stairs.</li>
-              <li>• <strong>One Continuous 120-Foot Subterranean Wine &amp; Bourbon Tunnel (16' × 120', -12' Below Grade — Zero Side Rooms, Bourbon Barrels on Left Wall &amp; Wine Storage on Right Wall Across All 3 Views):</strong> Stretches a full <strong>120 feet underground in one single groin-vaulted antique-brick &amp; carved limestone tunnel (with the side-room bump-out at the bottom of the stairs removed)</strong> from the Main Residence Speakeasy staircase (foreground-left) all the way to the glass-enclosed hammered copper pot still and Collector's Barn staircase at the far end—featuring <strong>3-tier white-oak rickhouse racks holding 24+ charred 53-gallon American white-oak bourbon barrels (`#4 Alligator Char`) + brass whiskey thief &amp; proofing station along the entire Left Wall</strong>, <strong>floor-to-ceiling climate-controlled bronze-glass and walnut wine storage racks (2,000+ bottles) along the entire Right Wall</strong>, and a <strong>15-guest live-edge dark walnut tasting table</strong> down the center aisle.</li>
+              <li>• <strong>Two-Story 3-Bedroom, 1.5-Bathroom Detached Guest House (~2,800 Sq Ft — Lenny Kravitz Maximalism, Straight-Up Stairs &amp; 100% Glass-Surrounded Boss Woman Office):</strong> Cascading 1970s Murano smoked-amber glass chandelier, charcoal-espresso Venetian plaster walls with brass-framed B&amp;W rock photography &amp; carved African masks, zebra-hide &amp; Moroccan rugs, leopard velvet pillows, vintage Gibson Les Paul guitar, a <strong>single straight-run floating dark-walnut staircase (zero wrap-around)</strong>, and the <strong>100% Glass-Surrounded "Boss Woman" Executive Office (18'×15')</strong>.</li>
+              <li>• <strong>Guest House Downstairs Narrow Half Bathroom (`~4.5' × 8'` Powder Room — Edwardian Emerald-Green Glazed Tile &amp; Brass Cloakroom Inspired by `https://www.instagram.com/p/DdHE1m_Adpt/`):</strong> Kept intentionally <strong>narrow (`~4.5' wide`) and uncluttered like the Instagram video</strong> so it isn't busy or overwhelming—featuring calm courses of high-gloss Victorian bottle-green beveled subway tiles and a single molded ceramic dado rail along the side walls, a single compact white porcelain Edwardian pedestal washbasin with unlacquered brass crosshead taps and arched brass mirror flanked by twin opal-glass globe sconces on the narrow back wall beneath the semicircular radial emerald sunburst fan-arch (`lunette`), a heritage high-level white porcelain cistern toilet with brass flush pipe and walnut seat tucked cleanly along the right wall, a narrow coved ceiling with a single brass pendant lantern, and an emerald-and-gold mosaic floor runner with a central floral medallion.</li>
+              <li>• <strong>Gold / Copper-and-Brass Bourbon Distillation Machine in the Downstairs Area Directly Below the Speakeasy (View 2 Close-Up):</strong> Positioned at the end of the 120-foot tunnel directly beneath the Main Residence Speakeasy (right beside the limestone stairs ascending to the Speakeasy bar overhead), the gleaming bourbon apparatus consists of: (1) a <strong>100-Gallon Hand-Hammered Copper &amp; Brass Pot Belly Kettle Boiler with Insulated Steam Jacket</strong> (heats the fermented corn-rye-barley mash to ~173°F without open flame); (2) an <strong>Onion-Dome Spirit Helmet ("Whiskey Head") &amp; Curved Swan-Neck Lyne Arm</strong> (where copper catalysis strips harsh sulfur compounds); (3) a <strong>6-Plate Copper Reflux &amp; Shell-and-Tube Condenser Column</strong> (cools vapor into crystal-clear 125–135 proof "White Dog" new-make bourbon); and (4) a <strong>Brass-and-Crystal-Glass "Spirit Safe" &amp; Hydrometer Parrot</strong> (separates the pure center "hearts" cut before barreling into the 24+ charred 53-gallon white-oak barrels lining the left wall).</li>
             </ul>
           </div>
         </div>
@@ -1515,6 +1537,20 @@
         ]
       },
       {
+        src: "static/images/09e_guest_house_downstairs_bath.jpg?v=narrow02",
+        category: "outbuildings",
+        zone: "Guest House Downstairs Narrow Half Bath (`DdHE1m_Adpt` Video Style)",
+        badge: "Outbuilding 1 • Guest House Level 1 Narrow Half Bathroom (`~4.5' × 8'` Powder Room • `https://www.instagram.com/p/DdHE1m_Adpt/` Video Style)",
+        title: "3-Bedroom Guest House Downstairs Narrow Half Bathroom (`~4.5' × 8'` Cloakroom Powder Room — Inspired by `https://www.instagram.com/p/DdHE1m_Adpt/`) — Uncluttered Emerald-Green Beveled Subway Tile Walls, Compact White Porcelain Pedestal Basin, Arched Brass Mirror & Opal Globe Sconces Beneath a Radial Sunburst Back-Wall Lunette, High-Level Cistern Toilet Along the Right Wall & Mosaic Medallion Floor",
+        dims: "Intimate Narrow Cloakroom Half Bathroom (`~4.5' Wide × 8' Deep`) • Calm, Uncluttered Proportions Matching the Video",
+        desc: "Adjusted to match the narrow, intimate cloakroom width (`~4.5' wide`) of your Instagram video inspiration (`https://www.instagram.com/p/DdHE1m_Adpt/`) so the downstairs half bathroom feels calm, focused, and jewel-box proportional rather than wide, busy, or overwhelming. Sleek, uncluttered courses of high-gloss Victorian bottle-green beveled subway tiles and a single horizontal molded ceramic dado rail line the left and right walls, leading the eye straight to the compact white porcelain Edwardian pedestal washbasin, arched antique-brass mirror, twin warm opal-glass globe sconces, and semicircular radial emerald sunburst fan-arch (`lunette`) on the narrow back wall, while the heritage high-level cistern toilet with brass flush pipe and walnut seat is neatly tucked along the right wall.",
+        highlights: [
+          "Narrow, Uncluttered Cloakroom Proportions (`~4.5' Wide` Like `https://www.instagram.com/p/DdHE1m_Adpt/`): Eliminates the busy side-wall frames and double-wide alcoves in favor of calm, continuous courses of high-gloss bottle-green beveled subway tiles with a single molded dado rail.",
+          "Single Narrow Back-Wall Focal Point + Tucked Heritage Toilet: Compact white porcelain Edwardian pedestal washbasin with unlacquered brass crosshead taps, arched brass mirror, twin opal-glass globe sconces, and radial emerald sunburst fan-arch (`lunette`) on the narrow back wall, with the high-level porcelain cistern toilet and brass flush pipe neatly tucked on the right wall.",
+          "Narrow Coved Ceiling & Mosaic Medallion Floor Runner: Narrow emerald-tiled barrel-coved ceiling with twin brass pipes and a single central brass pendant lantern above a dark glazed brick border and emerald-and-gold mosaic floor runner with a central floral medallion."
+        ]
+      },
+      {
         src: "static/images/11_breezeway_spa.jpg?v=c68cd32201",
         category: "outbuildings",
         zone: "Wellness Facility L1 (Hot Tub, Sauna & Open Shower)",
@@ -1641,17 +1677,17 @@
         ]
       },
       {
-        src: "static/images/14c_subterranean_bourbon_distillery_tunnel.jpg?v=longtunnel02",
+        src: "static/images/14c_subterranean_bourbon_distillery_tunnel.jpg?v=potstill02",
         category: "outbuildings",
-        zone: "120' Wine & Bourbon Tunnel (2. View 2: Mid-Tunnel — Bourbon Left, Wine Right & Copper Still Ahead)",
-        badge: "Mid-Tunnel View of the Exact Same Long Tunnel • 3-Tier Bourbon Barrels & Proofing on Left Wall, Wine Storage on Right Wall & Copper Pot Still at Far End",
-        title: "Subterranean Wine & Bourbon Tunnel (View 2 — Mid-Tunnel Perspective) — 3-Tier Charred 53-Gallon Bourbon Barrels & Whiskey Thief / Proofing Station on the Left Wall, Continuous Illuminated Glass Wine Storage on the Right Wall & Glass-Enclosed Copper Pot Still + Barn Stairs at the Far End",
-        dims: "Mid-Tunnel Perspective of the Single 120' Tunnel • Bourbon Barrels & Proofing (Left) • 2,000+ Wine Bottles (Right) • Copper Still (Far End)",
-        desc: "Updated to reflect the exact same single long groin-vaulted brick tunnel as View 1 (with zero side rooms branching off either wall): on the Left Wall stand 3-tier heavy timber white-oak rickhouse racks holding charred 53-gallon American white-oak bourbon barrels (#4 Alligator Char) with a hanging brass whiskey thief pipette, bung mallet, hygrometer gauges, and a narrow charred-walnut bourbon proofing and bottle-waxing ledge; on the Right Wall sit continuous floor-to-ceiling climate-controlled bronze-framed glass and walnut wine storage cabinets holding 2,000+ horizontal wine bottles with warm LED backlighting; in the center aisle sits the live-edge dark walnut tasting table; and straight ahead at the far end of the tunnel gleams the fire-rated glass-enclosed hammered copper pot still, condenser coil, stainless mash tuns, and the stone staircase ascending to the Collector's Barn.",
+        zone: "120' Wine & Bourbon Tunnel (2. View 2: Close-Up of the Gold Bourbon Machine Below the Speakeasy)",
+        badge: "Downstairs Directly Below the Main House Speakeasy • Close-Up of the Gold / Hammered Copper & Brass Bourbon Distillation Machine",
+        title: "Subterranean Wine & Bourbon Tunnel (View 2 — Close-Up of the Gold Bourbon-Making Machine at the End of the Hall Directly Below the Speakeasy) — 100-Gallon Copper & Brass Pot Belly Kettle Boiler, Onion-Dome Whiskey Head, Swan-Neck Lyne Arm, 6-Plate Reflux Condenser Column, Brass-and-Crystal Spirit Safe & Speakeasy Staircase",
+        dims: "Downstairs Directly Below the Speakeasy (-12' Elev) • 100-Gal Copper/Brass Pot Still • 6-Plate Reflux Column • Spirit Safe • Speakeasy Stairs",
+        desc: "Located in the downstairs area directly below the Main Residence Speakeasy (with the carved limestone stairs on the right ascending straight up to the Speakeasy bar overhead), View 2 is an up-close look at 'the gold machine at the end of the hall' that distills your private small-batch estate bourbon—framed by your 3-tier charred 53-gallon American white-oak bourbon barrels & nosing barrel on the Left Wall and your floor-to-ceiling backlit bronze-glass wine storage racks on the Right Wall. Here is what each piece of the gold/copper bourbon-making equipment does: (1) Pot Belly Kettle Boiler (Right Cylinder): 100-gallon hand-hammered copper kettle with an insulated quilted stainless/brass steam jacket that safely heats the fermented corn-rye-barley mash ('distiller's beer'—at least 51% corn) to ~173°F without an open flame so alcohol vaporizes out of the grain; (2) Onion-Dome 'Whiskey Head' & Curved Swan-Neck Lyne Arm (Top): As hot alcohol vapors rise into the bulbous copper dome and curve across the overhead swan-neck pipe, natural copper contact strips out harsh sulfur compounds; (3) 6-Plate Reflux & Condenser Column (Center-Left Tall Gold Cylinder with Round Sight Glasses): Refines the proof and condenses the hot bourbon vapor back into crystal-clear liquid 'White Dog' (new-make bourbon at 125–135 proof); and (4) Brass-and-Crystal-Glass 'Spirit Safe' & Hydrometer Parrot (Far-Left Glass Box): Lets you test the proof in real time and separate the early 'heads' and late 'tails' so only the pure center 'hearts' cut goes into your charred white-oak barrels!",
         highlights: [
-          "100% Consistent With View 1's Single Long Tunnel Layout: Bourbon barrels line the entire Left Wall, illuminated floor-to-ceiling glass wine storage lines the entire Right Wall, and the copper pot still sits in the glass-enclosed bay at the far north end of the tunnel.",
-          "Left Wall — 3-Tier Charred 53-Gallon Bourbon Barrels + Whiskey Thief & Proofing Station: Stenciled barrel heads, solid brass whiskey thief, wooden bung mallet, hydrometer cylinders, and small-batch bourbon decanters & Glencairn tasting glasses.",
-          "Right Wall — Continuous Floor-to-Ceiling Illuminated Wine Storage + Far-End Copper Pot Still Alcove: Climate-controlled bronze-glass horizontal wine racks along the right brick arches leading to the gleaming hammered copper pot still and Barn stairs ahead."
+          "1. 100-Gallon Pot Belly Kettle Boiler & Onion-Dome 'Whiskey Head' (Center-Right): Heats the fermented corn-rye-barley mash via an enclosed steam/electric jacket (zero open flame underground) while the copper onion dome and overhead swan-neck lyne arm strip out sulfur for a smooth, sweet bourbon profile.",
+          "2. 6-Plate Copper Reflux Condenser Column & Brass/Crystal 'Spirit Safe' (Center-Left & Left): The tall gold/copper column with 6 circular sight-glasses condenses the vapor into crystal-clear 125–135 proof 'White Dog' spirit, which flows through the glass-box Spirit Safe & floating hydrometer on the left to isolate the pure 'hearts' cut.",
+          "3. Directly Below the Speakeasy + Seamless Connection to the 120' Tunnel: Stone stairs on the right ascend straight up to the Main House Speakeasy overhead, while the Left Wall holds 3-tier charred 53-gallon white-oak bourbon barrels (plus a tasting barrel with wooden bung mallet, brass whiskey thief & Glencairn glasses) and the Right Wall holds backlit bronze-glass wine storage."
         ]
       },
       {
@@ -2033,24 +2069,24 @@
         ]
       },
       bourbon: {
-        badge: "Subterranean Craft Distillery & Rickhouse • Inside the Same Single 120' Underground Tunnel (-12')",
-        dims: "Left Wall: 24+ Charred 53-Gal Bourbon Barrels & Proofing • Right Wall: 2,000+ Bottle Wine Storage • Far End: Copper Pot Still",
-        title: "Subterranean Bourbon Barrel Rickhouse, Proofing Station & Copper Pot Still Alcove (Inside the Single 120-Foot Long Tunnel with Bourbon Barrels on Left & Wine Storage on Right)",
-        desc: "Matching View 1's single continuous 120-foot groin-vaulted tunnel layout: along the entire Left Wall stand custom 3-tier heavy white-oak rickhouse racks holding 24+ full-size 53-gallon charred American white-oak bourbon barrels (#4 Alligator Char) paired with a brass whiskey thief, wooden bung mallet, hygrometer gauges, and a charred-walnut bourbon proofing and bottle-waxing ledge; along the entire Right Wall sit continuous floor-to-ceiling climate-controlled bronze-framed glass and walnut wine storage racks (2,000+ bottles); and at the far north end of the tunnel sits the fire-rated glass-enclosed distillery bay housing the hand-hammered copper pot still, condenser coil, and stainless-steel mash tuns right beside the Barn staircase.",
+        badge: "Downstairs Area Directly Below the Speakeasy (-12') • Gold / Copper & Brass Bourbon Distillation Machine",
+        dims: "100-Gal Copper/Brass Kettle • Onion Head & Swan Neck • 6-Plate Reflux Condenser • Brass/Crystal Spirit Safe",
+        title: "The Gold / Copper-and-Brass Bourbon Distillation Machine (Located in the Downstairs Area Directly Below the Main House Speakeasy)",
+        desc: "Positioned at the end of the 120-foot tunnel directly beneath the Main Residence Speakeasy (right beside the carved limestone stairs ascending to the Speakeasy bar overhead), this gleaming gold-brass and hand-hammered copper apparatus distills your private small-batch estate bourbon before it is aged in the 24+ charred 53-gallon American white-oak barrels lining the left wall of the tunnel:",
         specs: [
-          "Left Wall — 3-Tier White-Oak Bourbon Barrel Rickhouse & Proofing Station: Heavy timber white-oak ricks hold three tiers of 53-gallon charred American white-oak barrels stamped with batch numbers and fill dates, complete with a solid brass whiskey thief, wooden bung mallet, graduated hydrometer cylinders, and Glencairn crystal nosing glasses.",
-          "Right Wall — Continuous Floor-to-Ceiling Backlit Glass & Walnut Wine Storage (2,000+ Bottles): Directly opposite the bourbon barrels along the right wall of the tunnel, keeping the single-tunnel layout 100% consistent across Views 1, 2, and 3.",
-          "Far North End — Fire-Rated Glass-Enclosed Copper Pot Still Production Bay & Barn Staircase: Houses a gleaming hand-hammered copper pot still with swan neck, lyne arm, and copper worm condenser plus two stainless-steel fermentation mash tuns at the far end of the tunnel next to the stairs ascending to the Barn."
+          "1. 100-Gallon Pot Belly Kettle Boiler & Onion-Dome 'Whiskey Head' (Right): Heats the fermented corn-rye-barley mash ('distiller's beer'—at least 51% corn) to ~173°F via an enclosed steam/electric jacket (safe underground with zero open flame), while the bulbous copper onion dome and curved overhead swan-neck lyne arm strip out harsh sulfur compounds.",
+          "2. 6-Plate Copper Reflux & Shell-and-Tube Condenser Column (Center-Left Tall Gold Cylinder): Fitted with 6 circular brass sight-glasses and chilled-water cooling lines that condense the hot bourbon vapor back into crystal-clear liquid 'White Dog' (new-make bourbon at 125–135 proof).",
+          "3. Brass-and-Crystal-Glass 'Spirit Safe' & Hydrometer Parrot (Far Left) + Nosing Barrel: The glass-domed inspection box lets you measure proof in real time and separate the early 'heads' and late 'tails' so only the pure center 'hearts' cut is piped into your #4 Alligator Char 53-gallon white-oak barrels."
         ]
       },
       poolhouse: {
-        badge: "Outbuilding 1 • Lenny Kravitz Paris Hôtel Particulier Maximalist Guest House",
-        dims: "~2,800 Sq Ft Across 2 Levels • Lenny-Level Rock-and-Roll Maximalism + Straight Stairs + Glass Office",
-        title: "Two-Story 3-Bedroom Detached Guest House (Lenny Kravitz Maximalism, Straight-Up Stairs & 100% Glass-Surrounded 'Boss Woman' Office)",
-        desc: "Where the Pool House previously stood is now a complete ~2,800 sq ft Two-Story 3-Bedroom, 2-Bathroom Detached Guest House dialed up to full Lenny Kravitz Paris Hôtel Particulier & Kravitz Design × CB2 rock-and-roll maximalism: a monumental cascading 1970s Murano smoked-amber glass & brass chandelier, charcoal-espresso Venetian plaster gallery walls with oversized brass-framed B&W rock photography and carved African tribal masks, zebra-hide layered over a vintage Moroccan rug, leopard velvet pillows & shearling throw on the cognac leather sectional, a vintage Gibson Les Paul guitar on a brass stand, a burl-wood vinyl turntable console, a single straight-run floating walnut staircase going straight up (zero wrap-around), and the 100% Glass-Surrounded 'Boss Woman' Executive Office on Level 2.",
+        badge: "Outbuilding 1 • Lenny Kravitz Maximalist Guest House + Narrow Edwardian Emerald Half Bath (`DdHE1m_Adpt`)",
+        dims: "~2,800 Sq Ft Across 2 Levels • Narrow ~4.5'×8' Downstairs Half Bath + Straight Stairs + Glass Office",
+        title: "Two-Story 3-Bedroom, 1.5-Bathroom Detached Guest House (Lenny Kravitz Maximalism, Narrow Edwardian Emerald-Green Glazed Tile & Brass Downstairs Half Bathroom From `DdHE1m_Adpt`, Straight-Up Stairs & 100% Glass-Surrounded 'Boss Woman' Office)",
+        desc: "Where the Pool House previously stood is now a complete ~2,800 sq ft Two-Story 3-Bedroom, 1.5-Bathroom Detached Guest House: Level 1 features the Lenny Kravitz Paris Hôtel Particulier maximalist living/kitchen space AND the Narrow Edwardian Emerald-Green Glazed Ceramic Tile & Unlacquered Brass Downstairs Half Bathroom (`~4.5' × 8'` Cloakroom Powder Room, kept intentionally narrow and uncluttered like `https://www.instagram.com/p/DdHE1m_Adpt/` so it isn't busy or overwhelming—with calm beveled bottle-green metro tile side walls, a compact white porcelain pedestal basin with brass crosshead taps and arched brass mirror on the narrow back wall beneath the radial sunburst lunette, a heritage high-level cistern toilet tucked on the right wall, and an emerald/gold mosaic medallion floor); Level 2 houses the 100% Glass-Surrounded 'Boss Woman' Executive Office, 85\" TV wall, Guest Bedrooms #2 & #3, and Upstairs Full Bath #2.",
         specs: [
-          "Lenny Kravitz Rock-and-Roll Maximalist Layering (Level 1 & Level 2): Cascading 1970s Murano smoked-amber glass chandelier, charcoal-espresso Venetian plaster gallery walls with brass-framed B&W rock photography and carved African masks/sculptures, zebra-hide layered over a Moroccan rug, leopard velvet pillows & shearling throw on the cognac leather sectional, vintage Gibson Les Paul guitar on a brass stand, and burl-wood vinyl turntable credenza.",
-          "Consistent Single Straight-Run Staircase (Goes Straight Up, Zero Wrap-Around Across All 3 Views): Floating dark-walnut staircase with frameless glass railing rises in a single unbroken straight flight along the side wall to the flat smoked-walnut herringbone mezzanine (with the 85-inch 4K TV mounted on the wall at the top of the straight stairs).",
+          "Downstairs Narrow Half Bathroom (`~4.5' × 8'` Powder Room — Inspired by `https://www.instagram.com/p/DdHE1m_Adpt/`): Kept narrow and calm like the video with uncluttered courses of high-gloss Victorian bottle-green beveled subway tiles and a single molded dado rail on the side walls, a compact white Edwardian pedestal basin with arched brass mirror & twin opal globe sconces beneath the semicircular radial emerald sunburst lunette on the narrow back wall, a heritage high-level cistern toilet tucked on the right wall, and a narrow emerald/gold floral medallion mosaic floor runner.",
+          "Lenny Kravitz Rock-and-Roll Maximalist Layering & Single Straight-Run Staircase (Level 1 & Level 2): Cascading 1970s Murano smoked-amber glass chandelier, charcoal-espresso Venetian plaster gallery walls with brass-framed B&W rock photography and carved African masks, zebra-hide layered over a Moroccan rug, leopard velvet pillows, vintage Gibson Les Paul guitar, and a single straight-run floating walnut staircase (zero wrap-around).",
           "Large 100% Glass-Surrounded 'Boss Woman' Executive Office Overlooking the Main Part of the House (18' × 15'): Completely enclosed on all interior sides in floor-to-ceiling matte-black steel-and-glass grid walls—with the sculptural burl-wood desk in the middle of the office, the cream bouclé chair behind the desk facing away from the wall, layered Persian/zebra rugs, and a leopard-pillow cognac lounge chair."
         ]
       },
